@@ -29,7 +29,7 @@ overallinfo = []
 for i in tqdm(hrefLinkList):
     webD.get(i)
     time.sleep(1)
-    if webD.find_element_by_class_name('product_info_name') :
+    try:
         nameOftheProduct = webD.find_element_by_class_name('product_info_name').text
         priceoftheProduct = webD.find_element_by_class_name('nk-price-final').text
         #     descOfProduct = webD.find_element_by_xpath(
@@ -63,7 +63,7 @@ for i in tqdm(hrefLinkList):
                  'SupplierID': supID
                  }
         data.append(tempJ)
-    else:
+    except:
         continue
 
 pd.DataFrame(data)

@@ -28,42 +28,55 @@ data = []
 overallinfo = []
 for i in tqdm(hrefLinkList):
     webD.get(i)
-    time.sleep(1)
-    if webD.find_element_by_class_name('product_info_name'):
+    time.sleep(0.25)
+    try:
         nameOftheProduct = webD.find_element_by_class_name('product_info_name').text
         priceoftheProduct = webD.find_element_by_class_name('nk-price-final').text
         #     descOfProduct = webD.find_element_by_xpath(
         #         '//*[@id="__next"]/div[1]/main/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[3]/ul')
-        supplier = webD.find_element_by_xpath('//*[@id="content_features"]/div[1]/div[2]/div/table/tbody/tr[3]/td[2]').text
-        if supplier != 'Samsung' and supplier != 'Sony' and supplier != 'Philips' and supplier != 'Casper' and supplier != 'TCL' and supplier != 'LG' and supplier != 'Sharp' and supplier != 'Panasonic':
-            supplier = webD.find_element_by_xpath('//*[@id="content_features"]/div[1]/div[2]/div/table/tbody/tr[2]/td[2]').text
-        supID = 0
-        if supplier == 'Samsung':
-            supID = 9
-        elif supplier == 'Sony':
-            supID = 10
-        elif supplier == 'Philips':
-            supID = 11
-        elif supplier == 'Casper':
-            supID = 12
-        elif supplier == 'TCL':
-            supID = 13
-        elif supplier == 'LG':
-            supID = 6
-        elif supplier == 'Sharp':
-            supID = 14
-        elif supplier == 'Panasonic':
-            supID = 15
-        tempJ = {'nameOftheProduct': nameOftheProduct,
-                 'priceoftheProduct': priceoftheProduct,
-                 #              'descOfProduct': descOfProduct,
-                 'hyperlink': i,
-                 'CategoryID': 1,
-                 'CompanyID': 1,
-                 'SupplierID': supID
-                 }
-        data.append(tempJ)
-    else:
+        try:
+            supplier = webD.find_element_by_xpath('//*[@id="content_features"]/div[1]/div[2]/div/table/tbody/tr[3]/td[2]').text
+            if supplier != 'Samsung' and supplier != 'oppo' and supplier != 'Nokia' and supplier != 'Vivo' and supplier != 'Itel' and supplier != 'Apple' and supplier != 'Vsmart' and supplier != 'Realme' and supplier != 'Xiaomi':
+                supplier = webD.find_element_by_xpath('//*[@id="content_features"]/div[1]/div[2]/div/table/tbody/tr[2]/td[2]').text
+            supID = 0
+            if supplier == 'Samsung':
+                supID = 9
+            elif supplier == 'oppo':
+                supID = 23
+            elif supplier == 'Nokia':
+                supID = 24
+            elif supplier == 'Vivo':
+                supID = 25
+            elif supplier == 'Itel':
+                supID = 26
+            elif supplier == 'Apple':
+                supID = 7
+            elif supplier == 'Vsmart':
+                supID = 28
+            elif supplier == 'Realme':
+                supID = 29
+            elif supplier == 'Xiaomi':
+                supID = 30
+            tempJ = {'nameOftheProduct': nameOftheProduct,
+                     'priceoftheProduct': priceoftheProduct,
+                     #              'descOfProduct': descOfProduct,
+                     'hyperlink': i,
+                     'CategoryID': 6,
+                     'CompanyID': 1,
+                     'SupplierID': supID
+                     }
+            data.append(tempJ)
+        except :
+            tempJ = {'nameOftheProduct': nameOftheProduct,
+                     'priceoftheProduct': priceoftheProduct,
+                     #              'descOfProduct': descOfProduct,
+                     'hyperlink': i,
+                     'CategoryID': 6,
+                     'CompanyID': 1,
+                     'SupplierID': 0
+                     }
+            data.append(tempJ)
+    except:
         continue
 
 pd.DataFrame(data)
