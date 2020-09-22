@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="26d2d8bda21b499894284ae2443ce626" Name="Diagram1">
+        <EntityTypeShape EntityType="EntityModels.Categories" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityModels.Companies" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityModels.ProductProperty" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityModels.Products" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityModels.Properties" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityModels.Suppliers" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EntityModels.sysdiagrams" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
+        <AssociationConnector Association="EntityModels.FK__Products__Catego__76969D2E" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityModels.FK__Products__Compan__778AC167" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityModels.FK__ProductPr__Prope__19DFD96B" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityModels.FK__ProductPr__Value__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityModels.FK__Products__Suppli__787EE5A0" ManuallyRouted="false" />
+        <AssociationConnector Association="EntityModels.CategoryProperty" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

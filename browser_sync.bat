@@ -1,0 +1,1 @@
+browser-sync start --proxy https://localhost:44344/ --files "css/*.css"

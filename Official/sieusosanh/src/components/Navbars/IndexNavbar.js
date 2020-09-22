@@ -29,6 +29,24 @@ function IndexNavbar() {
   const toggleModal = () => {
     setModal(!modal);
   };
+  //Connect to API
+  const Search = () => {
+    let text = document.getElementById("search-text").value
+    // alert(text)
+    //
+    fetch(`https://192.168.56.1:3000/api/Products/${text}`, {
+      // headers: { 'Service-Worker': 'script' },
+    })
+      .then(response =>  response.json())
+      .then(responseData => {
+        alert(responseData.length)
+      })
+      .catch((error) => {
+        console.log(
+          error
+        );
+      });
+  };
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 
@@ -97,7 +115,7 @@ function IndexNavbar() {
                   </h5>
                 </div>
                 <div className="modal-body">
-                <Input placeholder="Tìm kiếm sản phẩm" type="text" />
+                <Input id="search-text" name="search-text" placeholder="Tìm kiếm sản phẩm" type="text" />
                 </div>
                 <div className="modal-footer">
                   <div className="left-side">
@@ -112,7 +130,7 @@ function IndexNavbar() {
                   </div>
                   <div className="divider" />
                   <div className="right-side">
-                    <Button className="btn-link" type="button">
+                    <Button className="btn-link" type="button" onClick={Search}>
                       Tìm kiếm
                     </Button>
                   </div>

@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EntityModels" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__Products__Catego__76969D2E" FromRole="Categories" ToRole="Products" />
+    <NavigationProperty Name="Properties" Relationship="Self.CategoryProperty" FromRole="Categories" ToRole="Properties" />
+  </EntityType>
+  <EntityType Name="Companies">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+    </Key>
+    <Property Name="CompanyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__Products__Compan__778AC167" FromRole="Companies" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="ProductProperty">
+    <Key>
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="PropertyID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="PropertyID" Type="Int32" Nullable="false" />
+    <Property Name="ValueAsString" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Properties" Relationship="Self.FK__ProductPr__Prope__19DFD96B" FromRole="ProductProperty" ToRole="Properties" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__ProductPr__Value__18EBB532" FromRole="ProductProperty" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="HyperLink" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="CompanyID" Type="Int32" />
+    <Property Name="SupplierID" Type="Int32" />
+    <NavigationProperty Name="Categories" Relationship="Self.FK__Products__Catego__76969D2E" FromRole="Products" ToRole="Categories" />
+    <NavigationProperty Name="Companies" Relationship="Self.FK__Products__Compan__778AC167" FromRole="Products" ToRole="Companies" />
+    <NavigationProperty Name="ProductProperty" Relationship="Self.FK__ProductPr__Value__18EBB532" FromRole="Products" ToRole="ProductProperty" />
+    <NavigationProperty Name="Suppliers" Relationship="Self.FK__Products__Suppli__787EE5A0" FromRole="Products" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="Properties">
+    <Key>
+      <PropertyRef Name="PropertyID" />
+    </Key>
+    <Property Name="PropertyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PropertyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProductProperty" Relationship="Self.FK__ProductPr__Prope__19DFD96B" FromRole="Properties" ToRole="ProductProperty" />
+    <NavigationProperty Name="Categories" Relationship="Self.CategoryProperty" FromRole="Properties" ToRole="Categories" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__Products__Suppli__787EE5A0" FromRole="Suppliers" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK__Products__Catego__76969D2E">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Products__Compan__778AC167">
+    <End Role="Companies" Type="Self.Companies" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Companies">
+        <PropertyRef Name="CompanyID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductPr__Prope__19DFD96B">
+    <End Role="Properties" Type="Self.Properties" Multiplicity="1" />
+    <End Role="ProductProperty" Type="Self.ProductProperty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Properties">
+        <PropertyRef Name="PropertyID" />
+      </Principal>
+      <Dependent Role="ProductProperty">
+        <PropertyRef Name="PropertyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProductPr__Value__18EBB532">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="ProductProperty" Type="Self.ProductProperty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="ProductProperty">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Products__Suppli__787EE5A0">
+    <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CategoryProperty">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="*" />
+    <End Role="Properties" Type="Self.Properties" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="EntityDataContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="Self.Categories" />
+    <EntitySet Name="Companies" EntityType="Self.Companies" />
+    <EntitySet Name="ProductProperty" EntityType="Self.ProductProperty" />
+    <EntitySet Name="Products" EntityType="Self.Products" />
+    <EntitySet Name="Properties" EntityType="Self.Properties" />
+    <EntitySet Name="Suppliers" EntityType="Self.Suppliers" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK__Products__Catego__76969D2E" Association="Self.FK__Products__Catego__76969D2E">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Products__Compan__778AC167" Association="Self.FK__Products__Compan__778AC167">
+      <End Role="Companies" EntitySet="Companies" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductPr__Prope__19DFD96B" Association="Self.FK__ProductPr__Prope__19DFD96B">
+      <End Role="Properties" EntitySet="Properties" />
+      <End Role="ProductProperty" EntitySet="ProductProperty" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProductPr__Value__18EBB532" Association="Self.FK__ProductPr__Value__18EBB532">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ProductProperty" EntitySet="ProductProperty" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Products__Suppli__787EE5A0" Association="Self.FK__Products__Suppli__787EE5A0">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="CategoryProperty" Association="Self.CategoryProperty">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Properties" EntitySet="Properties" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,16 @@
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\bin\Debug\ViewModels.dll
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\bin\Debug\ViewModels.pdb
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\obj\Debug\ViewModels.csproj.CoreCompileInputs.cache
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\obj\Debug\ViewModels.dll
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\obj\Debug\ViewModels.pdb
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\bin\Debug\Newtonsoft.Json.dll
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\bin\Debug\System.Net.Http.Formatting.dll
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\bin\Debug\System.Web.Cors.dll
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\bin\Debug\System.Web.Http.Cors.dll
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\bin\Debug\System.Web.Http.dll
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\bin\Debug\Newtonsoft.Json.xml
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\bin\Debug\System.Net.Http.Formatting.xml
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\bin\Debug\System.Web.Http.xml
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\bin\Debug\System.Web.Http.Cors.xml
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\obj\Debug\ViewModels.csprojAssemblyReference.cache
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\ViewModels\obj\Debug\ViewModels.csproj.CopyComplete
