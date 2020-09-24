@@ -1,11 +1,6 @@
 import React from "react";
-
-// nodejs library that concatenates strings
 import classnames from "classnames";
-
-// import Landing from "../../views/home/Langding"
-// import SearchFrom from "../../views/home/SearchForm"
-// reactstrap components
+import { NavLink } from 'react-router-dom'
 import {
   Button,
   Collapse,
@@ -23,33 +18,29 @@ import {
   Container,
   Input,
 } from "reactstrap";
-
+//withRouter de redirect qua trang khac
+import { useHistory } from "react-router-dom";
 function IndexNavbar() {
+  let history=useHistory()
   const [modal, setModal] = React.useState(false);
   const toggleModal = () => {
     setModal(!modal);
   };
+
   //Connect to API
+
   const Search = () => {
     let text = document.getElementById("search-text").value
-    // alert(text)
-    //
-    fetch(`https://192.168.56.1:3000/api/Products/${text}`, {
-      // headers: { 'Service-Worker': 'script' },
-    })
-      .then(response =>  response.json())
-      .then(responseData => {
-        alert(responseData.length)
-      })
-      .catch((error) => {
-        console.log(
-          error
-        );
-      });
+    if (text.length > 0) {
+      history.push(`/search/${text}`)
+    } else {
+      alert("Vui lòng nhập từ khóa cần tìm!")
+    }
   };
+
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
-
+  
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
     document.documentElement.classList.toggle("nav-open");
@@ -77,17 +68,16 @@ function IndexNavbar() {
     };
   });
   return (
-    <Navbar className={classnames("fixed-top", navbarColor)} expand="lg">
+    <div className="navbar-homeTemplate">
+      <Navbar className={classnames("fixed-top", navbarColor)} expand="lg">
       <Container>
         <div className="navbar-translate">
-          <NavbarBrand
-            data-placement="bottom"
-            target="_blank"
-            type="button"
-            href="_index  "
+          <NavLink
+            className="navbar-logo"
+           to="/"
           >
             SIÊU SO SÁNH
-          </NavbarBrand>
+          </NavLink>
           <Button
                     className="btn-round"
                     color="neutral"
@@ -215,10 +205,11 @@ function IndexNavbar() {
             </NavItem>
            
           </Nav>
-          
         </Collapse>
       </Container>
     </Navbar>
+    </div>
+    
   );
 }
 

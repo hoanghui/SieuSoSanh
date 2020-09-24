@@ -1,0 +1,30 @@
+.box-product .product-detail{
+    color: black;
+}
+.box-product .product-img{
+    display: flex;
+    justify-content: center;
+}
+.box-product .product-img img{
+    width: 200px;
+}
+.box-product .btn-sosanhgia >div{
+    border:1px solid black;
+    display: inline-block;
+    padding: 5px;
+    margin: 20px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.box-product .btn-sosanhgia >div:hover{
+    color: white;
+    background-color: black;
+}
+.box-product{
+    margin: 15px 0;
+    padding: 15px 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
+}

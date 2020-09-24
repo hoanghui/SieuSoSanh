@@ -7,9 +7,9 @@ import { Container } from "reactstrap";
 
 // core components
 
-function IndexHeader() {
+function IndexHeader({namePage}) {
   return (
-    <>
+    <div className="header">
       <div
         className="page-header section-dark"
           style={{
@@ -21,8 +21,7 @@ function IndexHeader() {
         <div className="content-center">
           <Container>
             <div className="title-brand">
-              <h1 className="presentation-title">SIÊU</h1>
-              <h1 className="presentation-title">SO SÁNH</h1>
+        <h1 className="presentation-title text-uppercase">{namePage}</h1>
               {/* <div className="fog-low">
                 <img alt="..." src={require("../../assets/img/fog-low.png")} />
               </div>
@@ -55,7 +54,7 @@ function IndexHeader() {
           hoang huy
         </h6>
       </div>
-    </>
+    </div>
   );
 }
 
