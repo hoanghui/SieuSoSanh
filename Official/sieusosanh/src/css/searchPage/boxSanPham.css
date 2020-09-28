@@ -1,6 +1,11 @@
 .box-product .product-detail{
     color: black;
 }
+
+.box-product .product-price{
+    font-weight: 600;
+}
+
 .box-product .product-img{
     display: flex;
     justify-content: center;
@@ -9,18 +14,20 @@
     width: 200px;
 }
 .box-product .btn-sosanhgia >div{
-    border:1px solid black;
+    border:2px solid #51bcda;
     display: inline-block;
     padding: 5px;
     margin: 20px 0;
     border-radius: 3px;
     cursor: pointer;
     transition: all .5s;
+    color: #51bcda;
+    font-weight: 500;
 }
 
 .box-product .btn-sosanhgia >div:hover{
     color: white;
-    background-color: black;
+    background-color: #51bcda;
 }
 .box-product{
     margin: 15px 0;
@@ -28,3 +35,4 @@
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     border-radius: 5px;
 }
+

@@ -1,27 +1,4 @@
-/*!
 
- =========================================================
- * Paper Kit React - v1.2.0 based on Paper Kit - v2.2.0
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/paper-kit-2
- * Copyright 2020 Creative Tim (http://www.creative-tim.com)
-
- * Designed by www.invisionapp.com Coded by www.creative-tim.com
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
- */
-/*      light colors - used for select dropdown         */
-/* ========================================================================
- * bootstrap-switch - v3.3.2
- * http://www.bootstrap-switch.org
- * ========================================================================
- * Copyright 2012-2013 Mattia Larentis
- * http://www.apache.org/licenses/LICENSE-2.0
- */
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -4507,7 +4484,7 @@ License - nucleoapp.com/license/
     .card-profile .card-avatar.border-gray {
       border: 4px solid #ccc; }
 
-.section .card-profile {
+.section .card  -profile {
   margin-top: 100px; }
 
 .landing-alert {
@@ -4517,7 +4494,7 @@ License - nucleoapp.com/license/
   background-color: #B2AFAB;
   background-position: center center;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 70vh;
   max-height: 999px;
   overflow: hidden;
   position: relative;
@@ -4525,7 +4502,7 @@ License - nucleoapp.com/license/
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center; } 
   .page-header .filter::after {
     background-color: rgba(0, 0, 0, 0.5);
     content: "";

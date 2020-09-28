@@ -46,6 +46,12 @@ function IndexNavbar() {
     document.documentElement.classList.toggle("nav-open");
   };
 
+  const handleKeyPress = (event) => {
+    if(event.key === 'Enter'){
+      Search()
+    }
+  }
+
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
@@ -105,7 +111,7 @@ function IndexNavbar() {
                   </h5>
                 </div>
                 <div className="modal-body">
-                <Input id="search-text" name="search-text" placeholder="Tìm kiếm sản phẩm" type="text" />
+                <Input id="search-text" name="search-text" placeholder="Tìm kiếm sản phẩm" type="text" onKeyPress={handleKeyPress}/>
                 </div>
                 <div className="modal-footer">
                   <div className="left-side">

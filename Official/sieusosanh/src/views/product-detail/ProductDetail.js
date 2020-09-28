@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import IndexHeader from "../../components/Headers/IndexHeader"
-import OptionSanPham from "./OptionSanPham";
-import BoxSanPham from "./BoxSanPham";
+
+
 export default class SearchPage extends Component {
     constructor(props){
         super(props)
@@ -41,7 +41,7 @@ export default class SearchPage extends Component {
     render() {
         let kw =this.props.match.params.kw;
         console.log(this.state.data)
-        let {data}=this.state// cach viet tat cho this.state.data
+        let {data}=this.state
         return (
             <div className="search-page">
                 <IndexHeader namePage={kw}/>

@@ -2,3 +2,11 @@
     font-size: 6em;
     font-weight: 600;
 }
+
+.page-header {
+    min-height: 50vh;
+}
+
+.header {
+    min-height: 50vh;
+}
