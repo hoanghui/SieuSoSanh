@@ -1,12 +1,17 @@
 .header .presentation-title{
     font-size: 6em;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .page-header {
     min-height: 50vh;
 }
 
-.header {
+.section-dark{
+    min-width: 50vh;
+    height: 100px;
+}
+
+.page-header .section-dark{
     min-height: 50vh;
 }

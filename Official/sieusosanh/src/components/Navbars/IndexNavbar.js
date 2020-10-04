@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import classnames from "classnames";
 import { NavLink } from 'react-router-dom'
 import {
@@ -18,9 +18,13 @@ import {
   Container,
   Input,
 } from "reactstrap";
+import * as action from "../../redux/actions"
+import {connect} from "react-redux"
 //withRouter de redirect qua trang khac
 import { useHistory } from "react-router-dom";
-function IndexNavbar() {
+
+//Khai báo props khi sử dụng function
+function IndexNavbar({getListProductsByKeyWord}) {
   let history=useHistory()
   const [modal, setModal] = React.useState(false);
   const toggleModal = () => {
@@ -33,6 +37,7 @@ function IndexNavbar() {
     let text = document.getElementById("search-text").value
     if (text.length > 0) {
       history.push(`/search/${text}`)
+      getListProductsByKeyWord(text)
     } else {
       alert("Vui lòng nhập từ khóa cần tìm!")
     }
@@ -127,7 +132,7 @@ function IndexNavbar() {
                   <div className="divider" />
                   <div className="right-side">
                     <Button className="btn-link" type="button" onClick={Search}>
-                      Tìm kiếm
+                        Tìm kiếm
                     </Button>
                   </div>
                 </div>
@@ -218,5 +223,11 @@ function IndexNavbar() {
     
   );
 }
-
-export default IndexNavbar;
+const mapDispatchToProps=(dispatch)=>{
+  return {
+      getListProductsByKeyWord:(kw)=>{
+          dispatch(action.getListProductsByKeyWord(kw))
+      }
+  }
+}
+export default connect(null,mapDispatchToProps)(IndexNavbar);

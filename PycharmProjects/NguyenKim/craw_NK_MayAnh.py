@@ -67,6 +67,7 @@ for i in tqdm(hrefLinkList):
 
 pd.DataFrame(data)
 #Writing to JSON File
+# CTRL + ALT + SHIFT + L
 
 def writeToJSONFile(path, fileName, data):
     filePathNameWExt = './' + path + '/' + fileName + '.json'

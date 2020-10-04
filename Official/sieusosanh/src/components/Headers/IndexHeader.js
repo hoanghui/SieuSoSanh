@@ -51,7 +51,7 @@ function IndexHeader({namePage}) {
               // src={require("assets/img/creative-tim-white-slim2.png")}
             />
           </a>
-          hoang huy
+          hoang huy 🥺
         </h6>
       </div>
     </div>

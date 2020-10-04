@@ -11,7 +11,7 @@ using ViewModels;
 namespace SieuSoSanhAPI.Controllers
 {
     // Enable cors (connect API)
-    [EnableCors(origins: "http://localhost:3002 ", headers:"*", methods:"*")]
+    [EnableCors(origins: "http://localhost:3000 ", headers:"*", methods:"*")]
     public class ProductsController : ApiController
     {
         // GET api/values
