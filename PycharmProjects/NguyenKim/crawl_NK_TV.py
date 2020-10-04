@@ -32,6 +32,8 @@ for i in tqdm(hrefLinkList):
     try:
         nameOftheProduct = webD.find_element_by_class_name('product_info_name').text
         priceoftheProduct = webD.find_element_by_class_name('nk-price-final').text
+        linkProductImage = webD.find_element_by_class_name('img-full-width')
+        src = linkProductImage.get_property('src')
         #     descOfProduct = webD.find_element_by_xpath(
         #         '//*[@id="__next"]/div[1]/main/div[3]/div/div[2]/div[2]/div[1]/div[1]/div[3]/ul')
         supplier = webD.find_element_by_xpath('//*[@id="content_features"]/div[1]/div[2]/div/table/tbody/tr[3]/td[2]').text
@@ -60,7 +62,8 @@ for i in tqdm(hrefLinkList):
                  'hyperlink': i,
                  'CategoryID': 1,
                  'CompanyID': 1,
-                 'SupplierID': supID
+                 'SupplierID': supID,
+                 'linkProductImage':src
                  }
         data.append(tempJ)
     except:

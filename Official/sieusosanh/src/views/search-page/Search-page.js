@@ -24,10 +24,10 @@ class SearchPage extends Component {
         console.log(listProductsByKeyWord)
         return (
             <div className="search-page">
-                <IndexHeader namePage={kw}/>
+                <IndexHeader />
                 <div className='container'>
                     <div className="keyword-info py-4 text-center">
-                        Tu khoa "{kw}" co {listProductsByKeyWord.length} ket qua
+                        Từ khóa "{kw}" có {listProductsByKeyWord.length} kết quả.
                         <hr/>
                     </div>
                 </div>

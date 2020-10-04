@@ -58,7 +58,9 @@ D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\Microsoft.CodeDom.Provider
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\Microsoft.Web.Infrastructure.dll
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\Newtonsoft.Json.dll
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\System.Net.Http.Formatting.dll
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\System.Web.Cors.dll
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\System.Web.Helpers.dll
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\System.Web.Http.Cors.dll
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\System.Web.Http.dll
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\System.Web.Http.WebHost.dll
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\System.Web.Mvc.dll
@@ -74,6 +76,7 @@ D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\EntityModels.dll.config
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\ViewModels.pdb
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\EntityFramework.xml
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\EntityFramework.SqlServer.xml
+D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\System.Web.Http.Cors.xml
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\Newtonsoft.Json.xml
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\System.Net.Http.Formatting.xml
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\System.Web.Helpers.xml
@@ -92,6 +95,3 @@ D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\obj\Debug\SieuSoSanhAPI.csproj
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\obj\Debug\SieuSoSanhAPI.csproj.CopyComplete
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\obj\Debug\SieuSoSanhAPI.dll
 D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\obj\Debug\SieuSoSanhAPI.pdb
-D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\System.Web.Cors.dll
-D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\System.Web.Http.Cors.dll
-D:\TaiLieuHocTap\DoAn\SieuSoSanhAPI\SieuSoSanhAPI\bin\System.Web.Http.Cors.xml

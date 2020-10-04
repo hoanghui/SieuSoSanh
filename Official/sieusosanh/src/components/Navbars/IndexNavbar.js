@@ -38,6 +38,7 @@ function IndexNavbar({getListProductsByKeyWord}) {
     if (text.length > 0) {
       history.push(`/search/${text}`)
       getListProductsByKeyWord(text)
+      toggleModal()
     } else {
       alert("Vui lòng nhập từ khóa cần tìm!")
     }
@@ -87,7 +88,7 @@ function IndexNavbar({getListProductsByKeyWord}) {
             className="navbar-logo"
            to="/"
           >
-            SIÊU SO SÁNH
+            SIÊU SO SÁNH . COM
           </NavLink>
           <Button
                     className="btn-round"
@@ -95,8 +96,10 @@ function IndexNavbar({getListProductsByKeyWord}) {
                     type="button"
                     onClick={toggleModal}
                   >
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                    
                     Tìm kiếm
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    {/* <img src={require("../../assets/img/search.png")} className="search-icon"></img> */}
             </Button>
             <Modal isOpen={modal} toggle={toggleModal}>
                 <div className="modal-header">
@@ -116,7 +119,7 @@ function IndexNavbar({getListProductsByKeyWord}) {
                   </h5>
                 </div>
                 <div className="modal-body">
-                <Input id="search-text" name="search-text" placeholder="Tìm kiếm sản phẩm" type="text" onKeyPress={handleKeyPress}/>
+                <Input id="search-text" name="search-text" placeholder="Tìm kiếm sản phẩm" type="text" onKeyPress={handleKeyPress} style={{border:"0px"}}/>
                 </div>
                 <div className="modal-footer">
                   <div className="left-side">

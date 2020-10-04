@@ -12,5 +12,7 @@ namespace ViewModels
         public string ProductName { get; set; }
         public string Price { get; set; }
         public string HyperLink { get; set; }
+
+        public string LinkOfProductImage { get; set; }
     }
 }

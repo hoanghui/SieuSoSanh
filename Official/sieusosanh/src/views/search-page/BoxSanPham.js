@@ -7,7 +7,7 @@ export default class BoxSanPham extends Component {
             <div className="col-lg-4">
                 <div className="box-product">
                     <div className=" product-img">
-                        <img src="https://img.sosanhgia.com/images/500x0/b54bfba3268549b898091d941159794e/laptop-hp-pavilion-15cs3060tx-8rj61pa.jpeg" atl={data.ProductName} />
+                        <img src={data.LinkOfProductImage} atl={data.ProductName} />
                     </div>
                     <div className=" btn-sosanhgia text-center ">
                         <div>So sánh giá</div>

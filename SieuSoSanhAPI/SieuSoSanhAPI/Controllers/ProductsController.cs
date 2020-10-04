@@ -24,7 +24,8 @@ namespace SieuSoSanhAPI.Controllers
                     ProductID = p.ProductID,
                     ProductName = p.ProductName,
                     HyperLink = p.HyperLink,
-                    Price = p.Price
+                    Price = p.Price,
+                    LinkOfProductImage = p.LinkOfProductImage
                 }).ToList();
             }
         }
@@ -41,7 +42,8 @@ namespace SieuSoSanhAPI.Controllers
                     ProductID = p.ProductID,
                     ProductName = p.ProductName,
                     HyperLink = p.HyperLink,
-                    Price = p.Price
+                    Price = p.Price,
+                    LinkOfProductImage = p.LinkOfProductImage
                 }).ToList();
             }
         }

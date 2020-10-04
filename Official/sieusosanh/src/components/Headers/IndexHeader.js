@@ -14,7 +14,8 @@ function IndexHeader({namePage}) {
         className="page-header section-dark"
           style={{
             backgroundImage:
-              "url(" + require("../../assets/img/bg_dienmay.jpg") + ")",
+              "url(" + require("../../assets/img/vach-ti-vi-trang-tri-9.jpg") + ")",
+              minHeight:500
           }}
       >
         <div className="filter" />  
