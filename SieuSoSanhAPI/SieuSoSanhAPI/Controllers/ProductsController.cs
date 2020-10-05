@@ -31,7 +31,8 @@ namespace SieuSoSanhAPI.Controllers
         }
 
         // SETTING ROUTE
-        [Route("api/Products/{ProductName}")]
+        //Search by product name
+        [Route("api/Products/search/{ProductName}")]
         [HttpGet]
         public IEnumerable<ProductsViewModel> Search(string ProductName)
         {
@@ -45,6 +46,28 @@ namespace SieuSoSanhAPI.Controllers
                     Price = p.Price,
                     LinkOfProductImage = p.LinkOfProductImage
                 }).ToList();
+            }
+        }
+
+        //
+        [Route("api/Products/{CategoryName}")]
+        [HttpGet]
+        public IEnumerable<ProductsViewModel> getCategory(string CategoryName)
+        {
+            using (EntityDataContext _context = new EntityDataContext())
+            {
+                var list = (from p in _context.Products
+                            join c in _context.Categories on p.CategoryID equals c.CategoryID
+                            where c.CategoryName == CategoryName
+                            select new ProductsViewModel
+                            {
+                                ProductID = p.ProductID,
+                                ProductName = p.ProductName,
+                                HyperLink = p.HyperLink,
+                                Price = p.Price,
+                                LinkOfProductImage = p.LinkOfProductImage
+                            }).ToList();
+                return list;
             }
         }
     }
