@@ -17,7 +17,8 @@ GO
 --Categories
 CREATE TABLE Categories (
 	CategoryID INT IDENTITY NOT NULL PRIMARY KEY,
-	CategoryName nvarchar(50)
+	CategoryName nvarchar(50),
+	CategoryCode varchar(20)
 )
 GO
 --Companies
@@ -64,12 +65,12 @@ GO
 
 
 --------- INSERT------------
-INSERT INTO Categories VALUES ('Tivi')
-INSERT INTO Categories VALUES ('Tủ lạnh')
-INSERT INTO Categories VALUES ('Máy giặt')
-INSERT INTO Categories VALUES ('Máy ảnh')
-INSERT INTO Categories VALUES ('Laptop')
-INSERT INTO Categories VALUES ('Điện thoại')
+INSERT INTO Categories VALUES (N'Tivi', 'tivi')
+INSERT INTO Categories VALUES (N'Tủ lạnh', 'tulanh')
+INSERT INTO Categories VALUES (N'Máy giặt', 'maygiat')
+INSERT INTO Categories VALUES (N'Máy ảnh', 'mayanh')
+INSERT INTO Categories VALUES (N'Laptop', 'laptop')
+INSERT INTO Categories VALUES (N'Điện thoại', 'dienthoai')
 
 UPDATE Categories SET CategoryName = N'Tivi' WHERE CategoryID = 1
 UPDATE Categories SET CategoryName = N'Tủ lạnh' WHERE CategoryID = 2

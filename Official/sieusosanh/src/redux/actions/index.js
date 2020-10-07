@@ -4,7 +4,7 @@ export const getListProductsByKeyWord=(kw)=>{
     return dispatch=>{
         Axios({
             method:"GET",
-            url:`https://localhost:3001/api/Products/${kw}`
+            url:`https://localhost:3001/api/Products/search/${kw}`
         })
         .then((rs)=>{
             dispatch({

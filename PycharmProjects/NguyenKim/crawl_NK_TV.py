@@ -56,6 +56,8 @@ for i in tqdm(hrefLinkList):
             supID = 14
         elif supplier == 'Panasonic':
             supID = 15
+        elif supplier == 'Toshiba':
+            supID = 26
         tempJ = {'nameOftheProduct': nameOftheProduct,
                  'priceoftheProduct': priceoftheProduct,
                  #              'descOfProduct': descOfProduct,
@@ -63,7 +65,7 @@ for i in tqdm(hrefLinkList):
                  'CategoryID': 1,
                  'CompanyID': 1,
                  'SupplierID': supID,
-                 'linkProductImage':src
+                 'LinkOfProductImage': src,
                  }
         data.append(tempJ)
     except:

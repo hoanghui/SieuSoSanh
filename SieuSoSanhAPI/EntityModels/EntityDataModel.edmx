@@ -11,6 +11,7 @@
           </Key>
           <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CategoryName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CategoryCode" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="CategoryProperty">
           <Key>
@@ -43,11 +44,11 @@
           <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ProductName" Type="nvarchar" MaxLength="100" />
           <Property Name="Price" Type="varchar" MaxLength="20" />
-          <Property Name="HyperLink" Type="varchar" MaxLength="100" />
+          <Property Name="HyperLink" Type="varchar(max)" />
+          <Property Name="LinkOfProductImage" Type="varchar(max)" />
           <Property Name="CategoryID" Type="int" />
           <Property Name="CompanyID" Type="int" />
           <Property Name="SupplierID" Type="int" />
-          <Property Name="LinkOfProductImage" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Properties">
           <Key>
@@ -73,7 +74,7 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
-        <Association Name="FK__CategoryP__Categ__151B244E">
+        <Association Name="FK__CategoryP__Categ__690797E6">
           <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
           <End Role="CategoryProperty" Type="Self.CategoryProperty" Multiplicity="*" />
           <ReferentialConstraint>
@@ -85,7 +86,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CategoryP__Prope__160F4887">
+        <Association Name="FK__CategoryP__Prope__69FBBC1F">
           <End Role="Properties" Type="Self.Properties" Multiplicity="1" />
           <End Role="CategoryProperty" Type="Self.CategoryProperty" Multiplicity="*" />
           <ReferentialConstraint>
@@ -97,7 +98,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ProductPr__Prope__19DFD96B">
+        <Association Name="FK__ProductPr__Prope__7755B73D">
           <End Role="Properties" Type="Self.Properties" Multiplicity="1" />
           <End Role="ProductProperty" Type="Self.ProductProperty" Multiplicity="*" />
           <ReferentialConstraint>
@@ -109,7 +110,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ProductPr__Value__18EBB532">
+        <Association Name="FK__ProductPr__Value__76619304">
           <End Role="Products" Type="Self.Products" Multiplicity="1" />
           <End Role="ProductProperty" Type="Self.ProductProperty" Multiplicity="*" />
           <ReferentialConstraint>
@@ -121,7 +122,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Products__Catego__76969D2E">
+        <Association Name="FK__Products__Catego__719CDDE7">
           <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
@@ -133,7 +134,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Products__Compan__778AC167">
+        <Association Name="FK__Products__Compan__72910220">
           <End Role="Companies" Type="Self.Companies" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
@@ -145,7 +146,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Products__Suppli__787EE5A0">
+        <Association Name="FK__Products__Suppli__73852659">
           <End Role="Suppliers" Type="Self.Suppliers" Multiplicity="0..1" />
           <End Role="Products" Type="Self.Products" Multiplicity="*" />
           <ReferentialConstraint>
@@ -197,31 +198,31 @@
           <EntitySet Name="Properties" EntityType="Self.Properties" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__CategoryP__Categ__151B244E" Association="Self.FK__CategoryP__Categ__151B244E">
+          <AssociationSet Name="FK__CategoryP__Categ__690797E6" Association="Self.FK__CategoryP__Categ__690797E6">
             <End Role="Categories" EntitySet="Categories" />
             <End Role="CategoryProperty" EntitySet="CategoryProperty" />
           </AssociationSet>
-          <AssociationSet Name="FK__CategoryP__Prope__160F4887" Association="Self.FK__CategoryP__Prope__160F4887">
+          <AssociationSet Name="FK__CategoryP__Prope__69FBBC1F" Association="Self.FK__CategoryP__Prope__69FBBC1F">
             <End Role="Properties" EntitySet="Properties" />
             <End Role="CategoryProperty" EntitySet="CategoryProperty" />
           </AssociationSet>
-          <AssociationSet Name="FK__ProductPr__Prope__19DFD96B" Association="Self.FK__ProductPr__Prope__19DFD96B">
+          <AssociationSet Name="FK__ProductPr__Prope__7755B73D" Association="Self.FK__ProductPr__Prope__7755B73D">
             <End Role="Properties" EntitySet="Properties" />
             <End Role="ProductProperty" EntitySet="ProductProperty" />
           </AssociationSet>
-          <AssociationSet Name="FK__ProductPr__Value__18EBB532" Association="Self.FK__ProductPr__Value__18EBB532">
+          <AssociationSet Name="FK__ProductPr__Value__76619304" Association="Self.FK__ProductPr__Value__76619304">
             <End Role="Products" EntitySet="Products" />
             <End Role="ProductProperty" EntitySet="ProductProperty" />
           </AssociationSet>
-          <AssociationSet Name="FK__Products__Catego__76969D2E" Association="Self.FK__Products__Catego__76969D2E">
+          <AssociationSet Name="FK__Products__Catego__719CDDE7" Association="Self.FK__Products__Catego__719CDDE7">
             <End Role="Categories" EntitySet="Categories" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
-          <AssociationSet Name="FK__Products__Compan__778AC167" Association="Self.FK__Products__Compan__778AC167">
+          <AssociationSet Name="FK__Products__Compan__72910220" Association="Self.FK__Products__Compan__72910220">
             <End Role="Companies" EntitySet="Companies" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
-          <AssociationSet Name="FK__Products__Suppli__787EE5A0" Association="Self.FK__Products__Suppli__787EE5A0">
+          <AssociationSet Name="FK__Products__Suppli__73852659" Association="Self.FK__Products__Suppli__73852659">
             <End Role="Suppliers" EntitySet="Suppliers" />
             <End Role="Products" EntitySet="Products" />
           </AssociationSet>
@@ -238,6 +239,7 @@
           <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Products" Relationship="Self.FK__Products__Catego__76969D2E" FromRole="Categories" ToRole="Products" />
           <NavigationProperty Name="Properties" Relationship="Self.CategoryProperty" FromRole="Categories" ToRole="Properties" />
+          <Property Name="CategoryCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Companies">
           <Key>
@@ -265,7 +267,7 @@
           <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ProductName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Price" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="HyperLink" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="HyperLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="CategoryID" Type="Int32" />
           <Property Name="CompanyID" Type="Int32" />
           <Property Name="SupplierID" Type="Int32" />
@@ -273,7 +275,7 @@
           <NavigationProperty Name="Companies" Relationship="Self.FK__Products__Compan__778AC167" FromRole="Products" ToRole="Companies" />
           <NavigationProperty Name="ProductProperty" Relationship="Self.FK__ProductPr__Value__18EBB532" FromRole="Products" ToRole="ProductProperty" />
           <NavigationProperty Name="Suppliers" Relationship="Self.FK__Products__Suppli__787EE5A0" FromRole="Products" ToRole="Suppliers" />
-          <Property Name="LinkOfProductImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LinkOfProductImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Properties">
           <Key>
@@ -449,6 +451,7 @@
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="EntityModels.Categories">
               <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="CategoryCode" ColumnName="CategoryCode" />
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
                 <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
               </MappingFragment>
