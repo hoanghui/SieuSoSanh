@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Runtime.Remoting.Messaging;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using ViewModels;
@@ -68,6 +69,26 @@ namespace SieuSoSanhAPI.Controllers
                                 LinkOfProductImage = p.LinkOfProductImage
                             }).ToList();
                 return list;
+            }
+        }
+
+        [Route("api/Products/detail/{id}")]
+        [HttpGet]
+        public IEnumerable<ProductsViewModel> getProductByID(int id)
+        {
+            using (EntityDataContext _context = new EntityDataContext())
+            {
+                return _context.Products.Where(p => p.ProductID == id).Select(p => new ProductsViewModel()
+                {
+                    ProductID = p.ProductID,
+                    ProductName = p.ProductName,
+                    HyperLink = p.HyperLink,
+                    Price = p.Price,
+                    LinkOfProductImage = p.LinkOfProductImage,
+                    CategoryID = p.CategoryID,
+                    SupplierID = p.SupplierID,
+                    CompanyID = p.CompanyID
+                }).ToList();
             }
         }
 

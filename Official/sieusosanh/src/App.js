@@ -19,7 +19,7 @@ function App() {
     if(routes && routes.length >0 ){
         return routes.map((item,index)=>{
           return(
-            //homeTemplate la HOC (High-Order-copmonent)
+            //homeTemplate is HOC (High-Order-copmonent)
             <HomeTemplate
               key={index}
               exact={item.exact}

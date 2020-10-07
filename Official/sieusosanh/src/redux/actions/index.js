@@ -17,11 +17,21 @@ export const getListProductsByKeyWord=(kw)=>{
         })
     }
 }
-// export const getProductDetail=(id)=>{
-//     return dispatch=>{
-//         Axios({
-//             method:"GET",
-//             url:
-//         })
-//     }
-// }
+
+export const getProductDetail=(id)=>{
+    return dispatch=>{
+        Axios({
+            method:"GET",
+            url:`https://localhost:3001/api/Products/detail${id}`
+        })
+        .then((rs)=>{
+            dispatch({
+                type:"PRODUCT_DETAIL",
+                data:rs.data
+            })
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
+}
