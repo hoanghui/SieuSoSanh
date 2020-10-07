@@ -70,5 +70,46 @@ namespace SieuSoSanhAPI.Controllers
                 return list;
             }
         }
+
+        public object GetOrderInSpaceTime_Linq(OrderFullReq req)
+        {
+            var res = All.Where(x => x.OrderDate >= req.DateFrom && x.OrderDate <= req.DateTo);
+            var offSet = (req.Page - 1) * req.Size;
+            var total = res.Count();
+            int totalPage = (total % req.Size) == 0 ? (int)(total / req.Size) : ((int)(total / req.Size) + 1);
+            var data = res.OrderBy(x => x.OrderDate).Skip(offSet).Take(req.Size).ToList();
+            List<object> lst = new List<object>();
+            for (int i = 0; i < data.Count(); i++)
+            {
+                var item = data[i];
+                var tam = new
+                {
+                    STT = i + 1 + offSet,
+                    item.OrderId,
+                    item.CustomerId,
+                    item.EmployeeId,
+                    item.OrderDate,
+                    item.RequiredDate,
+                    item.ShippedDate,
+                    item.ShipVia,
+                    item.Freight,
+                    item.ShipName,
+                    item.ShipAddress,
+                    item.ShipCity,
+                    item.ShipRegion,
+                    item.ShipPostalCode,
+                    item.ShipCountry
+                };
+                lst.Add(tam);
+            }
+            return new
+            {
+                Data = lst,
+                TotalRecords = total,
+                Page = req.Page,
+                Size = req.Size,
+                TotalPages = totalPage
+            };
+        }
     }
 }
