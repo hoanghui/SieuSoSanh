@@ -2,16 +2,15 @@ import React, { Component } from 'react'
 import {connect} from "react-redux"
 //withRouter de redirect qua trang khac
 import * as action from "../../redux/actions"
-import { useHistory } from "react-router-dom";
+import {withRouter} from "react-router-dom"
 
 class BoxSanPham extends Component {
-
     GoToDetail=()=>{
         let {data}=this.props
         let id = data.ProductID
         console.log(id)
-        //useHistory.push(`product/${id}`)
-        action.getProductDetail(id)
+        this.props.getProductDetail(id)
+        this.props.history.push(`/product/${id}`)
     }
     render() {
         let {data}=this.props
@@ -35,10 +34,16 @@ class BoxSanPham extends Component {
 
 const mapDispatchToProps=(dispatch)=>{
     return {
-        getProductDetail:(id)=>{
+        getProductDetail: (id)=>{
             dispatch(action.getProductDetail(id))
         }
     }
 }
 
-export default connect(null,mapDispatchToProps)(BoxSanPham);
+// const mapStateToProps=(state)=>{
+//     return {
+//         productDetail:state.productsReducer.productDetail
+//     }
+// }
+
+export default withRouter(connect(null,mapDispatchToProps)(BoxSanPham));

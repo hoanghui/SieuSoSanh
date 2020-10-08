@@ -15,10 +15,10 @@ function IndexHeader({namePage}) {
           style={{
             backgroundImage:
               "url(" + require("../../assets/img/vach-ti-vi-trang-tri-9.jpg") + ")",
-              minHeight:500
+              minHeight:700
           }}
       >
-        <div className="filter" />  
+        {/* <div className="filter" />   */}
         <div className="content-center">
           <Container>
             <div className="title-brand">

@@ -1,0 +1,19 @@
+.product-info{
+    padding-top: 12%;
+    display: flex;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.button-move{
+    width: fit-content;
+    float: right;
+}
+.col-md-6 {
+    padding: 0;
+    margin: auto;
+}
+
+.product-slide-container .product-img {
+    width: 50%;
+}

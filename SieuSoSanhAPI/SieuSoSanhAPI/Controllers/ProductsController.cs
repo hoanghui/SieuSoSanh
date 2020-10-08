@@ -80,7 +80,7 @@ namespace SieuSoSanhAPI.Controllers
             {
                 return _context.Products.Where(p => p.ProductID == id).Select(p => new ProductsViewModel()
                 {
-                    ProductID = p.ProductID,
+                    ProductID = p.ProductID,    
                     ProductName = p.ProductName,
                     HyperLink = p.HyperLink,
                     Price = p.Price,

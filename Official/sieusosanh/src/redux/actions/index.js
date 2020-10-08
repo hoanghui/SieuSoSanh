@@ -22,9 +22,10 @@ export const getProductDetail=(id)=>{
     return dispatch=>{
         Axios({
             method:"GET",
-            url:`https://localhost:3001/api/Products/detail${id}`
+            url:`https://localhost:3001/api/Products/detail/${id}`
         })
         .then((rs)=>{
+            console.log("ok 1")
             dispatch({
                 type:"PRODUCT_DETAIL",
                 data:rs.data

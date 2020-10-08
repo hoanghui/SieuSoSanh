@@ -122,3 +122,10 @@ INSERT INTO Companies VALUES ('Lazada')
 INSERT INTO Companies VALUES ('Shopee')
 INSERT INTO Companies VALUES ('Mediamart')
 
+DROP TABLE Products
+DROP TABLE CategoryProperty
+DROP TABLE Categories
+DROP TABLE ProductProperty
+DROP TABLE Properties
+DROP TABLE Suppliers
+DROP TABLE Companies

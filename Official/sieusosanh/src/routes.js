@@ -13,11 +13,9 @@ const routesHome=[
         component:SearchPage
     },
     {
-        path:"product/:id",
+        path:"/product/:id",
         exact:false,
         component:ProductDetailPage
     }
-
-
 ]
 export  {routesHome}

@@ -1,7 +1,7 @@
-.search-page .product-list >div{
-   
-}
-
 .result {
     font-size: 20px;
+}
+
+.search-page .container {
+    padding-top: 7%;
 }

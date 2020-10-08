@@ -7,3 +7,7 @@
 .search-text .form-control{
     border: 0px solid;
 }
+
+#dropdownMenuButton {
+    color: black;
+}

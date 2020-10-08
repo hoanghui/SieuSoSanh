@@ -20,6 +20,7 @@ import {
 } from "reactstrap";
 import * as action from "../../redux/actions"
 import {connect} from "react-redux"
+
 //withRouter de redirect qua trang khac
 import { useHistory } from "react-router-dom";
 
@@ -98,7 +99,7 @@ function IndexNavbar({getListProductsByKeyWord}) {
                   >
                     
                     Tìm kiếm
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <i className="fa fa-search" aria-hidden="true"></i>
                     {/* <img src={require("../../assets/img/search.png")} className="search-icon"></img> */}
             </Button>
             <Modal isOpen={modal} toggle={toggleModal}>
@@ -169,10 +170,10 @@ function IndexNavbar({getListProductsByKeyWord}) {
                         data-toggle="dropdown"
                         href="#pablo"
                         id="dropdownMenuButton"
+                        className="dropdown"
                         nav 
                         onClick={(e) => e.preventDefault()}
-                        role="button"
-                        
+                        role="button" 
                       >
                         danh mục sản phẩm
                       </DropdownToggle>
@@ -226,6 +227,7 @@ function IndexNavbar({getListProductsByKeyWord}) {
     
   );
 }
+
 const mapDispatchToProps=(dispatch)=>{
   return {
       getListProductsByKeyWord:(kw)=>{

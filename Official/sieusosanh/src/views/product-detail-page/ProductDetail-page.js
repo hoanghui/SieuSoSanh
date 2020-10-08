@@ -5,29 +5,29 @@ import {connect} from "react-redux";
 
 class ProductDetailPage extends Component{
     renderProductDetail=()=>{
-        return this.props.getProductDetail.map((item,index)=>{
-            return (
-                <ProductInfo
-                    key={index}
-                    data={item}
-                />
-            )
-        })
+        return (
+            <ProductInfo
+            data={this.props.productDetail}/>
+        )
     }
 
     render() {
         let id =this.props.match.params.id;
         let {getProductDetail}=this.props
+        console.log("ok 2")
         return(
-            <div></div>
+            <div className="container product-info">
+                {this.renderProductDetail()}
+            </div>
+            
         )
     }
 }
 
 const mapStateToProps=(state)=>{
     return {
-        getProductDetail:state.productsReducer.getProductDetail
+        productDetail:state.productsReducer.productDetail
     }
 }
 
-export default connect(mapStateToProps,null)(ProductDetailPage)
+export default connect(mapStateToProps,null)(ProductDetailPage);

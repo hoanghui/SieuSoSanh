@@ -12,26 +12,26 @@ function IndexFooter() {
             <ul>
               <li>
                 <a
-                  href="https://www.creative-tim.com?ref=pkr-footer"
+                  href="/"
                   target="_blank"
                 >
-                  Creative Tim
+                  SIÊU SO SÁNH
                 </a>
               </li>
               <li>
                 <a
-                  href="http://blog.creative-tim.com/?ref=pkr-footer"
+                  href="#"
                   target="_blank"
                 >
-                  Blog
+                  Copyright © 2020 Little Bamboo Cute
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.creative-tim.com/license?ref=pkr-footer"
+                  href="#"
                   target="_blank"
                 >
-                  Licenses
+                  Email: info@sieusosanh.com
                 </a>
               </li>
             </ul>
@@ -39,7 +39,7 @@ function IndexFooter() {
           <div className="credits ml-auto">
             <span className="copyright">
               © {new Date().getFullYear()}, made with{" "}
-              <i className="fa fa-heart heart" /> by Creative Tim
+              <i className="fa fa-heart heart" /> by Nguyen Hoang Huy
             </span>
           </div>
         </Row>

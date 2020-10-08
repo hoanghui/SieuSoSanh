@@ -6,24 +6,6 @@ import {connect} from "react-redux";
 //import PropTypes from "prop-types";
 
 class SearchPage extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     const { totalRecords = null, pageLimit = 30, pageNeighbours = 0 } = props;
-
-    //     //??????
-    //     this.pageLimit = typeof pageLimit === "number" ? pageLimit : 30;
-    //     this.totalRecords = typeof totalRecords === "number" ? totalRecords : 0;
-     
-    //     this.pageNeighbours =
-    //       typeof pageNeighbours === "number"
-    //         ? Math.max(0, Math.min(pageNeighbours, 2))
-    //         : 0;
-     
-    //     this.totalPages = Math.ceil(this.totalRecords / this.pageLimit);
-     
-    //     this.state = { currentPage: 1 };
-    //   }
-      
     renderProductBox=()=>{
         if(this.props.listProductsByKeyWord.length>0){
             return this.props.listProductsByKeyWord.map((item,index)=>{
@@ -34,7 +16,6 @@ class SearchPage extends Component {
                 )
             })
         }
-        
     }
     render() {
         let kw =this.props.match.params.kw;
