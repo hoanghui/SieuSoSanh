@@ -2,6 +2,7 @@
 //
 let initialState={
     listProductsByKeyWord:[],
+    listProductsByCategory:[],
     productDetail:{}
 }
 
@@ -9,6 +10,9 @@ const productsReducer =(state=initialState, action)=> {
     switch(action.type){
         case "LIST_PRODUCTS_BY_KEYWORD":
             state.listProductsByKeyWord=action.data;
+            return{...state}
+        case "LIST_PRODUCTS_BY_CATEGORY":
+            state.listProductsByCategory=action.data;
             return{...state}
         case "PRODUCT_DETAIL":
             state.productDetail=action.data;

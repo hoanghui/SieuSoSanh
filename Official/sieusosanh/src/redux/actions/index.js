@@ -25,9 +25,26 @@ export const getProductDetail=(id)=>{
             url:`https://localhost:3001/api/Products/detail/${id}`
         })
         .then((rs)=>{
-            console.log("ok 1")
             dispatch({
                 type:"PRODUCT_DETAIL",
+                data:rs.data
+            })
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
+}
+
+export const getListProductsByCategory=(code)=>{
+    return dispatch=>{
+        Axios({
+            method:"GET",
+            url:`https://localhost:3001/api/Products/${code}`
+        })
+        .then((rs)=>{
+            dispatch({
+                type:"LIST_PRODUCTS_BY_CATEGORY",
                 data:rs.data
             })
         })

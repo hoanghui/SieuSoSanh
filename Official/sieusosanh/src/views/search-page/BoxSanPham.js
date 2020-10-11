@@ -8,7 +8,6 @@ class BoxSanPham extends Component {
     GoToDetail=()=>{
         let {data}=this.props
         let id = data.ProductID
-        console.log(id)
         this.props.getProductDetail(id)
         this.props.history.push(`/product/${id}`)
     }

@@ -1,0 +1,12 @@
+ul li {
+    display: inline-table;
+    min-width: 15%;
+}
+
+ul {
+    text-align: center;
+}
+
+.fas .fa-camera {
+    
+}

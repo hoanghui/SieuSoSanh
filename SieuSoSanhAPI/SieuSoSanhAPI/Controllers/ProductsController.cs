@@ -66,7 +66,8 @@ namespace SieuSoSanhAPI.Controllers
                                 ProductName = p.ProductName,
                                 HyperLink = p.HyperLink,
                                 Price = p.Price,
-                                LinkOfProductImage = p.LinkOfProductImage
+                                LinkOfProductImage = p.LinkOfProductImage,
+                                CategoryName = c.CategoryName
                             }).ToList();
                 return list;
             }
@@ -90,7 +91,6 @@ namespace SieuSoSanhAPI.Controllers
                     CompanyID = p.CompanyID
                 }).ToList();
             }
-        }
-
+        }       
     }
 }

@@ -9,6 +9,7 @@ import "./assets/css/bootstrap.min.css";
 import "./assets/scss/paper-kit.scss?v=1.2.0";
 import "./assets/demo/demo.css?v=1.2.0";
 import "../src/css/Header.css"
+import "./css/home/ListCategory.css"
 
 //redux
 import {createStore,applyMiddleware,compose} from "redux";

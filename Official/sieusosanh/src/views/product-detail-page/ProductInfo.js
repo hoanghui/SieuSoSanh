@@ -23,6 +23,7 @@ class ProductInfo extends Component {
                         Giá tốt từ nơi bán: {data[0].Price}
                     </div>
                     <a type="button" class="btn btn-outline-danger float-lg-right" href={data[0].HyperLink}> Đến nơi bán </a>
+                    <img/>
                 </div>
             </div>
             

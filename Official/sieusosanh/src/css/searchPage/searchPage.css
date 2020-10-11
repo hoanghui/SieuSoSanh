@@ -5,3 +5,7 @@
 .search-page .container {
     padding-top: 7%;
 }
+
+.search-page {
+    min-height: 90vh;
+}
