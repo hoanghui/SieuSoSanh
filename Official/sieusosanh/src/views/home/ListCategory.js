@@ -14,7 +14,7 @@ class ListCategory extends Component {
 
     render() {
         return (
-            <Container>
+            <div classNames="container-category">
                 <div>
                     <div className="category-title text-center">Danh mục phổ biến</div>
                     <hr/>
@@ -59,7 +59,7 @@ class ListCategory extends Component {
                         </li>
                     </ul>
                 </div>
-            </Container>
+            </div>
             
         )
     }

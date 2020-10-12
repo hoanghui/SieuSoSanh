@@ -8,26 +8,25 @@ class ProductInfo extends Component {
         let {data}=this.props
         return data && data[0] ? 
         <div className="box-product-info">
-            <div className="product-slide-container">
-                <div className="col-md-6 float-left">
-                    <div className=" product-img">
-                        <img src={data[0].LinkOfProductImage}/>
-                    </div>
-                </div>
-                <div className="col-md-6 float-left">
-                    <div className=" product-detail text-center my-1">
-                        {data[0].ProductName}
-                    </div>
-                    <hr/>
-                    <div className=" product-detail product-price text-center">
-                        Giá tốt từ nơi bán: {data[0].Price}
-                    </div>
-                    <a type="button" class="btn btn-outline-danger float-lg-right" href={data[0].HyperLink}> Đến nơi bán </a>
-                    <img/>
+            <div className="product-slide-container float-left">
+                <div className=" product-img">
+                    <img src={data[0].LinkOfProductImage}/>
                 </div>
             </div>
-            
-
+            <div className="float-left">
+                <div className=" product-detail text-center my-1">
+                    {data[0].ProductName}
+                </div>
+                <hr/>
+                <div className="priority-store">
+                    <span>Giá tốt từ nơi bán: </span>
+                    <div className="product-price">
+                        {data[0].Price}
+                    </div>
+                </div>
+                <a type="button" class="btn btn-outline-danger float-lg-right" href={data[0].HyperLink}> Đến nơi bán </a>
+                <img/>
+            </div>
         </div>: null
     }
 }
