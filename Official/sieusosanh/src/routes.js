@@ -19,7 +19,7 @@ const routesHome=[
         component:ProductDetailPage
     },
     {
-        path:"/category/:code",
+        path:"/:name",
         exact:false,
         component:ListProductsPage
     }

@@ -17,13 +17,14 @@ class ListProductsPage extends Component{
     }
 
     render() {
-        let code =this.props.match.params.code;
+        // let name =this.props.match.params.code;
         let {listProductsByCategory}=this.props
-        return(
+        console.log()
+        return listProductsByCategory && listProductsByCategory[0] ?
             <div className="search-page">
                 <div className='container'>
                     <div className="keyword-info py-4 text-center result">
-
+                        {listProductsByCategory[0].CategoryName} 
                     </div>
                 </div>
                 <div className="container">
@@ -32,15 +33,12 @@ class ListProductsPage extends Component{
                         </div>
                         <div className="col-lg-9" >
                             <div className="row product-list">
-                                {this.renderProductbox}
+                                {this.renderProductbox()}
                             </div>
-                            
                         </div>
                     </div>
                 </div>
-                
-            </div>
-        )
+            </div>: null
     }
 }
 const mapStateToProps=(state)=>{

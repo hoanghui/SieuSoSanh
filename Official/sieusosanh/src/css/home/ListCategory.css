@@ -5,8 +5,13 @@ ul li {
 
 ul {
     text-align: center;
+    padding-top: 5%;
 }
 
-.fas .fa-camera {
-    
+.fas{
+    width: 2em;
+}
+
+.container {
+    padding-top: 5%;
 }

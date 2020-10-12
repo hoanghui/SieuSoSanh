@@ -6,10 +6,10 @@ import {withRouter} from "react-router-dom"
 import { useHistory } from "react-router-dom";
 
 class ListCategory extends Component {
-    GoToListProductsPage = () => {
-        this.props.getListProductsByCategory("laptop")
-        this.props.history.push(`/category/laptop`)
-        console.log(action.getListProductsByCategory.length)
+
+    GoToListProductsPage = (name) => {
+        this.props.getListProductsByCategory(name)
+        this.props.history.push(`/${name}`)
     }
 
     render() {
@@ -24,37 +24,37 @@ class ListCategory extends Component {
                         <li>
                             <a>
                                 <i class="fas fa-camera"></i>
-                                <div className="ok1" onClick={this.GoToListProductsPage}>Điện thoại</div>
+                                <div type="button" onClick={() => this.GoToListProductsPage('dienthoai')}>Điện thoại</div>
                             </a>
                         </li>
                         <li>
                             <a>
                                 <i class="fas fa-camera"></i>
-                                <div>Laptop</div>
+                                <div type="button" onClick={() => this.GoToListProductsPage('laptop')}>Laptop</div>
                             </a>
                         </li>
                         <li>
                             <a>
                                 <i class="fas fa-camera"></i>
-                                <div>Tivi</div>
+                                <div type="button" onClick={() => this.GoToListProductsPage('tivi')}>Tivi</div>
                             </a>
                         </li>
                         <li>
                             <a>
                                 <i class="fas fa-camera"></i>
-                                <div>Máy ảnh</div>
+                                <div type="button" onClick={() => this.GoToListProductsPage('mayanh')}>Máy ảnh</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <i type="button" onClick={() => this.GoToListProductsPage('maygiat')} class="fas fa-camera"></i>
+                                <div type="button" onClick={() => this.GoToListProductsPage('maygiat')}>Máy giặt</div>
                             </a>
                         </li>
                         <li>
                             <a>
                                 <i class="fas fa-camera"></i>
-                                <div>Máy giặt</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <i class="fas fa-camera"></i>
-                                <div>Tủ lạnh</div>
+                                <div type="button" onClick={() => this.GoToListProductsPage('tulanh')}>Tủ lạnh</div>
                             </a>
                         </li>
                     </ul>
@@ -67,8 +67,8 @@ class ListCategory extends Component {
 
 const mapDispatchToProps=(dispatch)=>{
     return {
-        getListProductsByCategory:(code)=>{
-            dispatch(action.getListProductsByCategory(code))
+        getListProductsByCategory:(name)=>{
+            dispatch(action.getListProductsByCategory(name))
         }
     }
   }
