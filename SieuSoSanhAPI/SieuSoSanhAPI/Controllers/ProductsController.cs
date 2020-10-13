@@ -35,11 +35,11 @@ namespace SieuSoSanhAPI.Controllers
         //Search by product name
         [Route("api/Products/search/{ProductName}")]    
         [HttpGet]
-        public IEnumerable<ProductsViewModel> Search(string ProductName)
+        public IEnumerable<ProductsViewModel> Search(string productName)
         {
             using (EntityDataContext _context = new EntityDataContext())
             {
-                return _context.Products.Where(p=>p.ProductName.Contains(ProductName)).Select(p => new ProductsViewModel()
+                return _context.Products.Where(p=>p.ProductName.Contains(productName)).Select(p => new ProductsViewModel()
                 {
                     ProductID = p.ProductID,
                     ProductName = p.ProductName,
@@ -53,13 +53,13 @@ namespace SieuSoSanhAPI.Controllers
         //
         [Route("api/Products/{CategoryCode}")]
         [HttpGet]
-        public IEnumerable<ProductsViewModel> getCategory(string CategoryCode)
+        public IEnumerable<ProductsViewModel> GetCategory(string categoryCode)
         {
             using (EntityDataContext _context = new EntityDataContext())
             {
                 var list = (from p in _context.Products
                             join c in _context.Categories on p.CategoryID equals c.CategoryID
-                            where c.CategoryCode == CategoryCode
+                            where c.CategoryCode == categoryCode
                             select new ProductsViewModel
                             {
                                 ProductID = p.ProductID,
@@ -75,7 +75,7 @@ namespace SieuSoSanhAPI.Controllers
 
         [Route("api/Products/detail/{id}")]
         [HttpGet]
-        public IEnumerable<ProductsViewModel> getProductByID(int id)
+        public IEnumerable<ProductsViewModel> GetProductByID(int id)
         {
             using (EntityDataContext _context = new EntityDataContext())
             {
@@ -91,6 +91,33 @@ namespace SieuSoSanhAPI.Controllers
                     CompanyID = p.CompanyID
                 }).ToList();
             }
-        }       
+        }
+
+        [Route("api/Products/detail/{id}")]
+        [HttpGet]
+        public IEnumerable<SuppliersViewModel> GetBrandNameByCategoryCode(int CategoryID)
+        {
+            using (EntityDataContext _context = new EntityDataContext())
+            {
+                //var list = (from p in _context.Products
+                //            join c in _context.Categories on p.CategoryID equals c.CategoryID
+                //            where c.CategoryCode == categoryCode
+                //            group p by p.SupplierID into temp
+                //            select new SuppliersViewModel
+                //            {
+                //                SupplierName = temp.
+
+                //            }).ToList();
+                //return list;
+
+                var products = _context.Products.Where(n => n.CategoryID == CategoryID).ToList();
+                var supplierIds = products.Select(n => n.SupplierID).Distinct().ToList();
+                var suppliers = _context.Suppliers.Where(m => supplierIds.Contains(m.SupplierID)).ToList();
+                return suppliers;
+            }
+
+
+        }
+        
     }
 }

@@ -56,9 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoriesViewModel.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="ProductsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SuppliersViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

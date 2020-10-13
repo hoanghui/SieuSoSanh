@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import { Container } from "reactstrap";
 import * as action from "../../redux/actions/index"
 import {connect} from "react-redux"
 import {withRouter} from "react-router-dom"
-import { useHistory } from "react-router-dom";
 
 class ListCategory extends Component {
 

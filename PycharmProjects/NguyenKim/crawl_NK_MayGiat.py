@@ -12,9 +12,7 @@ hrefLinkList = []
 condition = True
 while condition:
     time.sleep(4)
-
     allInfo = webD.find_elements_by_xpath('/html/body/div[1]/div[4]/div[3]/div/div[3]/div/div[1]/div[2]/div/div/div[2]/div/div/a')
-
     for eEle in allInfo:
         hrefLink = eEle.get_property('href')
         hrefLinkList.append(hrefLink)
@@ -64,20 +62,12 @@ for i in tqdm(hrefLinkList):
                      'hyperlink': i,
                      'CategoryID': 3,
                      'CompanyID': 1,
-                     'SupplierID': supID
+                     'SupplierID': supID,
+                     'LinkOfProductImage': src
                      }
             data.append(tempJ)
         except :
-            tempJ = {'nameOftheProduct': nameOftheProduct,
-                     'priceoftheProduct': priceoftheProduct,
-                     #              'descOfProduct': descOfProduct,
-                     'hyperlink': i,
-                     'CategoryID': 3,
-                     'CompanyID': 1,
-                     'SupplierID': 0,
-                    'LinkOfProductImage': src,
-                     }
-
+            continue
     except:
         continue
 
