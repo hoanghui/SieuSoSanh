@@ -1,4 +1,3 @@
-
 [
   {
     "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS M200 EF-M 15-45 BK",
@@ -6,31 +5,35 @@
     "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-m200-ef-m-15-45-bk.html",
     "CategoryID": 4,
     "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOSRP Body",
-    "priceoftheProduct": "24.900.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-rp-body.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/624/10044646-may-anh-canon-eos-m200-ef-m-15-45-bk-1.jpg"
   },
   {
     "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS Kit 18-55mm 77D \u0110en",
-    "priceoftheProduct": "18.200.000\u0111",
+    "priceoftheProduct": "17.900.000\u0111",
     "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-77d-kit-18-55-vi.html",
     "CategoryID": 4,
     "CompanyID": 1,
-    "SupplierID": 38
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/621/10043876-may-anh-canon-eos-77d-kit-18-55-mm-1.jpg"
   },
   {
     "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS 200D II Kit 18-55 BK",
-    "priceoftheProduct": "17.900.000\u0111",
+    "priceoftheProduct": "14.990.000\u0111",
     "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-200d-ii-kit-18-55-bk.html",
     "CategoryID": 4,
     "CompanyID": 1,
-    "SupplierID": 38
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/624/10044644-may-anh-canon-eos-200d-ii-kit-18-55-mm-bk-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha 6400 ILCE-6400/BAP2",
+    "priceoftheProduct": "19.490.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-ilce-6400-b-ap2.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/589/10041749_may-anh-sony-alpha-6400-ilce-6400-bap2-1.jpg"
   },
   {
     "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS M200 EF-M 15-45 WH",
@@ -38,271 +41,26 @@
     "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-m200-ef-m-15-45-wh.html",
     "CategoryID": 4,
     "CompanyID": 1,
-    "SupplierID": 38
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/624/10044647-may-anh-canon-eos-m200-ef-m-15-45-mm-wh-1.jpg"
   },
   {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony DSC-H300 E32",
-    "priceoftheProduct": "3.490.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-dsc-h300-e32.html",
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOSRP Body",
+    "priceoftheProduct": "24.900.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-rp-body.html",
     "CategoryID": 4,
     "CompanyID": 1,
-    "SupplierID": 10
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/640/177/detailed/576/10041452-may-anh-canon-eos-rp-body-p1.jpg"
   },
   {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha 6000 ILCE-6000L/BAP2",
-    "priceoftheProduct": "12.490.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-ilce-6000l.html?pid=20017",
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon PowerShot SX70 HS",
+    "priceoftheProduct": "13.900.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-powershot-sx70-hs.html",
     "CategoryID": 4,
     "CompanyID": 1,
-    "SupplierID": 10
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon PowerShot SX430IS",
-    "priceoftheProduct": "4.990.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-powershot-sx430is.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha 6000 ILCE 6000/BAP2",
-    "priceoftheProduct": "9.990.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-chuyen-nghiep-sony-alpha-ilce-6000-b-ap2-body.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 10
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS Kit 18-55mm 800D \u0110en",
-    "priceoftheProduct": "14.490.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-800d-kit-18-55mm.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00c1Y \u1ea2NH SONY DSC-WX220/BCE32",
-    "priceoftheProduct": "3.790.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-dsc-wx220-bce32.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 10
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony DSC-W810/BC E32 \u0110en",
-    "priceoftheProduct": "2.090.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-dsc-w810-bc-e32.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 10
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-A3 - Kit 16-50mm S",
-    "priceoftheProduct": "8.990.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-a3-xc16-50mm-bw.html?pid=51194",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 39
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS 3000D Kit EF-S 18-55 III",
-    "priceoftheProduct": "7.590.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-3000d-kit-18-55-dc-iii.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon IXUS 185 \u0110en",
-    "priceoftheProduct": "2.290.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-ixus-185-den.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha 6000 ILCE-6000L/HAP2",
-    "priceoftheProduct": "12.490.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-ilce-6000l.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 10
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha 6000 ILCE-6000L/SAP2",
-    "priceoftheProduct": "12.490.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-ilce-6000l.html?pid=30150",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 10
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon IXUS 190 \u0110en",
-    "priceoftheProduct": "3.790.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-ixus-190-den.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha 7 II ILCE-7M2K/BQAP2",
-    "priceoftheProduct": "26.490.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-chuyen-nghiep-sony-alpha-ilce-7m2-lens-sel2870.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 10
-  },
-  {
-    "nameOftheProduct": "M\u00c1Y \u1ea2NH SONY ALPHA ILCE 7M2 BODY",
-    "priceoftheProduct": "20.990.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-chuyen-nghiep-sony-alpha-ilce-7m2-body.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 10
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea2nh Canon EOS M50 - Kit 15-45mm \u0110en",
-    "priceoftheProduct": "15.900.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-eos-m50-kit-15-45mm.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS 1500D - Kit EF-S 18-55mm IS II",
-    "priceoftheProduct": "10.790.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-1500d-kit-18-55mm-is-ii.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon IXUS 285",
-    "priceoftheProduct": "4.990.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-ixus-285-den.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00c1Y \u1ea2NH SONY KTS ILCE-6000L/WAP2",
-    "priceoftheProduct": "12.490.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-ilce-6000l.html?pid=55670",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 10
-  },
-  {
-    "nameOftheProduct": "M\u00c1Y \u1ea2NH CANON IXUS 190 XANH",
-    "priceoftheProduct": "3.790.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-ixus-190-xanh.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00c1Y \u1ea2NH CANON IXUS 185 \u0110\u1ece",
-    "priceoftheProduct": "2.290.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-ixus-185-do.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea2nh Canon EOS 6D Mark II",
-    "priceoftheProduct": "33.500.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-6d-mark-ii.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00c1Y \u1ea2NH SONY ALPHA 7 III LENS KIT 28-70MM (ILCE-7M3K/BCAP2)",
-    "priceoftheProduct": "47.490.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-alpha-ilce-7m3k-bcap2.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 10
-  },
-  {
-    "nameOftheProduct": "M\u00c1Y \u1ea2NH CANON IXUS 285",
-    "priceoftheProduct": "4.990.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-ixus-285-bac.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-A7/XC1545 B\u1ea1c",
-    "priceoftheProduct": "15.990.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-a7-xc1545-bac.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 39
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS 800D - Kit EF-S 18-55mm",
-    "priceoftheProduct": "14.490.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-800d-kit-18-55-1.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS 90D Kit 18-55mm",
-    "priceoftheProduct": "33.990.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-90d-kit-18-55mm.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS 77D Body",
-    "priceoftheProduct": "15.490.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-77d-body.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 38
-  },
-  {
-    "nameOftheProduct": "M\u00c1Y \u1ea2NH SONY DSC-HX99 | BC E32",
-    "priceoftheProduct": "10.490.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-dsc-wx800-wce32.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 10
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-A7/XC1545 Xanh b\u1ea1c h\u00e0",
-    "priceoftheProduct": "15.990.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-a7-xc1545-xanh.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 39
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-T200/XC15-45MM B\u1ea1c",
-    "priceoftheProduct": "18.990.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-t200-xc15-45mm-bac.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 39
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-T200/XC15-45MM V\u00e0ng",
-    "priceoftheProduct": "18.990.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-t200-xc15-45mm-vang.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 39
-  },
-  {
-    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-T200/XC15-45MM B\u1ea1c \u0111\u1eadm",
-    "priceoftheProduct": "18.990.000\u0111",
-    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-t200-xc15-45mm-bac-dam.html",
-    "CategoryID": 4,
-    "CompanyID": 1,
-    "SupplierID": 39
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/613/10043734_MAY-ANH_CANON_POWERSHOT-SX70HS_01.jpg"
   },
   {
     "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-A7/XC1545 Xanh bi\u1ec3n",
@@ -310,7 +68,467 @@
     "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-a7-xc1545-xanh-bien.html",
     "CategoryID": 4,
     "CompanyID": 1,
-    "SupplierID": 39
+    "SupplierID": 39,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/675/10044963-may-anh-fujifilm-x-a7-15-45mm-xanh-bien-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony DSC-H300 E32",
+    "priceoftheProduct": "3.490.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-dsc-h300-e32.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/62/10012008-may-anh-sony-dsc-h300-e32-den-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha 6000 ILCE-6000L/HAP2",
+    "priceoftheProduct": "10.490.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-ilce-6000l.html?pid=20017",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/223/10030887_may-anh-sony-alpha-6000-ilce-6000l-hap2-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony DSC-W830/BC E32",
+    "priceoftheProduct": "2.490.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-dsc-w830-bc-e32.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/298/10012009_may-anh-sony-w830-bc-e32-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon PowerShot SX430IS",
+    "priceoftheProduct": "4.790.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-powershot-sx430is.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/645/10031944_may-anh-canon-powershot-sx430is-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha 6000 ILCE 6000/BAP2",
+    "priceoftheProduct": "9.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-chuyen-nghiep-sony-alpha-ilce-6000-b-ap2-body.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/80/10021794_may-anh-sony-alpha6000-ilce-bap2-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS Kit 18-55mm 800D \u0110en",
+    "priceoftheProduct": "14.490.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-800d-kit-18-55mm.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/641/10032186-may-anh-canon-eos-800d-18-55-mm-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00c1Y \u1ea2NH SONY DSC-WX220/BCE32",
+    "priceoftheProduct": "3.790.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-dsc-wx220-bce32.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/298/10012462-may-anh-sony-dsc-wx220-bce32-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony DSC-W830/SC E32",
+    "priceoftheProduct": "2.490.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-dsc-w830-sc-e32.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/298/10012011_may-anh-sony-dsc-w830-sce32-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony DSC E32 W810 X\u00e1m",
+    "priceoftheProduct": "2.090.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-dsc-w810-sc-e32.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/238/10032338-may-anh-sony-dsc-w810-sc-e32-xam-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony DSC-W810/BC E32 \u0110en",
+    "priceoftheProduct": "2.090.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-dsc-w810-bc-e32.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/247/10032337_may-anh-sony-dsc-w810-sc-e32-den-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-A3 - Kit 16-50mm S",
+    "priceoftheProduct": "8.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-a3-xc16-50mm-bw.html?pid=51194",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 39,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS 3000D Kit EF-S 18-55 III",
+    "priceoftheProduct": "7.590.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-3000d-kit-18-55-dc-iii.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/644/10036326_may-anh-canon-eos-3000d-kit-18-55-dc-iii-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon IXUS 185 \u0110en",
+    "priceoftheProduct": "2.290.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-ixus-185-den.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/642/10031860-may-anh-canon-ixus-185-den-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha 6000 ILCE-6000L/HAP2",
+    "priceoftheProduct": "10.490.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-ilce-6000l.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/223/10030887_may-anh-sony-alpha-6000-ilce-6000l-hap2-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon Kit 18-55mm EOS 77D \u0110en",
+    "priceoftheProduct": "17.900.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-77d-kit-18-55-mm.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/642/10032185-may-anh-canon-eos-77d-18-55-mm-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha 6000 ILCE-6000L/HAP2",
+    "priceoftheProduct": "10.490.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-ilce-6000l.html?pid=30150",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/223/10030887_may-anh-sony-alpha-6000-ilce-6000l-hap2-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon IXUS 190 \u0110en",
+    "priceoftheProduct": "3.790.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-ixus-190-den.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/260/10031942-may-anh-canon-ixus-190-den-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha 7 II ILCE-7M2K/BQAP2",
+    "priceoftheProduct": "21.490.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-chuyen-nghiep-sony-alpha-ilce-7m2-lens-sel2870.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/642/10022546-may-anh-sony-alpha-7-ii-ilce-7m2k-bqap2-sel-28-70mm-den-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh DSRL Sony Alpha ILCE-72M2",
+    "priceoftheProduct": "23.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-chuyen-nghiep-sony-alpha-ilce-7m2-body.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/157/10022545-may-anh-sony-alpha-ilce-7m2-body-den-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha 6500 ILCE-6500/BQAP2",
+    "priceoftheProduct": "22.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-alpha-ilce-6500-voi-cam-bien-24.2-mp-exmor-cmos-sensor.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/227/10031441_may-anh-sony-alpha-650-ilce-6500-bqap2-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00c1Y \u1ea2NH SONY DSC-W830/PCE32",
+    "priceoftheProduct": "2.290.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-dsc-w830-pc-e32.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/298/10012010-may-anh-sony-dsc-w830-pce32-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea2nh Canon EOS M50 - Kit 15-45mm \u0110en",
+    "priceoftheProduct": "15.900.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-eos-m50-kit-15-45mm.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/641/10036327_may-anh-canon-eos-m50-kit-15-45mm-den-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS 1500D - Kit EF-S 18-55mm IS II",
+    "priceoftheProduct": "10.790.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-1500d-kit-18-55mm-is-ii.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/642/10036325_may-anh-canon-eos-1500d-kit-18-55mm-is-ii-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon IXUS 285",
+    "priceoftheProduct": "4.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-ixus-285-den.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/173/10026469-may-anh-canon-ixus-285-den-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha 6000 ILCE-6000L/HAP2",
+    "priceoftheProduct": "10.490.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-ilce-6000l.html?pid=55670",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/223/10030887_may-anh-sony-alpha-6000-ilce-6000l-hap2-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00c1Y \u1ea2NH SONY DSC-RX100M3 E32",
+    "priceoftheProduct": "13.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-dsc-rx100m3-e32-den.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/147/10021338-M%C3%81Y-%E1%BA%A2NH-SONY-DSC-RX100M3-E32.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon IXUS 190 Xanh",
+    "priceoftheProduct": "3.790.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-ixus-190-xanh.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/235/10031943-may-anh-canon-ixus-190-xanh-1_r93d-2v.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon IXUS 185 \u0110\u1ecf",
+    "priceoftheProduct": "2.290.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-ixus-185-do.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/235/10031941-may-anh-canon-ixus-185-do-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea2nh Canon EOS 6D Mark II",
+    "priceoftheProduct": "33.500.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-6d-mark-ii.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/641/10033768-may-anh-canon-eos-6d-mark-ii-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm Kit 15-45mm X-A5 B\u1ea1c",
+    "priceoftheProduct": "11.590.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-a5-xc15-45mm.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 39,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/506/10035710-may-anh-fujifilm-x-a5-xc15-45-mm-bac-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha ILCE-7M3K/BCAP2",
+    "priceoftheProduct": "47.490.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-alpha-ilce-7m3k-bcap2.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/640/177/detailed/512/10036060-may-anh-sony-alpha-7-iii-lens=kit-28-70-mm-ilce-7m3k-bcap2-p1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha 7 III ILCE-7M3/BCAP2",
+    "priceoftheProduct": "41.490.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-alpha-ilce-7m3-bcap2.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/640/177/detailed/644/10036059_may-anh-sony-anpha-7-iii-ilce7m3-bcap2-p1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00c1Y \u1ea2NH CANON IXUS 285",
+    "priceoftheProduct": "4.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-ixus-285-bac.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/173/10026468-may-anh-canon-ixus-285-bac-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-A7/XC1545 B\u1ea1c",
+    "priceoftheProduct": "15.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-a7-xc1545-bac.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 39,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/613/10043736-may-anh-fujifilm-x-a7-xc-1545-s-bac-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS 800D - Kit EF-S 18-55mm",
+    "priceoftheProduct": "14.490.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-800d-kit-18-55-1.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/642/10042013_may-anh-canon-eos-_800-kit-18-55-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00c1Y \u1ea2NH CANON POWERSHOT G7X MKII",
+    "priceoftheProduct": "10.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-powershot-g7x-mkii.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/587/10041875_MAYANH_CANON_POWERSHOT-G7X-MKII_01.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS 90D Kit 18-55mm",
+    "priceoftheProduct": "33.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-90d-kit-18-55mm.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/613/10043717-may-anh-canon-eos-90d-kit-18-55-mm-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00c1Y \u1ea2NH SONY DSC-HX99 | BC E32",
+    "priceoftheProduct": "10.490.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-dsc-wx800-wce32.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/562/10038929-may-anh-sony-dsc-hx99-bc-e32-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-T30 - Kit XF 18-55mm \u0110en",
+    "priceoftheProduct": "28.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-t30-18-55mm.html?pid=81263",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 39,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/646/10041684_may-anh-fujifilm-x-t30-kit-xf-18-55-den-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00c1Y \u1ea2NH FUJIFILM X-T30 BODY \u0110EN",
+    "priceoftheProduct": "21.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-t30-body.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 39,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/581/FUJIFILM_X-T30-BODY-DEN_01.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS 77D Body",
+    "priceoftheProduct": "15.490.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-77d-body.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/558/10035362_may-anh-canon-eos-77d-body-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-A7/XC1545 Xanh b\u1ea1c h\u00e0",
+    "priceoftheProduct": "15.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-a7-xc1545-xanh.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 39,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/613/10043737-may-anh-fujifilm-x-a7-xc1545-s-bac-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-T200/XC15-45MM B\u1ea1c",
+    "priceoftheProduct": "18.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-t200-xc15-45mm-bac.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 39,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/675/10045351-may-anh-fujifilm-x-t200-xc-15-45mm-bac-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS M6 MKII EF-M15-45 (BK)",
+    "priceoftheProduct": "24.900.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-m6-mkii-ef-m15-45-bk.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/613/10043719_MAY-ANH_CANON_EOS-M6-MKII-EF-M15-45-BK_01.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-T200/XC15-45MM V\u00e0ng",
+    "priceoftheProduct": "18.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-t200-xc15-45mm-vang.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 39,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/675/10045353-may-anh-fujifilm-x-t200-xc-15-45mm-vang-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-T30 - Kit XF 18-55mm \u0110en",
+    "priceoftheProduct": "28.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-t30-18-55mm.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 39,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/646/10041684_may-anh-fujifilm-x-t30-kit-xf-18-55-den-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Canon EOS M6 MKII EF-M15-45 (SL)",
+    "priceoftheProduct": "24.900.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-canon-eos-m6-mkii-ef-m15-45-sl.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/613/10043720_MAY-ANH_CANON_EOS-M6-MKII-EF-M15-45-SL_01.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm Kit 18-55mm X-E3/XF N\u00e2u",
+    "priceoftheProduct": "30.750.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-e3-xf-18-55mm-nau.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 39,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/620/10044283-may-anh-fujifilm-x-e3-xf-18-55-nau-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-T200/XC15-45MM B\u1ea1c \u0111\u1eadm",
+    "priceoftheProduct": "18.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-t200-xc15-45mm-bac-dam.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 39,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/675/10045352-may-anh-fujifilm-x-t200-xc-15-45mm-bac-dam-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-A20 - Kit XC15-45mm N\u00e2u",
+    "priceoftheProduct": "7.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-a20-xc15-45mm.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 39,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/644/10041595_may-anh-fujifilm-xc15-45mm-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Fujifilm X-A7/XC1545 N\u00e2u Camel",
+    "priceoftheProduct": "15.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-a7-xc1545-nau-camel.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 39,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/613/10043739-may-anh-fujifilm-x-a7-15-45mm-nau-camel-1.jpg"
   },
   {
     "nameOftheProduct": "M\u00c1Y \u1ea2NH FUJIFILM X-T3 | XF1855 B\u1ea0C",
@@ -318,6 +536,52 @@
     "hyperlink": "https://www.nguyenkim.com/may-anh-fujifilm-x-t3-xf1855-bac.html",
     "CategoryID": 4,
     "CompanyID": 1,
-    "SupplierID": 39
+    "SupplierID": 39,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/640/177/detailed/546/10038371-may-anh-fujifilm-x-t3-xf1855-bac-p1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00c1Y \u1ea2NH SONY DSC-WX800 | WCE32",
+    "priceoftheProduct": "8.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-dsc-wx800-bce32-clone.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/562/10038971_MAYANH_SONY_DSC-WX800-WCE32_01.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha ILCE-6600/B AP2",
+    "priceoftheProduct": "30.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-alpha-ilce-6600-b-ap2.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/625/10044649-may-anh-sony-alpha-ilce-6600-bap2-1.jpg"
+  },
+  {
+    "nameOftheProduct": "Th\u00e2n m\u00e1y \u1ea3nh Canon EOS 90D DSLR",
+    "priceoftheProduct": "28.190.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/than-may-anh-canon-eos-90d-dslr.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 38,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/613/10043716_THAN-MAY-ANH_CANON_EOS-90D-DSLR_01.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00c1Y \u1ea2NH SONY DSC-WX800 | BCE32",
+    "priceoftheProduct": "8.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-dsc-wx800-bce32.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/562/10038930-may-anh-sony-dsc-wx800-bce32-1.jpg"
+  },
+  {
+    "nameOftheProduct": "M\u00e1y \u1ea3nh Sony Alpha 6400 ILCE-6400L/BAP2",
+    "priceoftheProduct": "21.990.000\u0111",
+    "hyperlink": "https://www.nguyenkim.com/may-anh-sony-kts-ilce-6400l-bap2.html",
+    "CategoryID": 4,
+    "CompanyID": 1,
+    "SupplierID": 10,
+    "LinkOfProductImage": "https://cdn.nguyenkimmall.com/images/thumbnails/600/336/detailed/589/10041750_may-anh-sony-alpha-6400-ilce-6400-bap2-1.jpg"
   }
 ]
