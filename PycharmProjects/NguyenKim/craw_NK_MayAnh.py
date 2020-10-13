@@ -42,9 +42,9 @@ for i in tqdm(hrefLinkList):
             if supplier == 'Sony':
                 supID = 10
             elif supplier == 'Fujifilm':
-                supID = 39
+                supID = 32
             elif supplier == 'Canon':
-                supID = 38
+                supID = 31
             tempJ = {'nameOftheProduct': nameOftheProduct,
                      'priceoftheProduct': priceoftheProduct,
                      #              'descOfProduct': descOfProduct,

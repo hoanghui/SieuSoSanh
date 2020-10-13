@@ -47,19 +47,19 @@ for i in tqdm(hrefLinkList):
             elif supplier == 'Panasonic':
                 supID = 22
             elif supplier == 'Sanaky':
-                supID = 36
+                supID = 29
             elif supplier == 'Sharp':
-                supID = 21
+                supID = 14
             elif supplier == 'Electrolux':
-                supID = 34
+                supID = 27
             elif supplier == 'Toshiba':
-                supID = 33
+                supID = 26
             elif supplier == 'Aqua':
-                supID = 31
+                supID = 24
             elif supplier == 'Hitachi':
-                supID = 32
+                supID = 25
             elif supplier == 'Mitsubishi Electric':
-                supID = 37
+                supID = 30
             tempJ = {'nameOftheProduct': nameOftheProduct,
                      'priceoftheProduct': priceoftheProduct,
                      #              'descOfProduct': descOfProduct,

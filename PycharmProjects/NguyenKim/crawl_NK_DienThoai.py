@@ -44,21 +44,21 @@ for i in tqdm(hrefLinkList):
             if supplier == 'Samsung':
                 supID = 9
             elif supplier == 'oppo':
-                supID = 23
+                supID = 16
             elif supplier == 'Nokia':
-                supID = 24
+                supID = 17
             elif supplier == 'Vivo':
-                supID = 25
+                supID = 18
             elif supplier == 'Itel':
-                supID = 26
+                supID = 19
             elif supplier == 'Apple':
                 supID = 7
             elif supplier == 'Vsmart':
-                supID = 28
+                supID = 21
             elif supplier == 'Realme':
-                supID = 29
+                supID = 22
             elif supplier == 'Xiaomi':
-                supID = 30
+                supID = 23
             tempJ = {'nameOftheProduct': nameOftheProduct,
                      'priceoftheProduct': priceoftheProduct,
                      #              'descOfProduct': descOfProduct,
