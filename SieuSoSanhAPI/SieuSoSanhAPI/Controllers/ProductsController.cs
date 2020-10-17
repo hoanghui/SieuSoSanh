@@ -93,31 +93,35 @@ namespace SieuSoSanhAPI.Controllers
             }
         }
 
-        [Route("api/Products/detail/{id}")]
+        //[Route("api/Products/detail/{id}")]
+        //[HttpGet]
+        //public IEnumerable<SuppliersViewModel> GetBrandNameByCategoryCode(int CategoryID)
+        //{
+        //    using (EntityDataContext _context = new EntityDataContext())
+        //    {
+        //        //var list = (from p in _context.Products
+        //        //            join c in _context.Categories on p.CategoryID equals c.CategoryID
+        //        //            where c.CategoryCode == categoryCode
+        //        //            group p by p.SupplierID into temp
+        //        //            select new SuppliersViewModel
+        //        //            {
+        //        //                SupplierName = temp.
+
+        //        //            }).ToList();
+        //        //return list;
+
+        //        var products = _context.Products.Where(n => n.CategoryID == CategoryID).ToList();
+        //        var supplierIds = products.Select(n => n.SupplierID).Distinct().ToList();
+        //        var suppliers = _context.Suppliers.Where(m => supplierIds.Contains(m.SupplierID)).ToList();
+        //        return suppliers;
+        //    }
+
+
+        //}
+
+        //Lấy bảng giá
+        [Route("api/Products/pricelist/{name}")]
         [HttpGet]
-        public IEnumerable<SuppliersViewModel> GetBrandNameByCategoryCode(int CategoryID)
-        {
-            using (EntityDataContext _context = new EntityDataContext())
-            {
-                //var list = (from p in _context.Products
-                //            join c in _context.Categories on p.CategoryID equals c.CategoryID
-                //            where c.CategoryCode == categoryCode
-                //            group p by p.SupplierID into temp
-                //            select new SuppliersViewModel
-                //            {
-                //                SupplierName = temp.
 
-                //            }).ToList();
-                //return list;
-
-                var products = _context.Products.Where(n => n.CategoryID == CategoryID).ToList();
-                var supplierIds = products.Select(n => n.SupplierID).Distinct().ToList();
-                var suppliers = _context.Suppliers.Where(m => supplierIds.Contains(m.SupplierID)).ToList();
-                return suppliers;
-            }
-
-
-        }
-        
     }
 }
