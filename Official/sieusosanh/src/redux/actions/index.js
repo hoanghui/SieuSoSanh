@@ -53,3 +53,21 @@ export const getListProductsByCategory=(code)=>{
         })
     }
 }
+
+export const getListSuppliersByCategoryCode=(name)=>{
+    return dispatch=>{
+        Axios({
+            method:"GET",
+            url:`https://localhost:3001/api/suppliers/${name}`
+        })
+        .then((rs)=>{
+            dispatch({
+                type:"LIST_SUPPLIERS_BY_CATEGORY_CODE",
+                data:rs.data
+            })
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
+}

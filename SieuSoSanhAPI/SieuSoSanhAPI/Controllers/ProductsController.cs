@@ -33,7 +33,7 @@ namespace SieuSoSanhAPI.Controllers
 
         // SETTING ROUTE
         //Search by product name
-        [Route("api/Products/search/{ProductName}")]    
+        [Route("api/products/search/{ProductName}")]    
         [HttpGet]
         public IEnumerable<ProductsViewModel> Search(string productName)
         {
@@ -51,7 +51,7 @@ namespace SieuSoSanhAPI.Controllers
         }
 
         //
-        [Route("api/Products/{CategoryCode}")]
+        [Route("api/products/{categoryCode}")]
         [HttpGet]
         public IEnumerable<ProductsViewModel> GetCategory(string categoryCode)
         {
@@ -73,7 +73,7 @@ namespace SieuSoSanhAPI.Controllers
             }
         }
 
-        [Route("api/Products/detail/{id}")]
+        [Route("api/products/detail/{id}")]
         [HttpGet]
         public IEnumerable<ProductsViewModel> GetProductByID(int id)
         {
@@ -120,8 +120,24 @@ namespace SieuSoSanhAPI.Controllers
         //}
 
         //Lấy bảng giá
-        [Route("api/Products/pricelist/{name}")]
+        [Route("api/suppliers/{categoryCode}")]
         [HttpGet]
+        public IEnumerable<SuppliersViewModel> GetSuppliers(string categoryCode)
+        {
+            using (EntityDataContext _context = new EntityDataContext())
+            {
+                var category = _context.Categories.Where(n => n.CategoryCode == categoryCode).ToList();
+                var categoryID = category[0].CategoryID;
+                var products = _context.Products.Where(p => p.CategoryID == categoryID).ToList();
+                var supplierIds = products.Select(n => n.SupplierID).Distinct().ToList();
+                var suppliersTemp = _context.Suppliers.Where(m => supplierIds.Contains(m.SupplierID)).ToList();
+                var suppliers = (from p in suppliersTemp
+                                 select new SuppliersViewModel { 
+                                    SupplierName = p.SupplierName
+                                 }).ToList();
+                return suppliers;
+            }
+        }
 
     }
 }

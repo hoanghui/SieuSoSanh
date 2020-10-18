@@ -3,6 +3,7 @@
 let initialState={
     listProductsByKeyWord:[],
     listProductsByCategory:[],
+    listSuppliersByCategoryCode:[],
     productDetail:{}
 }
 
@@ -17,6 +18,9 @@ const productsReducer =(state=initialState, action)=> {
         case "PRODUCT_DETAIL":
             state.productDetail=action.data;
             return{...state}
+        case "LIST_SUPPLIERS_BY_CATEGORY_CODE":
+            state.listSuppliersByCategoryCode=action.data;
+        return{...state}
         default:
             return {...state}
     }

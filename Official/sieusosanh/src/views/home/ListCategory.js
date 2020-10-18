@@ -69,5 +69,6 @@ const mapDispatchToProps=(dispatch)=>{
             dispatch(action.getListProductsByCategory(name))
         }
     }
-  }
+}
+
 export default withRouter(connect(null,mapDispatchToProps)(ListCategory));
