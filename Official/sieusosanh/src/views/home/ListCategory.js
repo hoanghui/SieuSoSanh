@@ -18,7 +18,7 @@ class ListCategory extends Component {
                     <hr/>
                 </div>
                 <div>
-                    <ul>
+                    <ul className="list-category">
                         <li>
                             <a>
                                 <i class="fas fa-camera"></i>

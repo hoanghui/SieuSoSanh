@@ -18,31 +18,23 @@ class ListProductsPage extends Component{
         }
     }
 
-    renderListBrand=(name)=>{
-        this.props.getListSuppliersByCategoryCode(name);
-            if(this.props.listSuppliersByCategoryCode.length>0){
-                return this.props.listSuppliersByCategoryCode.map((item, index)=>{
-                    return (
-                        <ListBrand
-                        key = {index}
-                        data={item}/>
-                    )
-                })
-            }
+    renderListBrand=()=>{
+        let length = this.props.listSuppliersByCategoryCode
+        console.log(length)
+        if(this.props.listSuppliersByCategoryCode.length>0){
+            return this.props.listSuppliersByCategoryCode.map((item, index)=>{
+                return (
+                    <ListBrand
+                    key = {index}
+                    data={item}/>
+                )
+            })
+        }
     }
     
     componentWillUnmount=()=> {
         let name =this.props.match.params.name;
         this.props.getListSuppliersByCategoryCode(name);
-            if(this.props.listSuppliersByCategoryCode.length>0){
-                return this.props.listSuppliersByCategoryCode.map((item, index)=>{
-                    return (
-                        <ListBrand
-                        key = {index}
-                        data={item}/>
-                    )
-                })
-            }
     }
 
     render() {
@@ -58,8 +50,9 @@ class ListProductsPage extends Component{
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-3">
-                            <ul>
-                                {this.componentWillUnmount}
+                            <ul className="list-brand">
+                                <strong>Thương hiệu</strong>
+                                {this.renderListBrand()}
                             </ul>
                         </div>
                         <div className="col-lg-9" >

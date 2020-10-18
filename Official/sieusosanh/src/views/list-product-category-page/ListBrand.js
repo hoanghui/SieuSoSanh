@@ -5,19 +5,30 @@ import {withRouter} from "react-router-dom"
 
 class ListBrand extends Component {
     render() {
-        let data = this.props
-        console.log('ok')
-        return (<li>
-            {data.SupplierName}
-        </li>)
+        if(this.props){
+            let {data} = this.props
+            return (<li>
+                {data.SupplierName}
+            </li>
+            )
+            
+        }
     }
 }
 
-const mapStateToProps=(state)=>{
+const mapDispatchToProps=(dispatch)=>{
     return {
-        listSuppliersByCategoryCode:state.productsReducer.listSuppliersByCategoryCode
+        getProductDetail: (id)=>{
+            dispatch(action.getProductDetail(id))
+        }
     }
 }
 
+// const mapStateToProps=(state)=>{
+//     return {
+//         listSuppliersByCategoryCode:state.productsReducer.listSuppliersByCategoryCode
+//     }
+// }
 
-export default withRouter(connect(mapStateToProps, null)(ListBrand))
+
+export default withRouter(connect(null, mapDispatchToProps)(ListBrand))

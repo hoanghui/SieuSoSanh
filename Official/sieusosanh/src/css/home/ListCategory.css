@@ -1,4 +1,4 @@
-ul li {
+.list-category > li{
     display: inline-table;
     min-width: 15%;
 }
