@@ -1,4 +1,5 @@
 ﻿using EntityModels;
+using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -115,11 +116,9 @@ namespace SieuSoSanhAPI.Controllers
         //        var suppliers = _context.Suppliers.Where(m => supplierIds.Contains(m.SupplierID)).ToList();
         //        return suppliers;
         //    }
-
-
         //}
 
-        //Lấy bảng giá
+
         [Route("api/suppliers/{categoryCode}")]
         [HttpGet]
         public IEnumerable<SuppliersViewModel> GetSuppliers(string categoryCode)
@@ -127,7 +126,7 @@ namespace SieuSoSanhAPI.Controllers
             using (EntityDataContext _context = new EntityDataContext())
             {
                 var category = _context.Categories.Where(n => n.CategoryCode == categoryCode).ToList();
-                var categoryID = category[0].CategoryID;
+                    var categoryID = category[0].CategoryID;
                 var products = _context.Products.Where(p => p.CategoryID == categoryID).ToList();
                 var supplierIds = products.Select(n => n.SupplierID).Distinct().ToList();
                 var suppliersTemp = _context.Suppliers.Where(m => supplierIds.Contains(m.SupplierID)).ToList();
@@ -136,6 +135,17 @@ namespace SieuSoSanhAPI.Controllers
                                     SupplierName = p.SupplierName
                                  }).ToList();
                 return suppliers;
+            }
+        }
+
+        [Route("api/Products/sameProducts/{ProductName}")]
+        [HttpGet]
+        public IEnumerable<ProductsViewModel> GetSameProduct(string productName)
+        {
+            using (EntityDataContext _context = new EntityDataContext())
+            {
+
+                return;
             }
         }
 

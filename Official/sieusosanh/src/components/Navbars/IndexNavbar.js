@@ -59,6 +59,11 @@ function IndexNavbar({getListProductsByKeyWord}) {
     }
   }
 
+  const GoToListProductsPage = (name) => {
+    this.props.getListProductsByCategory(name)
+    history.push(`/${name}`)
+  }
+
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
@@ -192,7 +197,7 @@ function IndexNavbar({getListProductsByKeyWord}) {
                         </DropdownItem>
                         <DropdownItem
                           href="#pablo"
-                          onClick={(e) => e.preventDefault()}
+                          onClick={() => this.GoToListProductsPage('tivi')}
                         >
                           Tủ lạnh
                         </DropdownItem>
@@ -232,7 +237,11 @@ const mapDispatchToProps=(dispatch)=>{
   return {
       getListProductsByKeyWord:(kw)=>{
           dispatch(action.getListProductsByKeyWord(kw))
-      }
+      },
+      getListProductsByCategory:(name)=>{
+        dispatch(action.getListProductsByCategory(name))
+    }
   }
 }
+
 export default connect(null,mapDispatchToProps)(IndexNavbar);
