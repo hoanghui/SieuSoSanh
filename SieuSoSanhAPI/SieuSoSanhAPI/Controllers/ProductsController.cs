@@ -144,6 +144,7 @@ namespace SieuSoSanhAPI.Controllers
         {
             using (EntityDataContext _context = new EntityDataContext())
             {
+                string[] words = productName.Split(' ');
 
                 return;
             }

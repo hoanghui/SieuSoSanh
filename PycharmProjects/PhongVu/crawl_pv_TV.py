@@ -16,7 +16,7 @@ while condition:
         hrefLink = eEle.get_property('href')
         hrefLinkList.append(hrefLink)
     try:
-        webD.find_elements_by_xpath('//*[@id="__next"]/div[5]/div[4]/nav/ul/li[8]/button')[-1].click()
+        webD.find_elements_by_xpath('//*[@id="__next"]/div[4]/div/div[4]/nav/ul/li[8]/button')[-1].click()
         print('ok')
     except:
         condition = False
@@ -28,14 +28,14 @@ for i in tqdm(hrefLinkList):
         nameOftheProduct = webD.find_element_by_xpath('//*[@id="__next"]/div[5]/div[1]/div[2]/div/div/div[2]/div[1]').text
         priceoftheProduct = webD.find_element_by_class_name('css-wz251').text
         descOfProduct = webD.find_element_by_xpath('//*[@id="__next"]/div[5]/div[1]/div[2]/div/div/div[1]/div[3]/div/div/div').text
-        linkProductImage = webD.find_element_by_class_name('img-full-width')
+        linkProductImage = webD.find_element_by_class_name('lazyload css-jdz5ak')
         src = linkProductImage.get_property('src')
-        supplier = webD.find_element_by_xpath('//*[@id="content_features"]/div[1]/div[2]/div/table/tbody/tr[3]/td[2]').text
-        if supplier != 'Samsung' and supplier != 'Sony' and supplier != 'Philips' and supplier != 'Casper' and supplier != 'TCL' and supplier != 'LG' and supplier != 'Sharp' and supplier != 'Panasonic':
+        supplier = webD.find_element_by_xpath('//*[@id="__next"]/div[4]/div[1]/div[1]/div[4]/div[2]/div/div[2]/div[1]/span[2]/div').text
+        if supplier != 'SAMSUNG' and supplier != 'Sony' and supplier != 'Philips' and supplier != 'Casper' and supplier != 'TCL' and supplier != 'LG' and supplier != 'Sharp' and supplier != 'Panasonic':
             supplier = webD.find_element_by_xpath(
-                '//*[@id="content_features"]/div[1]/div[2]/div/table/tbody/tr[2]/td[2]').text
+                '//*[@id="__next"]/div[4]/div[1]/div[1]/div[4]/div[2]/div/div[2]/div[1]/span[2]/div').text
         supID = 0
-        if supplier == 'Samsung':
+        if supplier == 'SAMSUNG':
             supID = 9
         elif supplier == 'Sony':
             supID = 10
@@ -49,14 +49,25 @@ for i in tqdm(hrefLinkList):
             supID = 6
         elif supplier == 'Sharp':
             supID = 14
-        elif supplier == 'Panasonic':
+        elif supplier == 'PANASONIC':
             supID = 15
         elif supplier == 'Toshiba':
             supID = 26
-        tempJ = {'nameOftheProduct': nameOftheProduct,
-                 'priceoftheProduct': priceoftheProduct,
-                 'descOfProduct': descOfProduct,
-                 'hyperlink': i}
+        elif supplier == 'Vsmart':
+            supID = 21
+        elif supplier == 'Sanco':
+            supID = 33
+        elif supplier == 'Asanzo':
+            supID = 34
+
+
+        if supID == 0:
+            break;
+        else:
+            tempJ = {'nameOftheProduct': nameOftheProduct,
+                     'priceoftheProduct': priceoftheProduct,
+                     'descOfProduct': descOfProduct,
+                     'hyperlink': i}
         overallinfo.append(tempJ)
     except:
         continue
