@@ -5,6 +5,8 @@ import bg from "../../assets/img/bg_dienmay.jpg"
 // reactstrap components
 import { Container } from "reactstrap";
 
+//slice show
+import Slider from "react-slick";
 // core components
 
 function IndexHeader({namePage}) {

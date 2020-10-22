@@ -111,7 +111,8 @@ INSERT INTO Suppliers VALUES ('Sanaky')
 INSERT INTO Suppliers VALUES ('Mitsubishi Electric')
 INSERT INTO Suppliers VALUES ('Canon')
 INSERT INTO Suppliers VALUES ('Fujifilm')
-
+INSERT INTO Suppliers VALUES ('Sanco')
+INSERT INTO Suppliers VALUES ('Asanzo')
 
 INSERT INTO Companies VALUES ('Nguyễn Kim')
 INSERT INTO Companies VALUES ('Phong Vũ')

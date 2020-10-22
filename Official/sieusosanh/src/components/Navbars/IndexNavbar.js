@@ -23,6 +23,7 @@ import {connect} from "react-redux"
 
 //withRouter de redirect qua trang khac
 import { useHistory } from "react-router-dom";
+import {withRouter} from "react-router-dom"
 
 //Khai báo props khi sử dụng function
 function IndexNavbar({getListProductsByKeyWord}) {
@@ -60,8 +61,9 @@ function IndexNavbar({getListProductsByKeyWord}) {
   }
 
   const GoToListProductsPage = (name) => {
-    this.props.getListProductsByCategory(name)
-    history.push(`/${name}`)
+    action.getListProductsByCategory(name)
+    if(action.getListProductsByCategory(name))
+      history.push(`/${name}`)
   }
 
   React.useEffect(() => {
@@ -190,14 +192,12 @@ function IndexNavbar({getListProductsByKeyWord}) {
                           Sản phẩm
                         </DropdownItem>
                         <DropdownItem
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
+                          onClick={() => GoToListProductsPage('tivi')}
                         >
                           Tivi
                         </DropdownItem>
                         <DropdownItem
-                          href="#pablo"
-                          onClick={() => this.GoToListProductsPage('tivi')}
+                          onClick={()=>this.GoToListProductsPage('tivi')}
                         >
                           Tủ lạnh
                         </DropdownItem>

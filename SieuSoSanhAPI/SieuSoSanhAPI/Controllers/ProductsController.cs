@@ -119,36 +119,33 @@ namespace SieuSoSanhAPI.Controllers
         //}
 
 
-        [Route("api/suppliers/{categoryCode}")]
-        [HttpGet]
-        public IEnumerable<SuppliersViewModel> GetSuppliers(string categoryCode)
-        {
-            using (EntityDataContext _context = new EntityDataContext())
-            {
-                var category = _context.Categories.Where(n => n.CategoryCode == categoryCode).ToList();
-                    var categoryID = category[0].CategoryID;
-                var products = _context.Products.Where(p => p.CategoryID == categoryID).ToList();
-                var supplierIds = products.Select(n => n.SupplierID).Distinct().ToList();
-                var suppliersTemp = _context.Suppliers.Where(m => supplierIds.Contains(m.SupplierID)).ToList();
-                var suppliers = (from p in suppliersTemp
-                                 select new SuppliersViewModel { 
-                                    SupplierName = p.SupplierName
-                                 }).ToList();
-                return suppliers;
-            }
-        }
+        //[Route("api/suppliers/{categoryCode}")]
+        //[HttpGet]
+        //public IEnumerable<SuppliersViewModel> GetSuppliers(string categoryCode)
+        //{
+        //    using (EntityDataContext _context = new EntityDataContext())
+        //    {
+        //        var category = _context.Categories.Where(n => n.CategoryCode == categoryCode).ToList();
+        //            var categoryID = category[0].CategoryID;
+        //        var products = _context.Products.Where(p => p.CategoryID == categoryID).ToList();
+        //        var supplierIds = products.Select(n => n.SupplierID).Distinct().ToList();
+        //        var suppliersTemp = _context.Suppliers.Where(m => supplierIds.Contains(m.SupplierID)).ToList();
+        //        var suppliers = (from p in suppliersTemp
+        //                         select new SuppliersViewModel { 
+        //                            SupplierName = p.SupplierName
+        //                         }).ToList();
+        //        return suppliers;
+        //    }
+        //}
 
-        [Route("api/Products/sameProducts/{ProductName}")]
-        [HttpGet]
-        public IEnumerable<ProductsViewModel> GetSameProduct(string productName)
-        {
-            using (EntityDataContext _context = new EntityDataContext())
-            {
-                string[] words = productName.Split(' ');
-
-                return;
-            }
-        }
+        //[Route("api/Products/sameProducts/{ProductName}")]
+        //[HttpGet]
+        //public IEnumerable<ProductsViewModel> GetSameProduct(string productName)
+        //{
+        //    using (EntityDataContext _context = new EntityDataContext())
+        //    {
+        //    }
+        //}
 
     }
 }

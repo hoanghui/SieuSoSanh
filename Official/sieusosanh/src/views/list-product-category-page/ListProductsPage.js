@@ -6,7 +6,6 @@ import * as action from "../../redux/actions/index"
 
 class ListProductsPage extends Component{
     renderProductbox=()=>{
-        console.log("haha")
         if(this.props.listProductsByCategory.length>0){
             return this.props.listProductsByCategory.map((item, index)=>{
                 return (
@@ -39,7 +38,7 @@ class ListProductsPage extends Component{
 
     render() {
         let {listProductsByCategory}=this.props
-        console.log()
+        console.log('ok qua roi ne')
         return listProductsByCategory && listProductsByCategory[0] ?
             <div className="search-page">
                 <div className='container'>
