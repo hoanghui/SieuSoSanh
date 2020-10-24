@@ -46,7 +46,10 @@ namespace SieuSoSanhAPI.Controllers
                     ProductName = p.ProductName,
                     HyperLink = p.HyperLink,
                     Price = p.Price,
-                    LinkOfProductImage = p.LinkOfProductImage
+                    LinkOfProductImage = p.LinkOfProductImage,
+                    CategoryID = p.CategoryID,
+                    SupplierID = p.SupplierID,
+                    CompanyID = p.CompanyID
                 }).ToList();
             }
         }
@@ -138,14 +141,56 @@ namespace SieuSoSanhAPI.Controllers
         //    }
         //}
 
-        //[Route("api/Products/sameProducts/{ProductName}")]
-        //[HttpGet]
-        //public IEnumerable<ProductsViewModel> GetSameProduct(string productName)
-        //{
-        //    using (EntityDataContext _context = new EntityDataContext())
-        //    {
-        //    }
-        //}
+        [Route("api/Products/SameProducts/{ProductName}")]
+        [HttpGet]
+        public IEnumerable<ProductsViewModel> GetSameProduct(string productName)
+        {
+            productName = "Apple Macbook Air i5 13.3 inch MQD32SA/A";
+            string[] words = productName.Split(' ');
+            
+            string[] character;
+
+            for (int i = 0; i < words.Length; i++)
+            {
+                bool check = false;
+                for (int j = 0; j < words[i].Length; j++)
+                {
+                    char temp = char.Parse(words[i].Substring(j, 1));
+                    if (Char.IsNumber(temp))
+                    {
+                        check = true;
+                    }
+                }
+                if (check == false)
+                {
+                    string wordToRemove = words[i];
+                    words = words.Where(val => val != wordToRemove).ToArray();
+                }
+            }
+
+            using (EntityDataContext _context = new EntityDataContext())
+            {
+                List<ProductsViewModel> productList = new List<ProductsViewModel>();
+                foreach(var word in words)
+                {
+                    var products = (_context.Products.Where(p => p.ProductName.Contains(word)).Select(p => new ProductsViewModel()
+                    {
+                        ProductID = p.ProductID,
+                        ProductName = p.ProductName,
+                        HyperLink = p.HyperLink,
+                        Price = p.Price,
+                        LinkOfProductImage = p.LinkOfProductImage,
+                        CategoryID = p.CategoryID,
+                        SupplierID = p.SupplierID,
+                        CompanyID = p.CompanyID
+                    })).ToList();
+
+                    productList.AddRange(products);
+                    
+                }    
+                return productList; 
+            }    
+        }
 
     }
 }
