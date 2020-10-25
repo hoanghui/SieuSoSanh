@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-export default class OptionSanPham extends Component {
+export default class OptionProduct extends Component {
     render() {
         return (
             <div className="section-collapse">
                 <div className="section-collapse-trigger">
                     <div className="collapse-label">
-                        Nhãn hiệu
+                        Thương hiệu
                     </div>
                 </div>
                 <div className="section-collapse-body collapse in">

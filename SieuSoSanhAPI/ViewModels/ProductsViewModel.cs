@@ -17,5 +17,6 @@ namespace ViewModels
         public Nullable<int> CompanyID { get; set; }
         public Nullable<int> SupplierID { get; set; }
         public string CategoryName { get; set; }
+        public string CategoryCode { get; set; }
     }
 }

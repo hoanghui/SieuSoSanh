@@ -22,6 +22,11 @@ const routesHome=[
         path:"/:name",
         exact:false,
         component:ListProductsPage
+    },
+    {
+        path:"/:name/:supplierName",
+        exact:false,
+        component:ListProductsPage
     }
 ]
 export  {routesHome}

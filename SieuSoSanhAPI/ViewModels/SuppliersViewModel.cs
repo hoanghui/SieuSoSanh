@@ -10,5 +10,6 @@ namespace ViewModels
     {
         public int SupplierID { get; set; }
         public string SupplierName { get; set; }
+        public string CategoryCode { get; set; }
     }
 }

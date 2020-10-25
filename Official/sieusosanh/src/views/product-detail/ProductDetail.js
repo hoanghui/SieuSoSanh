@@ -34,7 +34,7 @@ export default class SearchPage extends Component {
         let {data}=this.state;
         return data.map((item,index)=>{
             return (
-                <BoxSanPham data={item}/>
+                <BoxProduct data={item}/>
             )
         })
     }
@@ -54,7 +54,7 @@ export default class SearchPage extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-3">
-                            <OptionSanPham/>
+                            <OptionProduct/>
                         </div>
                         <div className="col-lg-9" >
                             <div className="row product-list">

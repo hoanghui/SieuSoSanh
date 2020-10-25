@@ -14,7 +14,7 @@ function IndexHeader({namePage}) {
     <div className="header">
       <div
         className="page-header section-dark"
-          style={{
+          style={{         
             backgroundImage:
               "url(" + require("../../assets/img/vach-ti-vi-trang-tri-9.jpg") + ")",
               minHeight:700

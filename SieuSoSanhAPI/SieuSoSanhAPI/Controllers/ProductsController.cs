@@ -71,7 +71,8 @@ namespace SieuSoSanhAPI.Controllers
                                 HyperLink = p.HyperLink,
                                 Price = p.Price,
                                 LinkOfProductImage = p.LinkOfProductImage,
-                                CategoryName = c.CategoryName
+                                CategoryName = c.CategoryName,
+                                CategoryCode = c.CategoryCode
                             }).ToList();
                 return list;
             }
@@ -138,10 +139,10 @@ namespace SieuSoSanhAPI.Controllers
         //                            SupplierName = p.SupplierName
         //                         }).ToList();
         //        return suppliers;
-        //    }
+        //    } 
         //}
 
-        [Route("api/Products/SameProducts/{ProductName}")]
+        [Route("api/products/SameProducts/{ProductName}")]
         [HttpGet]
         public IEnumerable<ProductsViewModel> GetSameProduct(string productName)
         {
@@ -192,5 +193,34 @@ namespace SieuSoSanhAPI.Controllers
             }    
         }
 
+        [Route("api/products/{categoryCode}/{supplierID}")]
+        [HttpGet]
+        public IEnumerable<ProductsViewModel> GetCategoryWithBrand(string categoryCode, int supplierID)
+        {
+            if(categoryCode==null || supplierID == null)
+            {
+                List<ProductsViewModel> list = null; 
+                return list;
+            }
+            using (EntityDataContext _context = new EntityDataContext())
+            {
+                var list = (from p in _context.Products
+                            join c in _context.Categories on p.CategoryID equals c.CategoryID
+                            where c.CategoryCode == categoryCode && p.SupplierID == supplierID
+                            select new ProductsViewModel
+                            {
+                                ProductID = p.ProductID,
+                                ProductName = p.ProductName,
+                                HyperLink = p.HyperLink,
+                                Price = p.Price,
+                                LinkOfProductImage = p.LinkOfProductImage,
+                                CategoryName = c.CategoryName,
+                                CategoryID = p.CategoryID,
+                                CompanyID = p.CompanyID,
+                                SupplierID = p.SupplierID
+                            }).ToList();
+                return list;
+            }
+        }
     }
 }

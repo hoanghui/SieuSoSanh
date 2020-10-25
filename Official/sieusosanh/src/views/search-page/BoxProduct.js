@@ -4,12 +4,13 @@ import {connect} from "react-redux"
 import * as action from "../../redux/actions"
 import {withRouter} from "react-router-dom"
 
-class BoxSanPham extends Component {
+class BoxProduct extends Component {
     GoToDetail=()=>{
         let {data}=this.props
         let id = data.ProductID
+        let name = data.ProductName
         this.props.getProductDetail(id)
-        this.props.history.push(`/product/${id}`)
+        this.props.history.push(`/product/${name}`)
     }
     render() {
         let {data}=this.props
@@ -45,4 +46,4 @@ const mapDispatchToProps=(dispatch)=>{
 //     }
 // }
 
-export default withRouter(connect(null,mapDispatchToProps)(BoxSanPham));
+export default withRouter(connect(null,mapDispatchToProps)(BoxProduct));

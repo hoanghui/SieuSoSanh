@@ -1,25 +1,41 @@
 import React, { Component } from 'react'
 import {connect} from "react-redux"
-import BoxSanPham from "../search-page/BoxSanPham"
+import BoxProduct from "../search-page/BoxProduct"
 import ListBrand from "./ListBrand"
 import * as action from "../../redux/actions/index"
 
 class ListProductsPage extends Component{
     renderProductbox=()=>{
-        if(this.props.listProductsByCategory.length>0){
-            return this.props.listProductsByCategory.map((item, index)=>{
-                return (
-                    <BoxSanPham 
-                    key={index}
-                    data={item}/>
-                )
-            })
+        // console.log(this.props.listProductsByCategory.length)
+        let {listProductsByBrandName} = this.props
+
+        console.log(listProductsByBrandName.length)
+        console.log(this.props.listProductsByCategory.length)
+        if(listProductsByBrandName.length === 0){
+            if(this.props.listProductsByCategory.length>0){
+                return this.props.listProductsByCategory.map((item, index)=>{
+                    return (
+                        <BoxProduct 
+                        key={index}
+                        data={item}/>
+                    )
+                })
+            }
         }
+        else{
+            return listProductsByBrandName.map((item, index)=>{
+                    return (
+                        <BoxProduct 
+                        key={index}
+                        data={item}/>
+                    )
+            })
+            
+        }
+        
     }
 
     renderListBrand=()=>{
-        let length = this.props.listSuppliersByCategoryCode
-        console.log(length)
         if(this.props.listSuppliersByCategoryCode.length>0){
             return this.props.listSuppliersByCategoryCode.map((item, index)=>{
                 return (
@@ -30,20 +46,18 @@ class ListProductsPage extends Component{
             })
         }
     }
-    
-    componentWillUnmount=()=> {
-        let name =this.props.match.params.name;
-        this.props.getListSuppliersByCategoryCode(name);
-    }
 
     render() {
-        let {listProductsByCategory}=this.props
-        console.log('ok qua roi ne')
-        return listProductsByCategory && listProductsByCategory[0] ?
+        let {listProductsByCategory} = this.props
+        if(listProductsByCategory[0] && listProductsByCategory){
+            this.props.getListSuppliersByCategoryCode(listProductsByCategory[0].CategoryCode)
+        }
+        return (
+        // listProductsByCategory && listProductsByCategory[0] ?
             <div className="search-page">
                 <div className='container'>
                     <div className="keyword-info py-4 text-center result">
-                        {listProductsByCategory[0].CategoryName} 
+                        {/* {listProductsByCategory[0].CategoryName}  */}
                     </div>
                 </div>
                 <div className="container">
@@ -61,13 +75,14 @@ class ListProductsPage extends Component{
                         </div>
                     </div>
                 </div>
-            </div>: null
+            </div>)
     }
 }
 const mapStateToProps=(state)=>{
     return {
         listProductsByCategory:state.productsReducer.listProductsByCategory,
-        listSuppliersByCategoryCode:state.productsReducer.listSuppliersByCategoryCode
+        listSuppliersByCategoryCode:state.productsReducer.listSuppliersByCategoryCode,
+        listProductsByBrandName:state.productsReducer.listProductsByBrandName
     }
 }
 
@@ -75,7 +90,11 @@ const mapDispatchToProps=(dispatch)=>{
     return {
         getListSuppliersByCategoryCode:(name)=>{
             dispatch(action.getListSuppliersByCategoryCode(name))
+        },
+        getListProductsByCategory:(code) => {
+            dispatch(action.getListProductsByCategory(code))
         }
+
     }
 }
 

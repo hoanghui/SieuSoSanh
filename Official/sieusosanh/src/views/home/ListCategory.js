@@ -5,12 +5,33 @@ import {withRouter} from "react-router-dom"
 
 class ListCategory extends Component {
 
-    GoToListProductsPage = (name) => {
-        this.props.getListProductsByCategory(name)
-        this.props.history.push(`/${name}`)
+    constructor(props){
+        super(props);
+        this.state={
+            category: ''
+        }
+    }
+
+
+    
+    onSetState=(name)=>{
+        this.setState({
+            category: name
+        })
+        this.GoToListProductsPage()
+    }
+
+    GoToListProductsPage = () => {
+        // this.props.getListProductsByCategory(name)
+        this.props.history.push(`/${this.state.category}`)
+    }
+
+    componentWillUnmount(){
+        this.props.getListProductsByCategory(this.state.category)
     }
 
     render() {
+
         return (
             <div classNames="container-category">
                 <div>
@@ -21,38 +42,38 @@ class ListCategory extends Component {
                     <ul className="list-category">
                         <li>
                             <a>
-                                <i class="fas fa-camera"></i>
-                                <div type="button" onClick={() => this.GoToListProductsPage('dienthoai')}>Điện thoại</div>
+                                <i class="fas fa-camera" ></i>
+                                <div type="button" onClick={()=>this.onSetState("dienthoai")}>Điện thoại</div>
                             </a>
                         </li>
                         <li>
                             <a>
                                 <i class="fas fa-camera"></i>
-                                <div type="button" onClick={() => this.GoToListProductsPage('laptop')}>Laptop</div>
+                                <div type="button" onClick={() => this.onSetState("dienthoai")}>Laptop</div>
                             </a>
                         </li>
                         <li>
                             <a>
                                 <i class="fas fa-camera"></i>
-                                <div type="button" onClick={() => this.GoToListProductsPage('tivi')}>Tivi</div>
+                                <div type="button" onClick={() => this.onSetState("dienthoai")}>Tivi</div>
                             </a>
                         </li>
                         <li>
                             <a>
                                 <i class="fas fa-camera"></i>
-                                <div type="button" onClick={() => this.GoToListProductsPage('mayanh')}>Máy ảnh</div>
+                                <div type="button" onClick={() => this.onSetState("dienthoai")}>Máy ảnh</div>
                             </a>
                         </li>
                         <li>
                             <a>
                                 <i type="button" onClick={() => this.GoToListProductsPage('maygiat')} class="fas fa-camera"></i>
-                                <div type="button" onClick={() => this.GoToListProductsPage('maygiat')}>Máy giặt</div>
+                                <div type="button" onClick={() => this.onSetState("maygiat")}>Máy giặt</div>
                             </a>
                         </li>
                         <li>
                             <a>
                                 <i class="fas fa-camera"></i>
-                                <div type="button" onClick={() => this.GoToListProductsPage('tulanh')}>Tủ lạnh</div>
+                                <div type="button" onClick={() => this.onSetState("dienthoai")}>Tủ lạnh</div>
                             </a>
                         </li>
                     </ul>
@@ -67,6 +88,9 @@ const mapDispatchToProps=(dispatch)=>{
     return {
         getListProductsByCategory:(name)=>{
             dispatch(action.getListProductsByCategory(name))
+        },
+        getListSuppliersByCategoryCode:(code)=>{
+            dispatch(action.getListSuppliersByCategoryCode(code))
         }
     }
 }

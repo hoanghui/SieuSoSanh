@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import IndexHeader from "../../components/Headers/IndexHeader"
-import OptionSanPham from "./OptionSanPham";
-import BoxSanPham from "./BoxSanPham";
+import OptionProduct from "./OptionProduct";
+import BoxProduct from "./BoxProduct";
 import {connect} from "react-redux";
 //import PropTypes from "prop-types";
 
@@ -10,7 +10,7 @@ class SearchPage extends Component {
         if(this.props.listProductsByKeyWord.length>0){
             return this.props.listProductsByKeyWord.map((item,index)=>{
                 return (
-                    <BoxSanPham 
+                    <BoxProduct
                     key={index}
                     data={item}/>
                 )
@@ -20,7 +20,8 @@ class SearchPage extends Component {
     render() {
         let kw =this.props.match.params.kw;
         let {listProductsByKeyWord}=this.props
-        console.log(listProductsByKeyWord)
+        let {listProductsByCategory} = this.props
+        console.log(listProductsByCategory.length)
         return (
             <div className="search-page">
                 <div className='container'>
@@ -32,7 +33,7 @@ class SearchPage extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-3">
-                            <OptionSanPham/>
+                            {/* <OptionProduct/> */}
                         </div>
                         <div className="col-lg-9" >
                             <div className="row product-list">
@@ -50,7 +51,9 @@ class SearchPage extends Component {
 
 const mapStateToProps=(state)=>{
     return {
-        listProductsByKeyWord:state.productsReducer.listProductsByKeyWord
+        listProductsByKeyWord:state.productsReducer.listProductsByKeyWord,
+        listProductsByCategory:state.productsReducer.listProductsByCategory,
+        listSuppliersByCategoryCode:state.productsReducer.listSuppliersByCategoryCode
     }
 }
 

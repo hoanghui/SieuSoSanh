@@ -1,6 +1,7 @@
 @import "./Navbar.css";
 @import "./Header.css";
 @import "./searchPage/searchPage.css";
-@import "./searchPage/boxSanPham.css";
-@import "./searchPage/optionSanPham.css";
-@import "./productDetailPage/productInfo.css"
+@import "./searchPage/boxProduct.css";
+@import "./searchPage/optionProduct.css";
+@import "./productDetailPage/productInfo.css";
+@import "./listProductsByCategory/listBrand.css";

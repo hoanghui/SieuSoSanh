@@ -31,7 +31,8 @@ namespace SieuSoSanhAPI.Controllers
                                  select new SuppliersViewModel
                                  {
                                      SupplierName = p.SupplierName,
-                                     SupplierID = p.SupplierID
+                                     SupplierID = p.SupplierID,
+                                     CategoryCode = categoryCode
                                  }).ToList();
                 return suppliers;
             }

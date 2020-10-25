@@ -4,7 +4,7 @@ export const getListProductsByKeyWord=(kw)=>{
     return dispatch=>{
         Axios({
             method:"GET",
-            url:`https://localhost:3001/api/Products/search/${kw}`
+            url:`https://localhost:3001/api/products/search/${kw}`
         })
         .then((rs)=>{
             dispatch({
@@ -22,7 +22,7 @@ export const getProductDetail=(id)=>{
     return dispatch=>{
         Axios({
             method:"GET",
-            url:`https://localhost:3001/api/Products/detail/${id}`
+            url:`https://localhost:3001/api/products/detail/${id}`
         })
         .then((rs)=>{
             dispatch({
@@ -40,7 +40,7 @@ export const getListProductsByCategory=(code)=>{
     return dispatch=>{
         Axios({
             method:"GET",
-            url:`https://localhost:3001/api/Products/${code}`
+            url:`https://localhost:3001/api/products/${code}`
         })
         .then((rs)=>{
             dispatch({
@@ -52,7 +52,7 @@ export const getListProductsByCategory=(code)=>{
             console.log(err)
         })
     }
-}
+} //
 
 export const getListSuppliersByCategoryCode=(name)=>{
     return dispatch=>{
@@ -71,3 +71,21 @@ export const getListSuppliersByCategoryCode=(name)=>{
         })
     }
 }
+
+export const getListProductsByBrandName=(categoryCode,supplierID)=>{
+    return dispatch=>{
+        Axios({
+            method:"GET",
+            url:`https://localhost:3001/api/products/${categoryCode}/${supplierID}`
+        })
+        .then((rs)=>{
+            dispatch({
+                type:"LIST_PRODUCTS_BY_BRAND_NAME",
+                data:rs.data
+            })
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
+}//
