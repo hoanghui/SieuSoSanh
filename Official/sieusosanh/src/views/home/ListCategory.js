@@ -9,29 +9,28 @@ class ListCategory extends Component {
         super(props);
         this.state={
             category: ''
-        }
+        } 
     }
 
-
-    
     onSetState=(name)=>{
         this.setState({
             category: name
         })
-        this.GoToListProductsPage()
-    }
-
-    GoToListProductsPage = () => {
-        // this.props.getListProductsByCategory(name)
+        console.log('aa')
         this.props.history.push(`/${this.state.category}`)
+
+        this.props.getListSuppliersByCategoryCode(this.state.category)
+        this.props.getListProductsByCategory(this.state.category)
+        
     }
 
-    componentWillUnmount(){
-        this.props.getListProductsByCategory(this.state.category)
-    }
+    // componentWillUnmount(){
+    //     this.props.getListSuppliersByCategoryCode(this.state.category)
+    //     console.log(this.state.category)
+    //     this.props.getListProductsByCategory(this.state.category)
+    // }
 
     render() {
-
         return (
             <div classNames="container-category">
                 <div>
@@ -49,19 +48,19 @@ class ListCategory extends Component {
                         <li>
                             <a>
                                 <i class="fas fa-camera"></i>
-                                <div type="button" onClick={() => this.onSetState("dienthoai")}>Laptop</div>
+                                <div type="button" onClick={() => this.onSetState("laptop")}>Laptop</div>
+                            </a>        
+                        </li>
+                        <li>
+                            <a>
+                                <i class="fas fa-camera"></i>
+                                <div type="button" onClick={() => this.onSetState("tivi")}>Tivi</div>
                             </a>
                         </li>
                         <li>
                             <a>
                                 <i class="fas fa-camera"></i>
-                                <div type="button" onClick={() => this.onSetState("dienthoai")}>Tivi</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <i class="fas fa-camera"></i>
-                                <div type="button" onClick={() => this.onSetState("dienthoai")}>Máy ảnh</div>
+                                <div type="button" onClick={() => this.onSetState("mayanh")}>Máy ảnh</div>
                             </a>
                         </li>
                         <li>
@@ -73,7 +72,7 @@ class ListCategory extends Component {
                         <li>
                             <a>
                                 <i class="fas fa-camera"></i>
-                                <div type="button" onClick={() => this.onSetState("dienthoai")}>Tủ lạnh</div>
+                                <div type="button" onClick={() => this.onSetState("tulanh")}>Tủ lạnh</div>
                             </a>
                         </li>
                     </ul>
@@ -89,8 +88,8 @@ const mapDispatchToProps=(dispatch)=>{
         getListProductsByCategory:(name)=>{
             dispatch(action.getListProductsByCategory(name))
         },
-        getListSuppliersByCategoryCode:(code)=>{
-            dispatch(action.getListSuppliersByCategoryCode(code))
+        getListSuppliersByCategoryCode:(name)=>{
+            dispatch(action.getListSuppliersByCategoryCode(name))
         }
     }
 }

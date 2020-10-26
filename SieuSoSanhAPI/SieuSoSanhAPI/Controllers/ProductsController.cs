@@ -142,52 +142,87 @@ namespace SieuSoSanhAPI.Controllers
         //    } 
         //}
 
-        [Route("api/products/SameProducts/{ProductName}")]
+        [Route("api/products/SameProducts/{productName}")]
         [HttpGet]
         public IEnumerable<ProductsViewModel> GetSameProduct(string productName)
         {
-            productName = "Apple Macbook Air i5 13.3 inch MQD32SA/A";
+            productName = "Điện thoại Oppo A9 2020 Xanh";
             string[] words = productName.Split(' ');
-            
-            string[] character;
+            var length = words.Length;
 
-            for (int i = 0; i < words.Length; i++)
-            {
-                bool check = false;
-                for (int j = 0; j < words[i].Length; j++)
-                {
-                    char temp = char.Parse(words[i].Substring(j, 1));
-                    if (Char.IsNumber(temp))
-                    {
-                        check = true;
-                    }
-                }
-                if (check == false)
-                {
-                    string wordToRemove = words[i];
-                    words = words.Where(val => val != wordToRemove).ToArray();
-                }
-            }
+            //for (int i = 0; i < words.Length; i++)
+            //{
+            //    if(words.Length == length)
+            //    {
+            //        bool check = false;
+            //        for (int j = 0; j < words[i].Length; j++)
+            //        {
+            //            char temp = char.Parse(words[i].Substring(j, 1));
+            //            if (Char.IsNumber(temp))
+            //            {
+            //                check = true;
+            //            }
+            //        }
+            //        if (check == false)
+            //        {
+            //            string wordToRemove = words[i];
+            //            words = words.Where(val => val != wordToRemove).ToArray();
+            //        }
+            //    }
+            //    else
+            //    {
+            //        for(int k = 0; k< words.Length; k++)
+            //        {
+            //            bool check = false;
+            //            for (int j = 0; j < words[k].Length; j++)
+            //            {
+            //                char temp = char.Parse(words[k].Substring(j, 1));
+            //                if (Char.IsNumber(temp))
+            //                {
+            //                    check = true;
+            //                }
+            //            }
+            //            if (check == false)
+            //            {
+            //                string wordToRemove = words[k];
+            //                words = words.Where(val => val != wordToRemove).ToArray();
+            //            }
+            //        }
+            //    }
+            //}
 
             using (EntityDataContext _context = new EntityDataContext())
             {
                 List<ProductsViewModel> productList = new List<ProductsViewModel>();
-                foreach(var word in words)
+                for(int i = 0; i < words.Length; i++)
                 {
-                    var products = (_context.Products.Where(p => p.ProductName.Contains(word)).Select(p => new ProductsViewModel()
+                    var temp = words[i];
+                    if (i == 0)
                     {
-                        ProductID = p.ProductID,
-                        ProductName = p.ProductName,
-                        HyperLink = p.HyperLink,
-                        Price = p.Price,
-                        LinkOfProductImage = p.LinkOfProductImage,
-                        CategoryID = p.CategoryID,
-                        SupplierID = p.SupplierID,
-                        CompanyID = p.CompanyID
-                    })).ToList();
+                        var products = (_context.Products.Where(p => p.ProductName.Contains(temp)).Select(p => new ProductsViewModel()
+                        {
+                            ProductID = p.ProductID,
+                            ProductName = p.ProductName,
+                            HyperLink = p.HyperLink,
+                            Price = p.Price,
+                            LinkOfProductImage = p.LinkOfProductImage,
+                            CategoryID = p.CategoryID,
+                            SupplierID = p.SupplierID,
+                            CompanyID = p.CompanyID
+                        })).ToList();
 
-                    productList.AddRange(products);
-                    
+                        productList.AddRange(products);
+                    }
+                    else
+                    {
+                        for(int j = 0; j < productList.Count;j++)
+                        {
+                            if(productList[j].ProductName.Contains(temp) == false)
+                            {
+                                productList.RemoveAt(j);
+                            }
+                        }
+                    }
                 }    
                 return productList; 
             }    

@@ -24,7 +24,7 @@ class ListBrand extends Component {
             let {data} = this.props
             let {list} = this.props.listProductsByCategory
             return (<li onClick={()=>this.GoToListProductsByBrandName()}>
-                    {data.SupplierName}
+                    {data.SupplierName} ({this.props.listProductsByBrandName.length})
                 </li>
             )
         }
@@ -42,7 +42,8 @@ const mapDispatchToProps=(dispatch)=>{
 const mapStateToProps=(state)=>{
     return {
         listSuppliersByCategoryCode:state.productsReducer.listSuppliersByCategoryCode,
-        listProductsByCategory:state.productsReducer.listProductsByCategory
+        listProductsByCategory:state.productsReducer.listProductsByCategory,
+        listProductsByBrandName:state.productsReducer.listProductsByBrandName
     }
 }
 

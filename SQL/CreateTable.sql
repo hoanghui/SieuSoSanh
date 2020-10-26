@@ -130,3 +130,4 @@ DROP TABLE ProductProperty
 DROP TABLE Properties
 DROP TABLE Suppliers
 DROP TABLE Companies
+

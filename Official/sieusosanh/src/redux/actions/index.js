@@ -88,4 +88,22 @@ export const getListProductsByBrandName=(categoryCode,supplierID)=>{
             console.log(err)
         })
     }
+}
+
+export const getListSameProducts=(productName)=>{
+    return dispatch=>{
+        Axios({
+            method:"GET",
+            url:`https://localhost:3001/api/SameProducts/${productName}`
+        })
+        .then((rs)=>{
+            dispatch({
+                type:"LIST_SAME_PRODUCTS",
+                data:rs.data
+            })
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+    }
 }//

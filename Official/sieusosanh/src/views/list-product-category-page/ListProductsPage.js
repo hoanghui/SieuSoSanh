@@ -8,31 +8,27 @@ class ListProductsPage extends Component{
     renderProductbox=()=>{
         // console.log(this.props.listProductsByCategory.length)
         let {listProductsByBrandName} = this.props
-
-        console.log(listProductsByBrandName.length)
-        console.log(this.props.listProductsByCategory.length)
-        if(listProductsByBrandName.length === 0){
-            if(this.props.listProductsByCategory.length>0){
-                return this.props.listProductsByCategory.map((item, index)=>{
-                    return (
-                        <BoxProduct 
-                        key={index}
-                        data={item}/>
-                    )
-                })
-            }
-        }
-        else{
-            return listProductsByBrandName.map((item, index)=>{
-                    return (
-                        <BoxProduct 
-                        key={index}
-                        data={item}/>
-                    )
-            })
-            
-        }
-        
+        let {listProductsByCategory} = this.props
+        // if(listProductsByBrandName.length === 0){
+        //     if(listProductsByCategory.length>0){
+        //         return listProductsByCategory.map((item, index)=>{
+        //             return (
+        //                 <BoxProduct 
+        //                 key={index}
+        //                 data={item}/>
+        //             )
+        //         })
+        //     }
+        // }
+        // else{
+        return listProductsByCategory.map((item, index)=>{
+                return (
+                    <BoxProduct 
+                    key={index}
+                    data={item}/>
+                )
+        })
+        //}
     }
 
     renderListBrand=()=>{
@@ -49,15 +45,12 @@ class ListProductsPage extends Component{
 
     render() {
         let {listProductsByCategory} = this.props
-        if(listProductsByCategory[0] && listProductsByCategory){
-            this.props.getListSuppliersByCategoryCode(listProductsByCategory[0].CategoryCode)
-        }
         return (
-        // listProductsByCategory && listProductsByCategory[0] ?
+        listProductsByCategory && listProductsByCategory[0] ?
             <div className="search-page">
                 <div className='container'>
                     <div className="keyword-info py-4 text-center result">
-                        {/* {listProductsByCategory[0].CategoryName}  */}
+                        {listProductsByCategory[0].CategoryName} 
                     </div>
                 </div>
                 <div className="container">
@@ -75,14 +68,13 @@ class ListProductsPage extends Component{
                         </div>
                     </div>
                 </div>
-            </div>)
+            </div>:null)
     }
 }
 const mapStateToProps=(state)=>{
     return {
         listProductsByCategory:state.productsReducer.listProductsByCategory,
-        listSuppliersByCategoryCode:state.productsReducer.listSuppliersByCategoryCode,
-        listProductsByBrandName:state.productsReducer.listProductsByBrandName
+        listSuppliersByCategoryCode:state.productsReducer.listSuppliersByCategoryCode
     }
 }
 

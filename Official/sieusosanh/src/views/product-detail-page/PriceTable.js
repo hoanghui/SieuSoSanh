@@ -5,27 +5,24 @@ import {withRouter} from "react-router-dom"
 
 class ProductRow extends Component{
     GoToDetail=()=>{
-        let {data}=this.props
-        let id = data.ProductID
-        this.props.getProductDetail(id)
-        this.props.history.push(`/product/${id}`)
     }
+
     render() {
-        let {data}=this.props
+        let {listSameProducts} = this.props
         return (
-            <div className="col-lg-4">
-                <div className="box-product">
-                    <div className=" product-img">
-                        <img src={data.LinkOfProductImage} atl={data.ProductName} />
+            <li className="same-product">
+                <div className="store-product-img-wrapper">
+                    <div className="store-product-img">
+                    <img src={listSameProducts.LinkOfProductImage}/>    
                     </div>
-                    <div className=" btn-sosanhgia text-center " onClick={this.GoToDetail}>
-                        <div>So sánh giá</div>
-                    </div>
-                    <div className=" product-detail product-name text-center my-1">{data.ProductName}</div>
-                    <div className=" product-detail product-price text-center">{data.Price}</div>
                 </div>
-            </div>
-            
+                <div className="product-detail">
+                    <div className="product-name"></div>
+                    <div className="merchant-logo"></div>
+                    <div className="price"></div>
+                    <div className="go-buy-product"></div>
+                </div>
+            </li>
         )
     }
 }

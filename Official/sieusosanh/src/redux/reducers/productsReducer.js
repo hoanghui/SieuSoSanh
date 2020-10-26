@@ -5,7 +5,8 @@ let initialState={
     listProductsByCategory:[],
     listSuppliersByCategoryCode:[],
     productDetail:{},
-    listProductsByBrandName:[]
+    listProductsByBrandName:[],
+    listSameProducts:[]
 }
 
 const productsReducer =(state=initialState, action)=> {
@@ -28,7 +29,11 @@ const productsReducer =(state=initialState, action)=> {
             return{...state}
 
         case "LIST_PRODUCTS_BY_BRAND_NAME":
-            state.listProductsByBrandName=action.data;
+            state.listProductsByCategory=action.data;
+            return{...state}
+
+        case "LIST_SAME_PRODUCTS":
+            state.listSameProducts=action.data;
             return{...state}
 
         default:
