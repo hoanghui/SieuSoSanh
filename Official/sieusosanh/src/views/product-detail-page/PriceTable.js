@@ -5,15 +5,17 @@ import {withRouter} from "react-router-dom"
 
 class ProductRow extends Component{
     GoToDetail=()=>{
+        
     }
 
     render() {
-        let {listSameProducts} = this.props
+        let {data} = this.props
+        console.log(data)
         return (
             <li className="same-product">
                 <div className="store-product-img-wrapper">
                     <div className="store-product-img">
-                    <img src={listSameProducts.LinkOfProductImage}/>    
+                    <img src={data.LinkOfProductImage}/>    
                     </div>
                 </div>
                 <div className="product-detail">

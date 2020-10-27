@@ -142,13 +142,26 @@ namespace SieuSoSanhAPI.Controllers
         //    } 
         //}
 
-        [Route("api/products/SameProducts/{productName}")]
+        [Route("api/products/SameProducts/{ProductID}")]
         [HttpGet]
-        public IEnumerable<ProductsViewModel> GetSameProduct(string productName)
+        public IEnumerable<ProductsViewModel> GetSameProduct(int productID)
         {
-            productName = "Điện thoại Oppo A9 2020 Xanh";
-            string[] words = productName.Split(' ');
-            var length = words.Length;
+            //using (EntityDataContext _context = new EntityDataContext())
+            //{
+            //    var product = (_context.Products.Where(p => p.ProductID == productID).Select(p => new ProductsViewModel()
+            //    {
+            //        ProductID = p.ProductID,
+            //        ProductName = p.ProductName,
+            //        HyperLink = p.HyperLink,
+            //        Price = p.Price,
+            //        LinkOfProductImage = p.LinkOfProductImage,
+            //        CategoryID = p.CategoryID,
+            //        SupplierID = p.SupplierID,
+            //        CompanyID = p.CompanyID
+            //    }));
+            //}
+            //string[] words = productName.Split(' ');
+            //var length = words.Length;
 
             //for (int i = 0; i < words.Length; i++)
             //{
@@ -193,6 +206,21 @@ namespace SieuSoSanhAPI.Controllers
 
             using (EntityDataContext _context = new EntityDataContext())
             {
+                var product = (_context.Products.Where(p => p.ProductID == productID).Select(p => new ProductsViewModel()
+                {
+                    ProductID = p.ProductID,
+                    ProductName = p.ProductName,
+                    HyperLink = p.HyperLink,
+                    Price = p.Price,
+                    LinkOfProductImage = p.LinkOfProductImage,
+                    CategoryID = p.CategoryID,
+                    SupplierID = p.SupplierID,
+                    CompanyID = p.CompanyID
+                })).ToList();
+
+                string productName = product[0].ProductName;
+                string[] words = productName.Split(' ');
+
                 List<ProductsViewModel> productList = new List<ProductsViewModel>();
                 for(int i = 0; i < words.Length; i++)
                 {

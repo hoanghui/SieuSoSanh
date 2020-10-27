@@ -12,24 +12,23 @@ class ListCategory extends Component {
         } 
     }
 
+    GoToListProductsPage=(name)=>{
+        console.log(name)
+        this.props.history.push(`/${name}`)
+    }
+
     onSetState=(name)=>{
         this.setState({
             category: name
         })
-        console.log('aa')
-        this.props.history.push(`/${this.state.category}`)
-
-        this.props.getListSuppliersByCategoryCode(this.state.category)
-        this.props.getListProductsByCategory(this.state.category)
-        
     }
 
-    // componentWillUnmount(){
-    //     this.props.getListSuppliersByCategoryCode(this.state.category)
-    //     console.log(this.state.category)
-    //     this.props.getListProductsByCategory(this.state.category)
-    // }
-
+    componentWillUnmount(){
+        this.props.getListSuppliersByCategoryCode(this.state.category)
+        console.log(this.state.category)
+        this.props.getListProductsByCategory(this.state.category)
+    }
+    
     render() {
         return (
             <div classNames="container-category">
@@ -42,7 +41,7 @@ class ListCategory extends Component {
                         <li>
                             <a>
                                 <i class="fas fa-camera" ></i>
-                                <div type="button" onClick={()=>this.onSetState("dienthoai")}>Điện thoại</div>
+                                <div type="button" onClick={()=>{this.onSetState("dienthoai"); this.GoToListProductsPage()}}>Điện thoại</div>
                             </a>
                         </li>
                         <li>

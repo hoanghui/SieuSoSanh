@@ -15,17 +15,6 @@ class ProductDetailPage extends Component{
 
     renderSameProducts=()=>{
         let {productDetail} = this.props
-        
-        // if(productDetail[0].ProductName && productDetail)
-        // {
-        //     this.props.getListSameProducts(this.props.productDetail[0].ProductName)
-        // }
-        if(productDetail && productDetail[0])
-        {
-            this.props.getListSameProducts(this.props.productDetail[0].ProductName)
-            console.log(productDetail[0].ProductName)
-        }
-       
         if(this.props.listSameProducts.length>0){
             return this.props.listSameProducts.map((item, index)=>{
                 return (

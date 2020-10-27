@@ -90,11 +90,11 @@ export const getListProductsByBrandName=(categoryCode,supplierID)=>{
     }
 }
 
-export const getListSameProducts=(productName)=>{
+export const getListSameProducts=(productID)=>{
     return dispatch=>{
         Axios({
             method:"GET",
-            url:`https://localhost:3001/api/SameProducts/${productName}`
+            url:`https://localhost:3001/api/products/SameProducts/${productID}`
         })
         .then((rs)=>{
             dispatch({

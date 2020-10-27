@@ -12,12 +12,20 @@ class BoxProduct extends Component {
         this.props.getProductDetail(id)
         this.props.history.push(`/product/${name}`)
     }
+
+    componentWillUnmount(){
+        let {data}=this.props
+        let id = data.ProductID
+        this.props.getListSameProducts(id)
+    }
+
     render() {
         let {data}=this.props
         return (
             <div className="col-lg-4">
                 <div className="box-product">
                     <div className=" product-img">
+                        
                         <img src={data.LinkOfProductImage} atl={data.ProductName} />
                     </div>
                     <div className=" btn-sosanhgia text-center " onClick={this.GoToDetail}>
@@ -36,6 +44,10 @@ const mapDispatchToProps=(dispatch)=>{
     return {
         getProductDetail: (id)=>{
             dispatch(action.getProductDetail(id))
+        },
+
+        getListSameProducts: (productID)=>{
+            dispatch(action.getListSameProducts(productID))
         }
     }
 }
