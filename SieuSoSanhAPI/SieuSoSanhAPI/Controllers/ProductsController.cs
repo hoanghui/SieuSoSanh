@@ -248,6 +248,7 @@ namespace SieuSoSanhAPI.Controllers
                             if(productList[j].ProductName.Contains(temp) == false)
                             {
                                 productList.RemoveAt(j);
+                                j = -1;
                             }
                         }
                     }

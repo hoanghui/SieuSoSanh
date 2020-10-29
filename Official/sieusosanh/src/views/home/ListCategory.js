@@ -12,22 +12,25 @@ class ListCategory extends Component {
         } 
     }
 
-    GoToListProductsPage=(name)=>{
-        console.log(name)
-        this.props.history.push(`/${name}`)
-    }
-
     onSetState=(name)=>{
         this.setState({
             category: name
         })
+
+        this.props.history.push(`/${name}`)
+        // this.GoToListProducts()
+
     }
 
-    componentWillUnmount(){
-        this.props.getListSuppliersByCategoryCode(this.state.category)
-        console.log(this.state.category)
-        this.props.getListProductsByCategory(this.state.category)
-    }
+    // GoToListProducts(){
+    //     this.props.history.push(`/${this.state.category}`)
+    //     console.log(this.state.category)
+    // }
+
+    // componentWillUnmount(){
+    //     this.props.getListProductsByCategory(this.state.category)
+    //     console.log("vo")
+    // }
     
     render() {
         return (
@@ -41,7 +44,7 @@ class ListCategory extends Component {
                         <li>
                             <a>
                                 <i class="fas fa-camera" ></i>
-                                <div type="button" onClick={()=>{this.onSetState("dienthoai"); this.GoToListProductsPage()}}>Điện thoại</div>
+                                <div type="button" onClick={()=> this.onSetState("dienthoai")}>Điện thoại</div>
                             </a>
                         </li>
                         <li>
@@ -64,7 +67,7 @@ class ListCategory extends Component {
                         </li>
                         <li>
                             <a>
-                                <i type="button" onClick={() => this.GoToListProductsPage('maygiat')} class="fas fa-camera"></i>
+                                <i type="button" class="fas fa-camera"></i>
                                 <div type="button" onClick={() => this.onSetState("maygiat")}>Máy giặt</div>
                             </a>
                         </li>
@@ -87,9 +90,9 @@ const mapDispatchToProps=(dispatch)=>{
         getListProductsByCategory:(name)=>{
             dispatch(action.getListProductsByCategory(name))
         },
-        getListSuppliersByCategoryCode:(name)=>{
-            dispatch(action.getListSuppliersByCategoryCode(name))
-        }
+        // getListSuppliersByCategoryCode:(name)=>{
+        //     dispatch(action.getListSuppliersByCategoryCode(name))
+        // }
     }
 }
 

@@ -27,8 +27,6 @@ class ProductDetailPage extends Component{
     }
 
     render() {
-        let id =this.props.match.params.id;
-        let {getProductDetail}=this.props
         return(
             <div>
                 <div className="container product-info">

@@ -72,8 +72,8 @@ for i in tqdm(hrefLinkList):
         data.append(tempJ)
     except:
         continue
-pd.DataFrame(data)
 
+pd.DataFrame(data)
 #Writing to JSON File
 
 def writeToJSONFile(path, fileName, data):

@@ -9,14 +9,18 @@ class BoxProduct extends Component {
         let {data}=this.props
         let id = data.ProductID
         let name = data.ProductName
+        //console.log(name)
         this.props.getProductDetail(id)
+        this.props.getListSameProducts(id)
         this.props.history.push(`/product/${name}`)
     }
 
     componentWillUnmount(){
         let {data}=this.props
         let id = data.ProductID
-        this.props.getListSameProducts(id)
+        console.log("vo roi")
+        // console.log(id)
+        // this.props.getListSameProducts(id)
     }
 
     render() {

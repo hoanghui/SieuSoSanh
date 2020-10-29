@@ -6,21 +6,7 @@ import * as action from "../../redux/actions/index"
 
 class ListProductsPage extends Component{
     renderProductbox=()=>{
-        // console.log(this.props.listProductsByCategory.length)
-        let {listProductsByBrandName} = this.props
         let {listProductsByCategory} = this.props
-        // if(listProductsByBrandName.length === 0){
-        //     if(listProductsByCategory.length>0){
-        //         return listProductsByCategory.map((item, index)=>{
-        //             return (
-        //                 <BoxProduct 
-        //                 key={index}
-        //                 data={item}/>
-        //             )
-        //         })
-        //     }
-        // }
-        // else{
         return listProductsByCategory.map((item, index)=>{
                 return (
                     <BoxProduct 
@@ -28,7 +14,6 @@ class ListProductsPage extends Component{
                     data={item}/>
                 )
         })
-        //}
     }
 
     renderListBrand=()=>{
@@ -41,6 +26,12 @@ class ListProductsPage extends Component{
                 )
             })
         }
+    }
+
+    componentDidMount=()=>{
+        let name = this.props.match.params.name;
+        this.props.getListSuppliersByCategoryCode(name)
+        this.props.getListProductsByCategory(name)
     }
 
     render() {

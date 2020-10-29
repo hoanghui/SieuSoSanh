@@ -10,18 +10,17 @@ class ProductRow extends Component{
 
     render() {
         let {data} = this.props
-        console.log(data)
         return (
             <li className="same-product">
                 <div className="store-product-img-wrapper">
                     <div className="store-product-img">
-                    <img src={data.LinkOfProductImage}/>    
+                        <img src={data.LinkOfProductImage}/>    
                     </div>
                 </div>
                 <div className="product-detail">
-                    <div className="product-name"></div>
+                    <div className="product-name">{data.ProductName}</div>
                     <div className="merchant-logo"></div>
-                    <div className="price"></div>
+                    <div className="price">{data.Price}</div>
                     <div className="go-buy-product"></div>
                 </div>
             </li>
