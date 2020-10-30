@@ -10,7 +10,7 @@ webD.get('https://phongvu.vn/tivi-1253.cat?pv_medium=m-tivi')
 hrefLinkList = []
 condition = True
 while condition:
-    time.sleep(7)
+    time.sleep(6)
     allInfo = webD.find_elements_by_class_name('css-1rhapru')
 
     for eEle in allInfo:
@@ -18,27 +18,30 @@ while condition:
         hrefLinkList.append(hrefLink)
     try:
         webD.find_elements_by_xpath('//*[@id="__next"]/div[4]/div/div[4]/nav/ul/li[8]/button')[-1].click()
-        print('ok')
     except:
         condition = False
 
 data = []
+
 for i in tqdm(hrefLinkList):
     webD.get(i)
     try:
-        nameOftheProduct = webD.find_element_by_xpath('//*[@id="__next"]/div[5]/div[1]/div[2]/div/div/div[2]/div[1]').text
-        priceoftheProduct = webD.find_element_by_class_name('css-wz251').text
+        nameOftheProduct = webD.find_element_by_class_name('css-1jpdzyd').text
+        priceoftheProduct = webD.find_element_by_class_name('css-3725in').text
+        print(priceoftheProduct)
         # descOfProduct = webD.find_element_by_xpath('//*[@id="__next"]/div[5]/div[1]/div[2]/div/div/div[1]/div[3]/div/div/div').text
-        linkProductImage = webD.find_element_by_class_name('lazyload css-jdz5ak')
+        linkProductImage = webD.find_element_by_xpath('//*[@id="__next"]/div[4]/div[1]/div[1]/div[2]/div[1]/div/div/div/div[1]/div[1]/div[1]/div/picture/img')
         src = linkProductImage.get_property('src')
+        print(src)
         supplier = webD.find_element_by_xpath('//*[@id="__next"]/div[4]/div[1]/div[1]/div[4]/div[2]/div/div[2]/div[1]/span[2]/div').text
+        print(supplier)
         if supplier != 'SAMSUNG' and supplier != 'Sony' and supplier != 'Philips' and supplier != 'Casper' and supplier != 'TCL' and supplier != 'LG' and supplier != 'Sharp' and supplier != 'Panasonic':
             supplier = webD.find_element_by_xpath(
                 '//*[@id="__next"]/div[4]/div[1]/div[1]/div[4]/div[2]/div/div[2]/div[1]/span[2]/div').text
         supID = 0
         if supplier == 'SAMSUNG':
             supID = 9
-        elif supplier == 'Sony':
+        elif supplier == 'SONY':
             supID = 10
         elif supplier == 'Philips':
             supID = 11
@@ -48,7 +51,7 @@ for i in tqdm(hrefLinkList):
             supID = 13
         elif supplier == 'LG':
             supID = 6
-        elif supplier == 'Sharp':
+        elif supplier == 'SHARP':
             supID = 14
         elif supplier == 'PANASONIC':
             supID = 15
@@ -60,7 +63,17 @@ for i in tqdm(hrefLinkList):
             supID = 1002
         elif supplier == 'Asanzo':
             supID = 1003
+        elif supplier == 'FPT':
+            supID = 1004
+        elif supplier == 'XIAOMI':
+            supID = 23
 
+        print(nameOftheProduct)
+        print(priceoftheProduct)
+        print(src)
+        print(supID)
+        print(i)
+        print('huy dep trai')
         tempJ = {'nameOftheProduct': nameOftheProduct,
                  'priceoftheProduct': priceoftheProduct,
                  # 'descOfProduct': descOfProduct,
@@ -68,10 +81,13 @@ for i in tqdm(hrefLinkList):
                  'CompanyID': 2,
                  'hyperlink': i,
                  'LinkOfProductImage': src,
-                 'SupplierID': supID,}
+                 'SupplierID': supID
+                 }
         data.append(tempJ)
     except:
         continue
+
+
 
 pd.DataFrame(data)
 #Writing to JSON File
