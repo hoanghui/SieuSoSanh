@@ -257,20 +257,23 @@ namespace SieuSoSanhAPI.Controllers
             }    
         }
 
-        [Route("api/products/{categoryCode}/{supplierID}")]
+        [Route("api/products/{categoryCode}/{supplierCode}")]
         [HttpGet]
-        public IEnumerable<ProductsViewModel> GetCategoryWithBrand(string categoryCode, int supplierID)
+        public IEnumerable<ProductsViewModel> GetCategoryWithBrand(string categoryCode, string supplierCode)
         {
-            if(categoryCode==null || supplierID == null)
+            if(categoryCode==null || supplierCode == null)
             {
                 List<ProductsViewModel> list = null; 
                 return list;
             }
             using (EntityDataContext _context = new EntityDataContext())
             {
+                var sup = _context.Suppliers.Where(p => p.SupplierName.ToLower() == supplierCode).ToList();
+                var supItem = sup[0];
+
                 var list = (from p in _context.Products
                             join c in _context.Categories on p.CategoryID equals c.CategoryID
-                            where c.CategoryCode == categoryCode && p.SupplierID == supplierID
+                            where c.CategoryCode == categoryCode && p.SupplierID == supItem.SupplierID
                             select new ProductsViewModel
                             {
                                 ProductID = p.ProductID,
@@ -281,7 +284,8 @@ namespace SieuSoSanhAPI.Controllers
                                 CategoryName = c.CategoryName,
                                 CategoryID = p.CategoryID,
                                 CompanyID = p.CompanyID,
-                                SupplierID = p.SupplierID
+                                SupplierID = p.SupplierID,
+                                CategoryCode = categoryCode
                             }).ToList();
                 return list;
             }

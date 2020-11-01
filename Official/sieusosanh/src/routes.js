@@ -2,6 +2,7 @@ import Home from "./views/home/Home";
 import SearchPage from "./views/search-page/Search-page"
 import ProductDetailPage from "./views/product-detail-page/ProductDetail-page"
 import ListProductsPage from "./views/list-product-category-page/ListProductsPage";
+import { Fade } from "reactstrap";
 const routesHome=[
     {
         path:"/",
@@ -25,7 +26,7 @@ const routesHome=[
     },
     {
         path:"/:name/:supplierName",
-        exact:false,
+        exact:true,
         component:ListProductsPage
     }
 ]

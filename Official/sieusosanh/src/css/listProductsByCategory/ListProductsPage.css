@@ -3,3 +3,8 @@
     list-style-type: none;
     font-weight: 500;
 }
+
+.keyword-info:hover {
+    cursor: pointer;
+    color: #51bcda;
+}

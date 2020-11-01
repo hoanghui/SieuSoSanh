@@ -11,8 +11,8 @@ class ListBrand extends Component {
             let {data} = this.props
             console.log(categoryCode)
             console.log(data.SupplierID)
-            this.props.getListProductsByBrandName(categoryCode, data.SupplierID)
-            this.props.history.push(`/${categoryCode}/${data.SupplierName.toLowerCase()}`)
+            this.props.getListProductsByBrandName(categoryCode, data.SupplierName)
+            this.props.history.push(`/${categoryCode}/${data.SupplierName}`)
         }
     }
     

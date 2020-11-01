@@ -60,12 +60,6 @@ function IndexNavbar({getListProductsByKeyWord}) {
     }
   }
 
-  const GoToListProductsPage = (name) => {
-    action.getListProductsByCategory(name)
-    if(action.getListProductsByCategory(name))
-      history.push(`/${name}`)
-  }
-
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
@@ -192,31 +186,28 @@ function IndexNavbar({getListProductsByKeyWord}) {
                           Sản phẩm
                         </DropdownItem>
                         <DropdownItem
-                          onClick={() => GoToListProductsPage('tivi')}
+                          href="tivi"
                         >
                           Tivi
                         </DropdownItem>
                         <DropdownItem
-                          onClick={()=>this.GoToListProductsPage('tivi')}
+                          href="tulanh"
                         >
                           Tủ lạnh
                         </DropdownItem>
                         <DropdownItem
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
+                          href="maygiat"
                         >
                           Máy giặt
                         </DropdownItem>
                         <DropdownItem
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
+                          href="laptop"
                         >
                           Laptop
                         </DropdownItem>
                         {/* <DropdownItem divider /> */}
                         <DropdownItem
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
+                          href="dienthoai"
                         >
                           Điện thoại
                         </DropdownItem>

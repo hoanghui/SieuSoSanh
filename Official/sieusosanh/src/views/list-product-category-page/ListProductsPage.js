@@ -3,6 +3,7 @@ import {connect} from "react-redux"
 import BoxProduct from "../search-page/BoxProduct"
 import ListBrand from "./ListBrand"
 import * as action from "../../redux/actions/index"
+import { compose } from 'redux'
 
 class ListProductsPage extends Component{
     renderProductbox=()=>{
@@ -28,20 +29,37 @@ class ListProductsPage extends Component{
         }
     }
 
+    goToOwner=(category)=>{
+        console.log(category)
+        this.props.history.push(`/${category}`)
+    }
+
     componentDidMount=()=>{
         let name = this.props.match.params.name;
-        console.log(name)
-        this.props.getListSuppliersByCategoryCode(name)
-        this.props.getListProductsByCategory(name)
+        let supplierName = this.props.match.params.supplierName;
+        console.log(supplierName)
+        if(supplierName){
+            this.props.getListProductsByBrandName(name,supplierName)
+            this.props.getListSuppliersByCategoryCode(name)
+            console.log('ok')
+        }
+        else{
+            this.props.getListSuppliersByCategoryCode(name)
+            this.props.getListProductsByCategory(name)
+        }
+        
     }
 
     render() {
         let {listProductsByCategory} = this.props
+        if(listProductsByCategory && listProductsByCategory[0]){
+            console.log(listProductsByCategory[0])
+        }
         return (
         listProductsByCategory && listProductsByCategory[0] ?
             <div className="search-page">
                 <div className='container'>
-                    <div className="keyword-info py-4 text-center result">
+                    <div className="keyword-info py-4 text-center result" onClick={()=>this.goToOwner(listProductsByCategory[0].CategoryCode)}>
                         {listProductsByCategory[0].CategoryName} 
                     </div>
                 </div>
@@ -77,6 +95,9 @@ const mapDispatchToProps=(dispatch)=>{
         },
         getListProductsByCategory:(code) => {
             dispatch(action.getListProductsByCategory(code))
+        },
+        getListProductsByBrandName:(categoryCode,supplierName) => {
+            dispatch(action.getListProductsByBrandName(categoryCode, supplierName))
         }
 
     }
