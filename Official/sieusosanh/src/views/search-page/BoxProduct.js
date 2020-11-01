@@ -39,7 +39,6 @@ class BoxProduct extends Component {
                     <div className=" product-detail product-price text-center">{data.Price}</div>
                 </div>
             </div>
-            
         )
     }
 }
@@ -49,17 +48,10 @@ const mapDispatchToProps=(dispatch)=>{
         getProductDetail: (id)=>{
             dispatch(action.getProductDetail(id))
         },
-
         getListSameProducts: (productID)=>{
             dispatch(action.getListSameProducts(productID))
         }
     }
 }
-
-// const mapStateToProps=(state)=>{
-//     return {
-//         productDetail:state.productsReducer.productDetail
-//     }
-// }
 
 export default withRouter(connect(null,mapDispatchToProps)(BoxProduct));

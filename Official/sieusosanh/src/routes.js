@@ -20,7 +20,7 @@ const routesHome=[
     },
     {
         path:"/:name",
-        exact:false,
+        exact:true,
         component:ListProductsPage
     },
     {

@@ -4,7 +4,6 @@ import {connect} from "react-redux"
 import {withRouter} from "react-router-dom"
 
 class ListBrand extends Component {
-
     GoToListProductsByBrandName=()=>{
         if(this.props && this.props.listSuppliersByCategoryCode){
             let temp = this.props.listSuppliersByCategoryCode
@@ -13,18 +12,16 @@ class ListBrand extends Component {
             console.log(categoryCode)
             console.log(data.SupplierID)
             this.props.getListProductsByBrandName(categoryCode, data.SupplierID)
-            this.props.history.push(`/${categoryCode}/${data.SupplierName}`)
+            this.props.history.push(`/${categoryCode}/${data.SupplierName.toLowerCase()}`)
         }
     }
-    
-    
     
     render() {
         if(this.props){
             let {data} = this.props
             let {list} = this.props.listProductsByCategory
             return (<li onClick={()=>this.GoToListProductsByBrandName()}>
-                    {data.SupplierName} ({this.props.listProductsByBrandName.length})
+                    {data.SupplierName} ({data.QuantityProduct})
                 </li>
             )
         }
@@ -46,6 +43,5 @@ const mapStateToProps=(state)=>{
         listProductsByBrandName:state.productsReducer.listProductsByBrandName
     }
 }
-
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ListBrand))

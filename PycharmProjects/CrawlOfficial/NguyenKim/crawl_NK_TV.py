@@ -55,7 +55,7 @@ for i in tqdm(hrefLinkList):
             supID = 26
 
         tempJ = {'nameOftheProduct': nameOftheProduct,
-                 'priceoftheProduct': priceoftheProduct,
+                 'priceoftheProduct': priceoftheProduct[0:-1],
                  #              'descOfProduct': descOfProduct,
                  'hyperlink': i,
                  'CategoryID': 1,

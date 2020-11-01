@@ -1,17 +1,35 @@
-.list-category > li{
+.list-category > li {
     display: inline-table;
-    min-width: 15%;
+    min-width: 10%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 ul {
     text-align: center;
 }
 
-.container-category{
+li:hover {
+    color: #51bcda;
+}
+
+.container-category {
     padding-top: 8%;
 }
 
-.category-title{
+.category-title {
     padding-top: 8%;
+    font-size: 4vh;
 }
 
+.fa, .fas {
+    font-size: 5vh;
+}
+
+.list-category-container {
+    padding-top: 6vh;
+}
+
+.category-name {
+    padding-top: 2vh;
+}

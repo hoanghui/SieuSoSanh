@@ -30,6 +30,7 @@ class ListProductsPage extends Component{
 
     componentDidMount=()=>{
         let name = this.props.match.params.name;
+        console.log(name)
         this.props.getListSuppliersByCategoryCode(name)
         this.props.getListProductsByCategory(name)
     }

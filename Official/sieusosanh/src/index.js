@@ -11,6 +11,8 @@ import "./assets/demo/demo.css?v=1.2.0";
 import "../src/css/Header.css"
 import "./css/home/ListCategory.css"
 import "./css/listProductsByCategory/ListProductsPage.css"
+import "./css/productDetailPage/productDetailPage.css"
+import "./css/productDetailPage/priceTable.css"
 
 //redux
 import {createStore,applyMiddleware,compose} from "redux";

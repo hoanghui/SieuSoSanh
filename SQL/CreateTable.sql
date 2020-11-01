@@ -3,7 +3,7 @@
 CREATE TABLE Products (
 	ProductID INT IDENTITY NOT NULL PRIMARY KEY,
 	ProductName nvarchar(100), 
-    Price varchar(20), 
+    Price nvarchar(20), 
     HyperLink varchar(MAX),
 	LinkOfProductImage varchar(MAX),
 	CategoryID INT,
@@ -24,7 +24,8 @@ GO
 --Companies
 CREATE TABLE Companies (
 	CompanyID INT IDENTITY NOT NULL PRIMARY KEY,
-	CompanyName nvarchar(50)
+	CompanyName nvarchar(50),
+	CompanyImage varchar(MAX)
 )
 GO
 
@@ -115,14 +116,14 @@ INSERT INTO Suppliers VALUES ('Sanco')
 INSERT INTO Suppliers VALUES ('Asanzo')
 INSERT INTO Suppliers VALUES ('FPT')
 
-INSERT INTO Companies VALUES ('Nguyễn Kim')
-INSERT INTO Companies VALUES ('Phong Vũ')
-INSERT INTO Companies VALUES ('HC')
-INSERT INTO Companies VALUES ('Sendo')
-INSERT INTO Companies VALUES ('Tiki')
-INSERT INTO Companies VALUES ('Lazada')
-INSERT INTO Companies VALUES ('Shopee')
-INSERT INTO Companies VALUES ('Mediamart')
+INSERT INTO Companies VALUES ('Nguyễn Kim','https://img.sosanhgia.com/images/4ece80f1c66b476990fe84de956afafb/nguyen-kim.jpg')
+INSERT INTO Companies VALUES ('Phong Vũ','https://img.sosanhgia.com/images/dc9957af6bdf48149ac16fe0835113d4/phongvu.jpg')
+INSERT INTO Companies VALUES ('HC','https://img.sosanhgia.com/images/ddb96ceb483344788f72dcc1dcf1069a/hc.jpg')
+INSERT INTO Companies VALUES ('Sendo','https://img.sosanhgia.com/images/a02686bbefd74fb59c14e96c196086ed/sendo.jpeg')
+INSERT INTO Companies VALUES ('Tiki','https://img.sosanhgia.com/images/2fe604500fe548aa94e52d2d3849a8ca/tiki.jpg')
+INSERT INTO Companies VALUES ('Lazada','https://img.sosanhgia.com/images/fba6108022794fc894dd53ec7de00b2d/image.jpeg')
+INSERT INTO Companies VALUES ('Shopee', 'https://img.sosanhgia.com/images/1ef1aee0e2cb435893d32fe07031ec0c/shopee-mall.jpg')
+INSERT INTO Companies VALUES ('Mediamart','https://img.sosanhgia.com/images/cb3acdd6e7034430b306e84c29d5660f/mediamart.jpg')
 
 DROP TABLE Products
 DROP TABLE CategoryProperty

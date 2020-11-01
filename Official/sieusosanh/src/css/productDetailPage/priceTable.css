@@ -1,0 +1,13 @@
+.store-product-img > img{
+    width: 25vh;
+}
+
+.price {
+    font-size: 4vh;
+    padding: 20px 38px 0 20px;
+}
+
+.product-name {
+    padding-right: 15px;
+    padding-top: 15px;
+}

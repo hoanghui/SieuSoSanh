@@ -32,10 +32,16 @@ class ProductDetailPage extends Component{
                 <div className="container product-info">
                     {this.renderProductDetail()}
                 </div>
-                <div>
-                    <ul>
-                        {this.renderSameProducts()}
-                    </ul>
+                <div className="container">
+                    <hr/>
+                </div>
+                <div className="container price-table">
+                    <div className="price-table-title">
+                        <h2>Bảng giá bán</h2>
+                    </div>
+                    <div>
+                        
+                    </div>
                 </div>
             </div>
             

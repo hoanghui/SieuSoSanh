@@ -17,11 +17,11 @@ class ProductRow extends Component{
                         <img src={data.LinkOfProductImage}/>    
                     </div>
                 </div>
-                <div className="product-detail">
+                <div className="same-product-detail">
                     <div className="product-name">{data.ProductName}</div>
                     <div className="merchant-logo"></div>
                     <div className="price">{data.Price}</div>
-                    <div className="go-buy-product"></div>
+                    <div className="product-go-action">Đến nơi bán</div>
                 </div>
             </li>
         )

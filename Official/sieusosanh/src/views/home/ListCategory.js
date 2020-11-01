@@ -39,42 +39,42 @@ class ListCategory extends Component {
                     <div className="category-title text-center">Danh mục phổ biến</div>
                     <hr/>
                 </div>
-                <div>
+                <div className="list-category-container">
                     <ul className="list-category">
                         <li>
-                            <a>
-                                <i class="fas fa-camera" ></i>
-                                <div type="button" onClick={()=> this.onSetState("dienthoai")}>Điện thoại</div>
+                            <a type="button" onClick={()=> this.onSetState("dienthoai")}>
+                                <i class="fas fa-mobile-alt" ></i>
+                                <div className = "category-name">Điện thoại</div>
                             </a>
                         </li>
                         <li>
-                            <a>
-                                <i class="fas fa-camera"></i>
-                                <div type="button" onClick={() => this.onSetState("laptop")}>Laptop</div>
+                            <a type="button" onClick={() => this.onSetState("laptop")}>
+                                <i class="fas fa-laptop"></i>
+                                <div className = "category-name">Laptop</div>
                             </a>        
                         </li>
                         <li>
-                            <a>
-                                <i class="fas fa-camera"></i>
-                                <div type="button" onClick={() => this.onSetState("tivi")}>Tivi</div>
+                            <a type="button" onClick={() => this.onSetState("tivi")}>
+                                <i class="fas fa-tv "></i>
+                                <div className = "category-name">Tivi</div>
                             </a>
                         </li>
                         <li>
-                            <a>
+                            <a type="button" onClick={() => this.onSetState("mayanh")}>
                                 <i class="fas fa-camera"></i>
-                                <div type="button" onClick={() => this.onSetState("mayanh")}>Máy ảnh</div>
+                                <div className = "category-name">Máy ảnh</div>
                             </a>
                         </li>
                         <li>
-                            <a>
-                                <i type="button" class="fas fa-camera"></i>
-                                <div type="button" onClick={() => this.onSetState("maygiat")}>Máy giặt</div>
+                            <a type="button" onClick={() => this.onSetState("maygiat")}>
+                                <i class="fas fa-camera"></i>
+                                <div className = "category-name">Máy giặt</div>
                             </a>
                         </li>
                         <li>
-                            <a>
+                            <a type="button" onClick={() => this.onSetState("tulanh")}>
                                 <i class="fas fa-camera"></i>
-                                <div type="button" onClick={() => this.onSetState("tulanh")}>Tủ lạnh</div>
+                                <div className = "category-name">Tủ lạnh</div>
                             </a>
                         </li>
                     </ul>

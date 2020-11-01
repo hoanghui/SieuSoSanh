@@ -21,7 +21,7 @@ class SearchPage extends Component {
         let kw =this.props.match.params.kw;
         let {listProductsByKeyWord}=this.props
         let {listProductsByCategory} = this.props
-        console.log(listProductsByCategory.length)
+        //console.log(listProductsByCategory.length)
         return (
             <div className="search-page">
                 <div className='container'>

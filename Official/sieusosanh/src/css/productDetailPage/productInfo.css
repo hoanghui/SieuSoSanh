@@ -14,6 +14,31 @@
     margin: auto;
 }
 
-.product-slide-container .product-img {
-    width: 50%;
+.product-img > img {
+    width: 100%;
+}
+
+.product-price-detail {
+    font-size: 3vh;
+    padding: 0vh 2vh;
+}
+
+.product-price-detail :hover {
+    color: #51bcda;
+}
+
+.priority-store {
+    display: flex;
+    /*wrap allow xuong dong*/
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-detail-name {
+    min-width: 40vh;
+}
+
+.product-detail-name > h1 {
+    font-size: 1.6em;
+    font-weight: 900;
 }

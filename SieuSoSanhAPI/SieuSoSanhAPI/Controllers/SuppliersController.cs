@@ -27,13 +27,21 @@ namespace SieuSoSanhAPI.Controllers
                 var products = _context.Products.Where(p => p.CategoryID == categoryID).ToList();
                 var supplierIds = products.Select(n => n.SupplierID).Distinct().ToList();
                 var suppliersTemp = _context.Suppliers.Where(m => supplierIds.Contains(m.SupplierID)).ToList();
-                var suppliers = (from p in suppliersTemp
-                                 select new SuppliersViewModel
-                                 {
-                                     SupplierName = p.SupplierName,
-                                     SupplierID = p.SupplierID,
-                                     CategoryCode = categoryCode
-                                 }).ToList();
+                List<SuppliersViewModel> suppliers = new List<SuppliersViewModel>();
+                foreach (var supplier in suppliersTemp)
+                {
+                    var totalProduct = _context.Products.Where(n => n.SupplierID == supplier.SupplierID).Count();
+                    var temp = (from p in suppliersTemp
+                                     where p.SupplierID == supplier.SupplierID
+                                     select new SuppliersViewModel
+                                     {
+                                         SupplierName = p.SupplierName,
+                                         SupplierID = p.SupplierID,
+                                         CategoryCode = categoryCode,
+                                         QuantityProduct = totalProduct
+                                     }).ToList();
+                    suppliers.AddRange(temp);
+                }
                 return suppliers;
             }
         }
