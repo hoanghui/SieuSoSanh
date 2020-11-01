@@ -84,9 +84,6 @@ namespace SieuSoSanhAPI.Controllers
         {
             using (EntityDataContext _context = new EntityDataContext())
             {
-                //var item = _context.Products.Where(o => o.ProductID == id).ToList();
-                //var temp = supID[0].SupplierID;
-                //string supName = temp[0].SupplierName.ToString();
                 return _context.Products.Join(_context.Suppliers, p=>p.SupplierID, s=>s.SupplierID, (p, s) => new ProductsViewModel()  
                 {
                     ProductID = p.ProductID,    
@@ -150,64 +147,6 @@ namespace SieuSoSanhAPI.Controllers
         [HttpGet]
         public IEnumerable<ProductsViewModel> GetSameProduct(int productID)
         {
-            //using (EntityDataContext _context = new EntityDataContext())
-            //{
-            //    var product = (_context.Products.Where(p => p.ProductID == productID).Select(p => new ProductsViewModel()
-            //    {
-            //        ProductID = p.ProductID,
-            //        ProductName = p.ProductName,
-            //        HyperLink = p.HyperLink,
-            //        Price = p.Price,
-            //        LinkOfProductImage = p.LinkOfProductImage,
-            //        CategoryID = p.CategoryID,
-            //        SupplierID = p.SupplierID,
-            //        CompanyID = p.CompanyID
-            //    }));
-            //}
-            //string[] words = productName.Split(' ');
-            //var length = words.Length;
-
-            //for (int i = 0; i < words.Length; i++)
-            //{
-            //    if(words.Length == length)
-            //    {
-            //        bool check = false;
-            //        for (int j = 0; j < words[i].Length; j++)
-            //        {
-            //            char temp = char.Parse(words[i].Substring(j, 1));
-            //            if (Char.IsNumber(temp))
-            //            {
-            //                check = true;
-            //            }
-            //        }
-            //        if (check == false)
-            //        {
-            //            string wordToRemove = words[i];
-            //            words = words.Where(val => val != wordToRemove).ToArray();
-            //        }
-            //    }
-            //    else
-            //    {
-            //        for(int k = 0; k< words.Length; k++)
-            //        {
-            //            bool check = false;
-            //            for (int j = 0; j < words[k].Length; j++)
-            //            {
-            //                char temp = char.Parse(words[k].Substring(j, 1));
-            //                if (Char.IsNumber(temp))
-            //                {
-            //                    check = true;
-            //                }
-            //            }
-            //            if (check == false)
-            //            {
-            //                string wordToRemove = words[k];
-            //                words = words.Where(val => val != wordToRemove).ToArray();
-            //            }
-            //        }
-            //    }
-            //}
-
             using (EntityDataContext _context = new EntityDataContext())
             {
                 var product = (_context.Products.Where(p => p.ProductID == productID).Select(p => new ProductsViewModel()
