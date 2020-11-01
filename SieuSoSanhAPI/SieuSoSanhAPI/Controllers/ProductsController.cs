@@ -84,7 +84,10 @@ namespace SieuSoSanhAPI.Controllers
         {
             using (EntityDataContext _context = new EntityDataContext())
             {
-                return _context.Products.Where(p => p.ProductID == id).Select(p => new ProductsViewModel()
+                //var item = _context.Products.Where(o => o.ProductID == id).ToList();
+                //var temp = supID[0].SupplierID;
+                //string supName = temp[0].SupplierName.ToString();
+                return _context.Products.Join(_context.Suppliers, p=>p.SupplierID, s=>s.SupplierID, (p, s) => new ProductsViewModel()  
                 {
                     ProductID = p.ProductID,    
                     ProductName = p.ProductName,
@@ -93,8 +96,9 @@ namespace SieuSoSanhAPI.Controllers
                     LinkOfProductImage = p.LinkOfProductImage,
                     CategoryID = p.CategoryID,
                     SupplierID = p.SupplierID,
-                    CompanyID = p.CompanyID
-                }).ToList();
+                    CompanyID = p.CompanyID,
+                    SupplierName = s.SupplierName
+                }).Where(p=>p.ProductID == id).ToList();
             }
         }
 

@@ -63,13 +63,13 @@ function IndexNavbar({getListProductsByKeyWord}) {
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
-        document.documentElement.scrollTop > 299 ||
-        document.body.scrollTop > 299
+        document.documentElement.scrollTop > 169 ||
+        document.body.scrollTop > 169
       ) {
         setNavbarColor("");
       } else if (
-        document.documentElement.scrollTop < 300 ||
-        document.body.scrollTop < 300
+        document.documentElement.scrollTop < 170 ||
+        document.body.scrollTop < 170
       ) {
         setNavbarColor("navbar-transparent");
       }
@@ -186,30 +186,35 @@ function IndexNavbar({getListProductsByKeyWord}) {
                           Sản phẩm
                         </DropdownItem>
                         <DropdownItem
-                          href="tivi"
+                          href="/tivi"
                         >
                           Tivi
                         </DropdownItem>
                         <DropdownItem
-                          href="tulanh"
+                          href="/tulanh"
                         >
                           Tủ lạnh
                         </DropdownItem>
                         <DropdownItem
-                          href="maygiat"
+                          href="/maygiat"
                         >
                           Máy giặt
                         </DropdownItem>
                         <DropdownItem
-                          href="laptop"
+                          href="/laptop"
                         >
                           Laptop
                         </DropdownItem>
                         {/* <DropdownItem divider /> */}
                         <DropdownItem
-                          href="dienthoai"
+                          href="/dienthoai"
                         >
                           Điện thoại
+                        </DropdownItem>
+                        <DropdownItem
+                          href="/mayanh"
+                        >
+                          Máy ảnh
                         </DropdownItem>
                       </DropdownMenu>
                     </UncontrolledDropdown>

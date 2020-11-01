@@ -1,8 +1,10 @@
 .product-info{
-    padding-top: 12%;
+    padding-top: 30vh;
     display: flex;
     padding-left: 0px;
     padding-right: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .button-move{
@@ -21,10 +23,18 @@
 .product-price-detail {
     font-size: 3vh;
     padding: 0vh 2vh;
+    font-weight: 800;
 }
 
 .product-price-detail :hover {
     color: #51bcda;
+}
+
+.info-content {
+    display: flex;
+    /*wrap allow xuong dong*/
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .priority-store {
@@ -41,4 +51,14 @@
 .product-detail-name > h1 {
     font-size: 1.6em;
     font-weight: 900;
+}
+
+.brand-name {
+    font-size: 1.2em;
+    color: #0070c9!important;
+    cursor: pointer;
+}
+
+.brand-box {
+    padding: 2vh 0vh;
 }

@@ -18,6 +18,12 @@ class ProductInfo extends Component {
                     <h1>{data[0].ProductName}</h1>
                 </div>
                 <hr/>
+                <div className="info-content">
+                    <div className="brand-box">
+                        <span>Thương hiệu : </span>
+                        <span className="brand-name">{data[0].SupplierName}</span>
+                    </div>
+                </div>
                 <div className="priority-store">
                     <span>Giá tốt từ nơi bán: </span>
                     <div className="product-price-detail">

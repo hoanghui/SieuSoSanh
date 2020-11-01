@@ -43,37 +43,49 @@ class ListCategory extends Component {
                     <ul className="list-category">
                         <li>
                             <a type="button" onClick={()=> this.onSetState("dienthoai")}>
-                                <i class="fas fa-mobile-alt" ></i>
+                                <p className="circle-category">
+                                    <i class="fas fa-mobile-alt category-icon" ></i>  
+                                </p>
                                 <div className = "category-name">Điện thoại</div>
                             </a>
                         </li>
                         <li>
                             <a type="button" onClick={() => this.onSetState("laptop")}>
-                                <i class="fas fa-laptop"></i>
+                                <p className="circle-category">
+                                    <i class="fas fa-laptop category-icon"></i>
+                                </p>
                                 <div className = "category-name">Laptop</div>
                             </a>        
                         </li>
                         <li>
                             <a type="button" onClick={() => this.onSetState("tivi")}>
-                                <i class="fas fa-tv "></i>
+                                <p className="circle-category">
+                                    <i class="fas fa-tv category-icon"></i>
+                                </p>
                                 <div className = "category-name">Tivi</div>
                             </a>
                         </li>
                         <li>
                             <a type="button" onClick={() => this.onSetState("mayanh")}>
-                                <i class="fas fa-camera"></i>
+                                <p className="circle-category">
+                                    <i class="fas fa-camera category-icon"></i>
+                                </p>
                                 <div className = "category-name">Máy ảnh</div>
                             </a>
                         </li>
                         <li>
                             <a type="button" onClick={() => this.onSetState("maygiat")}>
-                                <i class="fas fa-camera"></i>
+                                <p className="circle-category">
+                                    <i class="fas fa-camera category-icon"></i>
+                                </p>
                                 <div className = "category-name">Máy giặt</div>
                             </a>
                         </li>
                         <li>
                             <a type="button" onClick={() => this.onSetState("tulanh")}>
-                                <i class="fas fa-camera"></i>
+                                <p className="circle-category">
+                                    <i class="fas fa-camera category-icon"></i>
+                                </p>
                                 <div className = "category-name">Tủ lạnh</div>
                             </a>
                         </li>

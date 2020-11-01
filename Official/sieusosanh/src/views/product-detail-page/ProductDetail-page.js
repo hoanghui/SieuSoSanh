@@ -40,7 +40,10 @@ class ProductDetailPage extends Component{
                         <h2>Bảng giá bán</h2>
                     </div>
                     <div>
-                        
+                        <ul className="list-same-products">
+                            {this.renderSameProducts()}
+                            <hr/>   
+                        </ul>
                     </div>
                 </div>
             </div>

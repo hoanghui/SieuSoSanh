@@ -9,7 +9,7 @@ ul {
     text-align: center;
 }
 
-li:hover {
+.list-category > li:hover {
     color: #51bcda;
 }
 
@@ -32,4 +32,15 @@ li:hover {
 
 .category-name {
     padding-top: 2vh;
+}
+
+.circle-category {
+    border: solid 0.5px;
+    border-radius: 10vh;
+    width: 15vh;
+    height: 15vh;
+}
+
+.category-icon {
+    padding: 4.5vh;
 }

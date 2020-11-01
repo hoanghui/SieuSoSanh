@@ -2,17 +2,16 @@
     display: flex;
 }
 
-.info-product-detail {
-    width: 45%  ;
+.info-product-detail {;
 }
 
 
 
-/* .same-product {
+.same-product {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-} */
+}
 
 .same-product-detail {
     display: flex;

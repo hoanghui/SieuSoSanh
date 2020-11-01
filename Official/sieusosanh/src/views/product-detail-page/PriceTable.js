@@ -21,7 +21,9 @@ class ProductRow extends Component{
                     <div className="product-name">{data.ProductName}</div>
                     <div className="merchant-logo"></div>
                     <div className="price">{data.Price}</div>
-                    <div className="product-go-action">Đến nơi bán</div>
+                    <div className="product-go-action">
+                        <a type="button" className="move-action btn btn-outline-primary float-lg-right"> Đến nơi bán </a>
+                    </div>
                 </div>
             </li>
         )
