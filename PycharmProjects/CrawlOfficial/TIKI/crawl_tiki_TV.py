@@ -46,7 +46,7 @@ nokia = 17
 vivo = 18
 itel = 19
 vsmart = 21
-realmi = 22
+realme = 22
 xiaomi = 23
 aqua = 24
 hitachi = 25
@@ -82,12 +82,16 @@ mediasmart = 8
 
 for i in tqdm(hrefLinkList):
     webD.get(i)
+    time.sleep(2.5)
     try:
-        productName = webD.find_element_by_xpath('//*[@id="__next"]/div[1]/main/div[3]/div/div[2]/div[1]/h1').text
-        price = webD.find_element_by_class_name('price').text
-        linkProductImage = webD.find_element_by_xpath('//*[@id="__next"]/div[1]/main/div[4]/div/div[1]/div[1]/div[1]/div/div[1]/img')
+        productName = webD.find_element_by_class_name('title').text
+        price = webD.find_element_by_class_name('product-price__current-price').text
+        linkProductImage = webD.find_element_by_xpath('//*[@id="__next"]/div[1]/main/div[4]/div/div[1]/div[1]/div[1]/div/div/img')
         src = linkProductImage.get_property('src')
-        supplier = webD.find_element_by_xpath('//*[@id="__next"]/div[1]/main/div[7]/div/div[1]/div[1]/div/table/tbody/tr[1]/td[2]').text.lower()
+        try:
+            supplier = webD.find_element_by_xpath('//*[@id="__next"]/div[1]/main/div[7]/div/div[1]/div[1]/div/table/tbody/tr[1]/td[2]').text.lower()
+        except:
+            supplier = webD.find_element_by_xpath('//*[@id="__next"]/div[1]/main/div[8]/div/div[1]/div[1]/div/table/tbody/tr[1]/td[2]').text.lower()
         # if supplier != 'dell' and supplier != 'Sony' and supplier != 'Philips' and supplier != 'Casper' and supplier != 'TCL' and supplier != 'LG' and supplier != 'Sharp' and supplier != 'Panasonic':
         #     supplier = webD.find_element_by_xpath(
         #         '//*[@id="__next"]/div[4]/div[1]/div[1]/div[4]/div[2]/div/div[2]/div[1]/span[2]/div').text
@@ -130,8 +134,8 @@ for i in tqdm(hrefLinkList):
             supID = itel
         elif supplier == 'vsmart':
             supID = vsmart
-        elif supplier == 'realmi':
-            supID = realmi
+        elif supplier == 'realme':
+            supID = realme
         elif supplier == 'xiaomi':
             supID = xiaomi
         elif supplier == 'panasonic':
@@ -178,6 +182,7 @@ for i in tqdm(hrefLinkList):
         continue
 
 pd.DataFrame(data)
+print(len(data))
 #Writing to JSON File
 
 def writeToJSONFile(path, fileName, data):
