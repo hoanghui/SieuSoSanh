@@ -115,6 +115,8 @@ INSERT INTO Suppliers VALUES ('Fujifilm')
 INSERT INTO Suppliers VALUES ('Sanco')
 INSERT INTO Suppliers VALUES ('Asanzo')
 INSERT INTO Suppliers VALUES ('FPT')
+INSERT INTO Suppliers VALUES (N'Khác')
+DElETE Suppliers WHERE SupplierID = 1006
 
 INSERT INTO Companies VALUES ('Nguyễn Kim','https://img.sosanhgia.com/images/4ece80f1c66b476990fe84de956afafb/nguyen-kim.jpg')
 INSERT INTO Companies VALUES ('Phong Vũ','https://img.sosanhgia.com/images/dc9957af6bdf48149ac16fe0835113d4/phongvu.jpg')

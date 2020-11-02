@@ -5,7 +5,7 @@ import time
 import json
 
 webD = wb.Chrome('C:\\Users\\Admin\\Downloads\\chromedriver.exe')
-webD.get('https://phongvu.vn/dien-thoai-di-dong-915.cat?pv_medium=m-dien-thoai')
+webD.get('https://phongvu.vn/laptop-theo-thuong-hieu-715.cat?pv_medium=m-laptop-theo-thuong-hieu')
 
 hrefLinkList = []
 condition = True
@@ -22,6 +22,7 @@ while condition:
         condition = False
 
 data = []
+
 #list brand
 dell = 1
 asus = 2
@@ -82,10 +83,10 @@ for i in tqdm(hrefLinkList):
     try:
         productName = webD.find_element_by_class_name('css-1jpdzyd').text
         price = webD.find_element_by_class_name('css-3725in').text
+        # descOfProduct = webD.find_element_by_xpath('//*[@id="__next"]/div[5]/div[1]/div[2]/div/div/div[1]/div[3]/div/div/div').text
         linkProductImage = webD.find_element_by_xpath('//*[@id="__next"]/div[4]/div[1]/div[1]/div[2]/div[1]/div/div/div/div[1]/div[1]/div[1]/div/picture/img')
         src = linkProductImage.get_property('src')
         supplier = webD.find_element_by_xpath('//*[@id="__next"]/div[4]/div[1]/div[1]/div[4]/div[2]/div/div[2]/div[1]/span[2]/div').text.lower()
-        print(supplier)
         if supplier != 'SAMSUNG' and supplier != 'Sony' and supplier != 'Philips' and supplier != 'Casper' and supplier != 'TCL' and supplier != 'LG' and supplier != 'Sharp' and supplier != 'Panasonic':
             supplier = webD.find_element_by_xpath(
                 '//*[@id="__next"]/div[4]/div[1]/div[1]/div[4]/div[2]/div/div[2]/div[1]/span[2]/div').text
@@ -161,21 +162,22 @@ for i in tqdm(hrefLinkList):
         elif supplier == 'huawei':
             supID = huawei
 
-        temp = {'productName': productName,
-                'price': price,
-                # 'descOfProduct': descOfProduct,
-                'CategoryID': dienthoai,
-                'CompanyID': phongvu,
-                'hyperLink': i,
-                'LinkOfProductImage': src,
-                'SupplierID': supID
-                }
-        data.append(temp)
+        tempJ = {'productName': productName,
+                 'price': price,
+                 # 'descOfProduct': descOfProduct,
+                 'CategoryID': laptop,
+                 'CompanyID': phongvu,
+                 'hyperlink': i,
+                 'LinkOfProductImage': src,
+                 'SupplierID': supID
+                 }
+        data.append(tempJ)
     except:
         continue
 
-pd.DataFrame(data)
 
+
+pd.DataFrame(data)
 #Writing to JSON File
 
 def writeToJSONFile(path, fileName, data):
@@ -184,7 +186,7 @@ def writeToJSONFile(path, fileName, data):
         json.dump(data, fp)
 
 path = './'
-fileName = 'DienThoai_PhongVu'
+fileName = 'Laptop_PhongVu'
 
 
 writeToJSONFile(path, fileName, data)
