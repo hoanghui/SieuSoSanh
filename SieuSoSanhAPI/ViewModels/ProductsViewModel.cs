@@ -19,5 +19,6 @@ namespace ViewModels
         public string CategoryName { get; set; }
         public string CategoryCode { get; set; }
         public string SupplierName { get; set; }
+        public string CompanyImage { get; set; }
     }
 }

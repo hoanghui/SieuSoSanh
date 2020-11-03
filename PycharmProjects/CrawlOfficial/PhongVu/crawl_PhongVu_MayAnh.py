@@ -12,6 +12,7 @@ condition = True
 while condition:
     time.sleep(6)
     allInfo = webD.find_elements_by_class_name('css-1rhapru')
+
     for eEle in allInfo:
         hrefLink = eEle.get_property('href')
         hrefLinkList.append(hrefLink)
@@ -42,7 +43,7 @@ nokia = 17
 vivo = 18
 itel = 19
 vsmart = 21
-realmi = 22
+realme = 22
 xiaomi = 23
 aqua = 24
 hitachi = 25
@@ -53,12 +54,14 @@ sanaky = 29
 mitsubishi_electric = 30
 canon = 31
 fujifilm = 32
-sanco = 1002
-asanzo = 1003
-fpt = 1004
+sanco = 33
+asanzo = 34
+fpt = 35
+huawei = 36
+khac = 37
 
 #list category
-titi = 1
+tivi = 1
 tulanh = 2
 maygiat = 3
 mayanh = 4
@@ -85,16 +88,16 @@ for i in tqdm(hrefLinkList):
         src = linkProductImage.get_property('src')
         print(src)
         supplier = (webD.find_element_by_xpath('//*[@id="__next"]/div[4]/div[1]/div[1]/div[4]/div[2]/div/div[2]/div[1]/span[2]/div').text).lower()
-        if supplier != 'fujifilm' and supplier != 'canon' and supplier != 'sony':
-            supplier = webD.find_element_by_xpath(
-                '//*[@id="__next"]/div[4]/div[1]/div[1]/div[4]/div[2]/div/div[2]/div[1]/span[2]/div').text
-        supID = 0
+        supID = khac
         if supplier == 'canon':
             supID = canon
         elif supplier == 'fujifilm':
             supID = fujifilm
         elif supplier == 'sony':
             supID = sony
+        else:
+            supID = khac
+
         temp = {'productName': productName,
                  'price': price,
                  # 'descOfProduct': descOfProduct,
@@ -118,7 +121,7 @@ def writeToJSONFile(path, fileName, data):
         json.dump(data, fp)
 
 path = './'
-fileName = 'MayAnh_PhongVu_Data'
+fileName = 'MayAnh_PhongVu'
 
 
 writeToJSONFile(path, fileName, data)

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import * as action from "../../redux/actions/index"
 import {connect} from "react-redux"
 import {withRouter} from "react-router-dom"
+import BackToTop from "react-back-to-top-button";
 
 class ListCategory extends Component {
 
@@ -35,6 +36,14 @@ class ListCategory extends Component {
     render() {
         return (
             <div classNames="container-category">
+                {/* <BackToTop
+                    showOnScrollUp
+                    showAt={100}
+                    speed={1500}
+                    easing="easeInOutQuint"
+                    >
+                    <span>scroll up</span>
+                </BackToTop> */}
                 <div>
                     <div className="category-title text-center">Danh mục phổ biến</div>
                     <hr/>

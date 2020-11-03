@@ -22,6 +22,7 @@ namespace EntityModels
     
         public int CompanyID { get; set; }
         public string CompanyName { get; set; }
+        public string CompanyImage { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Products> Products { get; set; }

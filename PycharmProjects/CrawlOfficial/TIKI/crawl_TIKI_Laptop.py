@@ -57,10 +57,11 @@ sanaky = 29
 mitsubishi_electric = 30
 canon = 31
 fujifilm = 32
-sanco = 1002
-asanzo = 1003
-fpt = 1004
-huawei = 1005
+sanco = 33
+asanzo = 34
+fpt = 35
+huawei = 36
+khac = 37
 
 #list category
 tivi = 1
@@ -88,11 +89,19 @@ for i in tqdm(hrefLinkList):
         price = webD.find_element_by_class_name('product-price__current-price').text
         linkProductImage = webD.find_element_by_xpath('//*[@id="__next"]/div[1]/main/div[4]/div/div[1]/div[1]/div[1]/div/div/img')
         src = linkProductImage.get_property('src')
-        supplier = webD.find_element_by_xpath('//*[@id="__next"]/div[1]/main/div[7]/div/div[1]/div[1]/div/table/tbody/tr[1]/td[2]').text.lower()
-        # if supplier != 'dell' and supplier != 'Sony' and supplier != 'Philips' and supplier != 'Casper' and supplier != 'TCL' and supplier != 'LG' and supplier != 'Sharp' and supplier != 'Panasonic':
-        #     supplier = webD.find_element_by_xpath(
-        #         '//*[@id="__next"]/div[4]/div[1]/div[1]/div[4]/div[2]/div/div[2]/div[1]/span[2]/div').text
-        supID = 0
+        dieukien = True
+        list = webD.find_elements_by_tag_name('tr')
+        while dieukien:
+            for item in list:
+                itemTemp = item.find_elements_by_tag_name('td')
+                itemChild = itemTemp[0].text.lower()
+                if itemChild == 'thương hiệu':
+                    supplier = itemTemp[1].text.lower()
+                    dieukien = False
+                else:
+                    continue
+
+        supID = khac
         if supplier == 'dell':
             supID = dell
         elif supplier == 'asus':
@@ -163,8 +172,6 @@ for i in tqdm(hrefLinkList):
             supID = fpt
         elif supplier == 'huawei':
             supID = huawei
-        else:
-            supID = 1007
 
         tempJ = {'productName': productName,
                  'price': price,

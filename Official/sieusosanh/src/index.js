@@ -13,6 +13,7 @@ import "./css/home/ListCategory.css"
 import "./css/listProductsByCategory/ListProductsPage.css"
 import "./css/productDetailPage/productDetailPage.css"
 import "./css/productDetailPage/priceTable.css"
+import "./css/Navbar/Navbar.css"
 
 //redux
 import {createStore,applyMiddleware,compose} from "redux";

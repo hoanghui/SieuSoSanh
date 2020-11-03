@@ -14,7 +14,7 @@ class ProductInfo extends Component {
                 </div>
             </div>
             <div className="info-product-detail col-lg-6">
-                <div className=" product-detail-name text-center my-1">
+                <div className=" product-detail-name my-1">
                     <h1>{data[0].ProductName}</h1>
                 </div>
                 <hr/>
@@ -28,6 +28,9 @@ class ProductInfo extends Component {
                     <span>Giá tốt từ nơi bán: </span>
                     <div className="product-price-detail">
                         {data[0].Price}
+                    </div>
+                    <div className="company-logo">
+                        <img src = {data[0].CompanyImage} className="company-logo-image"/>
                     </div>
                     <div>
                         <a type="button" class="btn btn-outline-danger float-lg-right" href={data[0].HyperLink}> Đến nơi bán </a>

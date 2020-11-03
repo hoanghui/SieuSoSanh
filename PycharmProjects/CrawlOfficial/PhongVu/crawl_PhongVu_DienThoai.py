@@ -43,7 +43,7 @@ nokia = 17
 vivo = 18
 itel = 19
 vsmart = 21
-realmi = 22
+realme = 22
 xiaomi = 23
 aqua = 24
 hitachi = 25
@@ -54,13 +54,14 @@ sanaky = 29
 mitsubishi_electric = 30
 canon = 31
 fujifilm = 32
-sanco = 1002
-asanzo = 1003
-fpt = 1004
-huawei = 1005
+sanco = 33
+asanzo = 34
+fpt = 35
+huawei = 36
+khac = 37
 
 #list category
-titi = 1
+tivi = 1
 tulanh = 2
 maygiat = 3
 mayanh = 4
@@ -85,11 +86,7 @@ for i in tqdm(hrefLinkList):
         linkProductImage = webD.find_element_by_xpath('//*[@id="__next"]/div[4]/div[1]/div[1]/div[2]/div[1]/div/div/div/div[1]/div[1]/div[1]/div/picture/img')
         src = linkProductImage.get_property('src')
         supplier = webD.find_element_by_xpath('//*[@id="__next"]/div[4]/div[1]/div[1]/div[4]/div[2]/div/div[2]/div[1]/span[2]/div').text.lower()
-        print(supplier)
-        if supplier != 'SAMSUNG' and supplier != 'Sony' and supplier != 'Philips' and supplier != 'Casper' and supplier != 'TCL' and supplier != 'LG' and supplier != 'Sharp' and supplier != 'Panasonic':
-            supplier = webD.find_element_by_xpath(
-                '//*[@id="__next"]/div[4]/div[1]/div[1]/div[4]/div[2]/div/div[2]/div[1]/span[2]/div').text
-        supID = 0
+        supID = khac
         if supplier == 'dell':
             supID = dell
         elif supplier == 'asus':
@@ -128,8 +125,8 @@ for i in tqdm(hrefLinkList):
             supID = itel
         elif supplier == 'vsmart':
             supID = vsmart
-        elif supplier == 'realmi':
-            supID = realmi
+        elif supplier == 'realme':
+            supID = realme
         elif supplier == 'xiaomi':
             supID = xiaomi
         elif supplier == 'panasonic':

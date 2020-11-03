@@ -18,12 +18,19 @@ class ProductRow extends Component{
                     </div>
                 </div>
                 <div className="same-product-detail">
-                    <div className="product-name">{data.ProductName}</div>
-                    <div className="merchant-logo"></div>
-                    <div className="price">{data.Price}</div>
-                    <div className="product-go-action">
-                        <a type="button" className="move-action btn btn-outline-primary float-lg-right"> Đến nơi bán </a>
+                    <div className="product-name">
+                        {data.ProductName}
                     </div>
+                    <div className="merchant-logo">
+                        <img src={data.CompanyImage} className="merchant-logo-image"/>    
+                    </div>
+                    <div className="price">
+                        {data.Price}
+                    </div>
+                    <div className="product-go-action">
+                        <a type="button" className="move-action btn btn-outline-primary float-lg-right" href={data.HyperLink}> Đến nơi bán </a>
+                    </div>
+                    <hr/>
                 </div>
             </li>
         )

@@ -90,6 +90,7 @@ function IndexNavbar({getListProductsByKeyWord}) {
             className="navbar-logo"
            to="/"
           >
+            <img src={require("../../assets/img/sieusosanh-logo-big.png")} className="search-icon"></img>
             SIÊU SO SÁNH . COM
           </NavLink>
           <Button
@@ -101,7 +102,6 @@ function IndexNavbar({getListProductsByKeyWord}) {
                     
                     Tìm kiếm
                     <i className="fa fa-search" aria-hidden="true"></i>
-                    {/* <img src={require("../../assets/img/search.png")} className="search-icon"></img> */}
             </Button>
             <Modal isOpen={modal} toggle={toggleModal}>
                 <div className="modal-header">

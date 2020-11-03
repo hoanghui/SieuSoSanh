@@ -3,8 +3,8 @@
 }
 
 .price {
-    font-size: 4vh;
-    padding: 20px 38px 0 20px;
+    font-size: 2vh;
+    padding: 10px 38px 0 20px;
 }
 
 .product-name {
@@ -13,5 +13,19 @@
 }
 
 .move-action {
-    color: #0070c9;
+    color: #51cbce;
+}
+
+.merchant-logo-image {
+    border-radius: 10vh;
+    width: 70%;
+    border: double 4.5px #cccccc
+}
+
+.store-product-img {
+    height: 13vh;
+}
+
+.same-product {
+    margin: auto;
 }

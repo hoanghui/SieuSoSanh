@@ -84,9 +84,13 @@ namespace SieuSoSanhAPI.Controllers
         {
             using (EntityDataContext _context = new EntityDataContext())
             {
-                return _context.Products.Join(_context.Suppliers, p=>p.SupplierID, s=>s.SupplierID, (p, s) => new ProductsViewModel()  
+                var product = _context.Products.Where(p => p.ProductID == id).ToList();
+                var companyID = product[0].CompanyID;
+                var company = _context.Companies.Where(c => c.CompanyID == companyID).ToList();
+                var logo = company[0].CompanyImage;
+                return _context.Products.Join(_context.Suppliers, p => p.SupplierID, s => s.SupplierID, (p, s) => new ProductsViewModel()
                 {
-                    ProductID = p.ProductID,    
+                    ProductID = p.ProductID,
                     ProductName = p.ProductName,
                     HyperLink = p.HyperLink,
                     Price = p.Price,
@@ -94,7 +98,8 @@ namespace SieuSoSanhAPI.Controllers
                     CategoryID = p.CategoryID,
                     SupplierID = p.SupplierID,
                     CompanyID = p.CompanyID,
-                    SupplierName = s.SupplierName
+                    SupplierName = s.SupplierName,
+                    CompanyImage = logo
                 }).Where(p=>p.ProductID == id).ToList();
             }
         }
@@ -163,14 +168,14 @@ namespace SieuSoSanhAPI.Controllers
 
                 string productName = product[0].ProductName;
                 string[] words = productName.Split(' ');
-
+                
                 List<ProductsViewModel> productList = new List<ProductsViewModel>();
                 for(int i = 0; i < words.Length; i++)
                 {
                     var temp = words[i];
                     if (i == 0)
                     {
-                        var products = (_context.Products.Where(p => p.ProductName.Contains(temp)).Select(p => new ProductsViewModel()
+                        var products = _context.Products.Join(_context.Companies, p=>p.CompanyID, c=>c.CompanyID, (p, c)=> new ProductsViewModel()
                         {
                             ProductID = p.ProductID,
                             ProductName = p.ProductName,
@@ -179,8 +184,9 @@ namespace SieuSoSanhAPI.Controllers
                             LinkOfProductImage = p.LinkOfProductImage,
                             CategoryID = p.CategoryID,
                             SupplierID = p.SupplierID,
-                            CompanyID = p.CompanyID
-                        })).ToList();
+                            CompanyID = p.CompanyID,
+                            CompanyImage = c.CompanyImage
+                        }).Where(p=>p.ProductName.Contains(temp)).ToList();
 
                         productList.AddRange(products);
                     }

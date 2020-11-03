@@ -13,6 +13,7 @@
     <EntitySetMapping Name="Companies">
       <EntityTypeMapping TypeName="EntityModels.Companies">
         <MappingFragment StoreEntitySet="Companies">
+          <ScalarProperty Name="CompanyImage" ColumnName="CompanyImage" />
           <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
           <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
         </MappingFragment>

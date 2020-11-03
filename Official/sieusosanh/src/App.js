@@ -8,6 +8,7 @@ import {Route} from "react-router-dom";
 import {routesHome}from "./routes"
 import Lottie from 'lottie-web';
 import './App.css';
+
 function App() {
 
   const container = useRef(null)

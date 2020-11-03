@@ -44,6 +44,10 @@
     justify-content: center;
 }
 
+.priority-store > span{
+    padding-top: 1vh
+}
+
 .product-detail-name {
     min-width: 40vh;
 }
@@ -61,4 +65,18 @@
 
 .brand-box {
     padding: 2vh 0vh;
+}
+
+.company-logo{
+    width: 17%;
+}
+
+.company-logo-image{
+    border-radius: 20vh;
+    width: 70%;
+    border: double 4.5px #cccccc
+}
+
+.list-same-products {
+    margin: auto;
 }
