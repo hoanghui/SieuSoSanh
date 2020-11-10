@@ -5,21 +5,20 @@ import time
 import json
 
 webD = wb.Chrome('C:\\Users\\Admin\\Downloads\\chromedriver.exe')
-webD.get('https://tiki.vn/dien-thoai-smartphone/c1795?src=static_block')
+webD.get('https://dienmaythienhoa.vn/tivi-c5351.html?page=1&_is_desktop=1')
 
 hrefLinkList = []
 condition = True
 
 while condition:
-    time.sleep(1.75)
-    allInfo = webD.find_elements_by_class_name('product-item       ')
+    time.sleep(4)
+    allInfo = webD.find_elements_by_class_name('link-img')
     for eEle in allInfo:
-        temp = eEle.find_element_by_tag_name('a')
-        hrefLink = temp.get_property('href')
+        hrefLink = eEle.get_property('href')
         hrefLinkList.append(hrefLink)
     print(len(hrefLinkList))
     try:
-        webD.find_elements_by_class_name('next')[-1].click()
+        webD.find_elements_by_xpath('/html/body/main/div[2]/div[1]/div[3]/div/div[4]/div/div/div[2]/div/a')[-1].click()
     except:
         condition = False
 
@@ -80,28 +79,30 @@ tiki = 5
 lazada = 6
 shopee = 7
 mediasmart = 8
+dienmaythienhoa = 9
 
 for i in tqdm(hrefLinkList):
     webD.get(i)
-    time.sleep(3)
+    time.sleep(0.5)
     try:
-        productName = webD.find_element_by_class_name('title').text
+        productName= webD.find_element_by_class_name('title-top').find_element_by_tag_name('h1').text
         print(productName)
-        price = webD.find_element_by_class_name('product-price__current-price').text
+        price = webD.find_element_by_class_name('price-real').text
         print(price)
-        linkProductImage = webD.find_element_by_xpath('//*[@id="__next"]/div[1]/main/div[4]/div/div[1]/div[1]/div[1]/div/div/img')
+        linkProductImage = webD.find_element_by_class_name('bzoom_magnifier').find_element_by_tag_name('img')
         src = linkProductImage.get_property('src')
         print(src)
-        try:
-            supplier = webD.find_element_by_xpath(
-                '//*[@id="__next"]/div[1]/main/div[4]/div/div[3]/div[1]/div/span/h6/a').text.lower()
-        except:
-            try:
-                supplier = webD.find_element_by_xpath(
-                    '//*[@id="__next"]/div[1]/main/div[4]/div/div[3]/div[1]/div[1]/span/h6/a').text.lower()
-            except:
-                break
-
+        # try:
+        #     supplier = webD.find_element_by_xpath(
+        #         '//*[@id="__next"]/div[1]/main/div[4]/div/div[3]/div[1]/div/span/h6/a').text.lower()
+        # except:
+        #     try:
+        #         supplier = webD.find_element_by_xpath(
+        #             '//*[@id="__next"]/div[1]/main/div[4]/div/div[3]/div[1]/div[1]/span/h6/a').text.lower()
+        #     except:
+        #         break
+        supplier = webD.find_element_by_class_name('star').find_element_by_tag_name('a').text.lower()
+        print(supplier)
         supID = khac
         if supplier == 'dell':
             supID = dell
@@ -176,8 +177,8 @@ for i in tqdm(hrefLinkList):
 
         tempJ = {'productName': productName,
                  'price': price,
-                 'CategoryID': dienthoai,
-                 'CompanyID': tiki,
+                 'CategoryID': tivi,
+                 'CompanyID': dienmaythienhoa,
                  'hyperlink': i,
                  'LinkOfProductImage': src,
                  'SupplierID': supID
@@ -187,7 +188,6 @@ for i in tqdm(hrefLinkList):
         continue
 
 pd.DataFrame(data)
-
 print(len(data))
 #Writing to JSON File
 
@@ -197,7 +197,7 @@ def writeToJSONFile(path, fileName, data):
         json.dump(data, fp)
 
 path = './'
-fileName = 'DienThoai_Tiki'
+fileName = 'Tivi_DienMayThienHoa'
 
 
 writeToJSONFile(path, fileName, data)

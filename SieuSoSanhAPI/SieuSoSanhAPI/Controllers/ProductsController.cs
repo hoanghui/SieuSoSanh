@@ -194,7 +194,7 @@ namespace SieuSoSanhAPI.Controllers
                     {
                         for(int j = 0; j < productList.Count;j++)
                         {
-                            if(productList[j].ProductName.Contains(temp) == false)
+                            if(productList[j].ProductName.Contains(temp) == false || productList[j].ProductID == productID)
                             {
                                 productList.RemoveAt(j);
                                 j = -1;

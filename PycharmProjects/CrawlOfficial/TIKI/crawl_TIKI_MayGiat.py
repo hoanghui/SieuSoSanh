@@ -11,7 +11,7 @@ hrefLinkList = []
 condition = True
 
 while condition:
-    time.sleep(3)
+    time.sleep(1.5)
     allInfo = webD.find_elements_by_class_name('product-item       ')
     for eEle in allInfo:
         temp = eEle.find_element_by_tag_name('a')
@@ -83,7 +83,7 @@ mediasmart = 8
 
 for i in tqdm(hrefLinkList):
     webD.get(i)
-    time.sleep(2.5)
+    time.sleep(1)
     try:
         productName = webD.find_element_by_class_name('title').text
         price = webD.find_element_by_class_name('product-price__current-price').text
@@ -94,18 +94,27 @@ for i in tqdm(hrefLinkList):
         # except:
         #     supplier = webD.find_element_by_xpath('//*[@id="__next"]/div[1]/main/div[8]/div/div[1]/div[1]/div/table/tbody/tr[1]/td[2]').text.lower()
 
-        dieukien = True
-        list = webD.find_elements_by_tag_name('tr')
-        while dieukien:
-            for item in list:
-                itemTemp = item.find_elements_by_tag_name('td')
-                itemChild = itemTemp[0].text.lower()
-                if itemChild == 'thương hiệu':
-                    supplier = itemTemp[1].text.lower()
-                    dieukien = False
-                else:
-                    continue
+        # dieukien = True
+        # list = webD.find_elements_by_tag_name('tr')
+        # while dieukien:
+        #     for item in list:
+        #         itemTemp = item.find_elements_by_tag_name('td')
+        #         itemChild = itemTemp[0].text.lower()
+        #         if itemChild == 'thương hiệu':
+        #             supplier = itemTemp[1].text.lower()
+        #             dieukien = False
+        #         else:
+        #             continue
 
+        try:
+            supplier = webD.find_element_by_xpath(
+                '//*[@id="__next"]/div[1]/main/div[4]/div/div[3]/div[1]/div/span/h6/a').text.lower()
+        except:
+            try:
+                supplier = webD.find_element_by_xpath(
+                    '//*[@id="__next"]/div[1]/main/div[4]/div/div[3]/div[1]/div[1]/span/h6/a').text.lower()
+            except:
+                break
         supID = khac
         if supplier == 'dell':
             supID = dell
@@ -180,7 +189,7 @@ for i in tqdm(hrefLinkList):
 
         tempJ = {'productName': productName,
                  'price': price,
-                 'CategoryID': dienthoai,
+                 'CategoryID': maygiat,
                  'CompanyID': tiki,
                  'hyperlink': i,
                  'LinkOfProductImage': src,

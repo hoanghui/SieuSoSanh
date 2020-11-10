@@ -83,23 +83,30 @@ mediasmart = 8
 
 for i in tqdm(hrefLinkList):
     webD.get(i)
-    time.sleep(2.5)
+    time.sleep(1)
     try:
         productName = webD.find_element_by_class_name('title').text
         price = webD.find_element_by_class_name('product-price__current-price').text
         linkProductImage = webD.find_element_by_xpath('//*[@id="__next"]/div[1]/main/div[4]/div/div[1]/div[1]/div[1]/div/div/img')
         src = linkProductImage.get_property('src')
-        dieukien = True
-        list = webD.find_elements_by_tag_name('tr')
-        while dieukien:
-            for item in list:
-                itemTemp = item.find_elements_by_tag_name('td')
-                itemChild = itemTemp[0].text.lower()
-                if itemChild == 'thương hiệu':
-                    supplier = itemTemp[1].text.lower()
-                    dieukien = False
-                else:
-                    continue
+        # dieukien = True
+        # list = webD.find_elements_by_tag_name('tr')
+        # while dieukien:
+        #     for item in list:
+        #         itemTemp = item.find_elements_by_tag_name('td')
+        #         itemChild = itemTemp[0].text.lower()
+        #         if itemChild == 'thương hiệu':
+        #             supplier = itemTemp[1].text.lower()
+        #             dieukien = False
+        #         else:
+        #             continue
+        try:
+            supplier = webD.find_element_by_xpath('//*[@id="__next"]/div[1]/main/div[4]/div/div[3]/div[1]/div/span/h6/a')
+        except:
+            try:
+                supplier = webD.find_element_by_xpath('//*[@id="__next"]/div[1]/main/div[4]/div/div[3]/div[1]/div[1]/span/h6/a')
+            except:
+                break
 
         supID = khac
         if supplier == 'dell':
@@ -175,7 +182,7 @@ for i in tqdm(hrefLinkList):
 
         tempJ = {'productName': productName,
                  'price': price,
-                 'CategoryID': dienthoai,
+                 'CategoryID': mayanh,
                  'CompanyID': tiki,
                  'hyperlink': i,
                  'LinkOfProductImage': src,
